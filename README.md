@@ -13,11 +13,14 @@ This is the FE of IM.
 
 ## Design
 
+### View
+
 - Welcome
   - ViewPager: support slide to left or right.
-- MainPage
-- LoginOrRegister
-- GuidePage
+- MainPage:
+  -  self-define components
+- LoginOrRegister: TabHost
+- GuidePage: MultiView, use select to indicate which page the user is watching.
 
 ---
 
@@ -39,3 +42,4 @@ This is the FE of IM.
 ## reference
 
 1. [ViewPager使用](<https://www.jianshu.com/p/9faa1fc3f527>)
+2. [自定义控件](https://blog.csdn.net/guolin_blog/article/details/17357967)

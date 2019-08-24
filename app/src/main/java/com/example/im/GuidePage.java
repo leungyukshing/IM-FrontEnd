@@ -1,6 +1,7 @@
 package com.example.im;
 
 import android.bluetooth.le.AdvertisingSetParameters;
+import android.content.Intent;
 import android.media.Image;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -56,7 +57,16 @@ public class GuidePage extends AppCompatActivity implements ViewPager.OnPageChan
         viewPager.setAdapter(guideViewPagerAdapter);
         viewPager.addOnPageChangeListener(this);
 
-        btnToMain = (Button)findViewById()
+        btnToMain = (Button)findViewById(R.id.btn_to_main);
+
+        btnToMain.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Jump to Login or Register
+                Intent intent = new Intent(GuidePage.this, LoginOrRegister.class);
+                startActivity(intent);
+            }
+        });
 
     }
 
@@ -66,8 +76,15 @@ public class GuidePage extends AppCompatActivity implements ViewPager.OnPageChan
     }
 
     @Override
-    public void onPageSelected(int i) {
-
+    public void onPageSelected(int pos) {
+        for (int i = 0; i < indicatorDotIds.length; i++) {
+            if (i != pos) {
+                imageViews[i].setImageResource(R.drawable.unselected);
+            }
+            else {
+                imageViews[i].setImageResource(R.drawable.selected);
+            }
+        }
     }
 
     @Override
