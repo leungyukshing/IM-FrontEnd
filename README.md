@@ -2,12 +2,16 @@
 
 This is the FE of IM.
 
-### Basic
+### Basic View
 
 + Welcome: Welcome Page, only show 1 time
 + MainPage
 + LoginOrRegister
 + GuidePage
+
+## Server
+
+
 
 ---
 
@@ -18,7 +22,7 @@ This is the FE of IM.
 - Welcome
   - ViewPager: support slide to left or right.
 - MainPage:
-  -  self-define components
+  -  self-define components: TitleBar
 - LoginOrRegister: TabHost
 - GuidePage: MultiView, use select to indicate which page the user is watching.
 

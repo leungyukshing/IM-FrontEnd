@@ -1,13 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.DrawerLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:background="@drawable/shot8">
 
+        <com.example.im.view.TitleBar
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/titleBar"
+            app:leftText="IM"
+            app:leftTextColor="#ffffff"
+            app:rightText="+"
+            app:rightTextSize="10sp"
+            app:rightTextColor="#ffffff"
+            app:rightBackground="#00ffffff">
+        </com.example.im.view.TitleBar>
+
+        <android.support.v4.view.ViewPager
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/mainViewPager"
+            android:scrollbars="none"
+            android:layout_weight="10">
+        </android.support.v4.view.ViewPager>
+
+        <android.support.design.widget.TabLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/mainTabLayout"
+            app:tabMode="fixed"
+            app:tabIndicatorHeight="0dp"
+            android:layout_weight="1"
+            android:background="#ffffff"
+            style="@style/CustomTabTextStyle">
+        </android.support.design.widget.TabLayout>
     </LinearLayout>
+
+
 </android.support.v4.widget.DrawerLayout>
