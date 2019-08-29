@@ -22,9 +22,15 @@ This is the FE of IM.
 - Welcome
   - ViewPager: support slide to left or right.
 - MainPage:
-  -  self-define components: TitleBar
+  -  self-define components: 
+     -  TitleBar
+     -  LayoutSlide
+     -  PictureAndTextButton
 - LoginOrRegister: TabHost
 - GuidePage: MultiView, use select to indicate which page the user is watching.
+- DressUp:
+- Profile:
+- Setting:
 
 ---
 

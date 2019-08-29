@@ -20,4 +20,15 @@
         <attr name="rightBackground" format="reference|color"/>
     </declare-styleable>
 
+    <declare-styleable name="PictureAndTextButton">
+        <!-- ImageView -->
+        <attr name="picture" format="reference|color|integer"/>
+        <attr name="pictureBackground" format="reference|color"/>
+
+        <!-- TextView -->
+        <attr name="text" format="string"/>
+        <attr name="textSize" format="dimension"/>
+        <attr name="textColor" format="color"/>
+        <attr name="textBackground" format="reference|color"/>
+    </declare-styleable>
 </resources>

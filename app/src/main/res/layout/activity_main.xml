@@ -41,5 +41,10 @@
         </android.support.design.widget.TabLayout>
     </LinearLayout>
 
+    <com.example.im.view.LayoutSlide
+        android:layout_width="270dp"
+        android:layout_height="match_parent"
+        android:clickable="true">
+    </com.example.im.view.LayoutSlide>
 
 </android.support.v4.widget.DrawerLayout>
