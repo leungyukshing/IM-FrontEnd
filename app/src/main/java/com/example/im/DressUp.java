@@ -3,12 +3,16 @@ package com.example.im;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.example.im.adapter.AvatarAdapter;
+import com.example.im.adapter.BackgroundAdapter;
 import com.example.im.utils.Image;
 import com.example.im.utils.ImageManager;
 import com.example.im.view.TitleBar;
@@ -74,10 +78,24 @@ public class DressUp extends AppCompatActivity {
         }
 
         // Add Adapter
-        
+        AvatarAdapter avatarAdapter = new AvatarAdapter(this, images);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        avatar_recyclerView.setLayoutManager(linearLayoutManager);
+        avatar_recyclerView.setAdapter(avatarAdapter);
     }
 
     private void addBackgroundRecyclerView() {
+        List<Image> images = new ArrayList<>();
+        for (int imageBackgroundTmp: ImageManager.imagesBackground) {
+            Image img = new Image();
+            img.setImageID(imageBackgroundTmp);
+            images.add(img);
+        }
 
+        // Add Adapter
+        BackgroundAdapter backgroundAdapter = new BackgroundAdapter(this, images);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        background_recyclerView.setLayoutManager(linearLayoutManager);
+        background_recyclerView.setAdapter(backgroundAdapter);
     }
 }

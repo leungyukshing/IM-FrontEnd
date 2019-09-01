@@ -60,17 +60,17 @@ public class TitleBar extends RelativeLayout {
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.TitleBar);
 
         titleText = typedArray.getString(R.styleable.TitleBar_titleText);
-        titleTextSize = typedArray.getFloat(R.styleable.TitleBar_titleTextSize, 24);
+        titleTextSize = typedArray.getDimension(R.styleable.TitleBar_titleTextSize, 24);
         titleTextColor = typedArray.getColor(R.styleable.TitleBar_leftTextColor, 0);
         titleBackground = typedArray.getDrawable(R.styleable.TitleBar_titleBackground);
 
         leftText = typedArray.getString(R.styleable.TitleBar_leftText);
-        leftTextSize = typedArray.getFloat(R.styleable.TitleBar_leftTextSize, 24);
+        leftTextSize = typedArray.getDimension(R.styleable.TitleBar_leftTextSize, 24);
         leftTextColor = typedArray.getColor(R.styleable.TitleBar_leftTextColor, 0);
         leftBackground = typedArray.getDrawable(R.styleable.TitleBar_leftBackground);
 
         rightText = typedArray.getString(R.styleable.TitleBar_rightText);
-        rightTextSize = typedArray.getFloat(R.styleable.TitleBar_rightTextSize, 24);
+        rightTextSize = typedArray.getDimension(R.styleable.TitleBar_rightTextSize, 24);
         rightTextColor = typedArray.getColor(R.styleable.TitleBar_rightTextColor, 0);
         rightBackground = typedArray.getDrawable(R.styleable.TitleBar_rightBackground);
 

@@ -28,9 +28,10 @@ This is the FE of IM.
      -  PictureAndTextButton
 - LoginOrRegister: TabHost
 - GuidePage: MultiView, use select to indicate which page the user is watching.
-- DressUp:
-- Profile:
-- Setting:
+- DressUp: choose avatar and background
+  - choose_image.xml
+- Profile: EditText for editing user information
+- Setting: some options saved in local cache
 
 ---
 
@@ -45,7 +46,8 @@ This is the FE of IM.
 
 ## TimeLine
 
-+ 2018.8.23: Init
++ 2019.8.23: Init
++ 2019.9.2: Finish Basic Views, testing on phone successfully.
 
 ---
 

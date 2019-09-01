@@ -19,6 +19,9 @@
         <activity android:name=".MainPage"></activity>
         <activity android:name=".GuidePage"></activity>
         <activity android:name=".LoginOrRegister"></activity>
+        <activity android:name=".Profile"></activity>
+        <activity android:name=".DressUp"></activity>
+        <activity android:name=".Setting"></activity>
     </application>
 
 </manifest>

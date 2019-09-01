@@ -15,6 +15,7 @@
             android:id="@+id/titleBar"
             app:leftText="IM"
             app:leftTextColor="#ffffff"
+            app:leftBackground="#00ffffff"
             app:rightText="+"
             app:rightTextSize="10sp"
             app:rightTextColor="#ffffff"

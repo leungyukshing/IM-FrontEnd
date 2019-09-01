@@ -3,43 +3,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <android.support.v4.view.ViewPager
+    <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/guide_viewpager">
-    </android.support.v4.view.ViewPager>
+        android:src="@drawable/shot8"
+        android:scaleType="centerCrop"
+        android:contentDescription="Welcome!"/>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
+    <TextView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_centerHorizontal="true"
+        android:id="@+id/welcome_text"
+        android:text="welcome"
+        android:textColor="#ffffff"
+        android:textSize="30sp"
+        android:fontFamily="monospace"
+        android:gravity="center"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="20dp"
-        >
-        <ImageView
-            android:layout_width="10dp"
-            android:layout_height="10dp"
-            android:id="@+id/dot1"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:src="@drawable/selected"/>
-
-        <ImageView
-            android:layout_width="10dp"
-            android:layout_height="10dp"
-            android:id="@+id/dot2"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:src="@drawable/unselected"/>
-
-        <ImageView
-            android:layout_width="10dp"
-            android:layout_height="10dp"
-            android:id="@+id/dot3"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:src="@drawable/unselected"/>
-    </LinearLayout>
-
+        android:layout_marginBottom="20dp"/>
 </RelativeLayout>

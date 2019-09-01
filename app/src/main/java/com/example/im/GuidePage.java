@@ -57,7 +57,7 @@ public class GuidePage extends AppCompatActivity implements ViewPager.OnPageChan
         viewPager.setAdapter(guideViewPagerAdapter);
         viewPager.addOnPageChangeListener(this);
 
-        btnToMain = (Button)findViewById(R.id.btn_to_main);
+        btnToMain = (Button)viewList.get(2).findViewById(R.id.btn_to_main);
 
         btnToMain.setOnClickListener(new View.OnClickListener() {
             @Override

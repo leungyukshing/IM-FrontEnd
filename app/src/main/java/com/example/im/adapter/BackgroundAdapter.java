@@ -16,26 +16,25 @@ import com.example.im.utils.Image;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AvatarAdapter extends RecyclerView.Adapter<AvatarAdapter.BaseViewHolder> {
+public class BackgroundAdapter extends RecyclerView.Adapter<BackgroundAdapter.BaseViewHolder> {
     private List<Image> imageViews;
     private Context context;
     private LayoutInflater inflater;
-    private static int selectedImageAvatar = 0;
+    private static int selectedBackground = 0;
     private List<RelativeLayout> imageContainer = new ArrayList<>();
     private Drawable backgroundImageDrawable;
 
-
-    public AvatarAdapter(Context context, List<Image> imageViews) {
+    public BackgroundAdapter(Context context, List<Image> imageViews) {
         this.context = context;
         this.imageViews = imageViews;
         this.inflater = LayoutInflater.from(context);
-        selectedImageAvatar = 0; // default selected
-        backgroundImageDrawable = context.getResources().getDrawable(R.drawable.bgimage); // default background
+        selectedBackground = 0;
+        backgroundImageDrawable = context.getResources().getDrawable(R.drawable.bgimage2);
     }
 
     @NonNull
     @Override
-    public AvatarAdapter.BaseViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+    public BaseViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         View view = inflater.inflate(R.layout.choose_image, viewGroup, false);
         return new BaseViewHolder(view);
     }
@@ -43,16 +42,15 @@ public class AvatarAdapter extends RecyclerView.Adapter<AvatarAdapter.BaseViewHo
     @Override
     public void onBindViewHolder(@NonNull BaseViewHolder baseViewHolder, final int i) {
         baseViewHolder.imageView.setImageResource(imageViews.get(i).getImageID());
-        imageContainer.get(selectedImageAvatar).setBackground(backgroundImageDrawable);
+        imageContainer.get(selectedBackground).setBackground(backgroundImageDrawable);
 
         baseViewHolder.imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // change background
-                if (i != selectedImageAvatar) {
+                if (i != selectedBackground) {
                     imageContainer.get(i).setBackground(backgroundImageDrawable);
-                    imageContainer.get(selectedImageAvatar).setBackgroundColor(0);
-                    selectedImageAvatar = i;
+                    imageContainer.get(selectedBackground).setBackgroundColor(0);
+                    selectedBackground = i;
                 }
             }
         });
@@ -64,7 +62,6 @@ public class AvatarAdapter extends RecyclerView.Adapter<AvatarAdapter.BaseViewHo
     }
 
     class BaseViewHolder extends RecyclerView.ViewHolder {
-        // Corresponding to choose_image.xml
         ImageView imageView;
 
         BaseViewHolder(View view) {
