@@ -1,18 +1,17 @@
 package com.example.im;
 
-import android.bluetooth.le.AdvertisingSetParameters;
 import android.content.Intent;
-import android.media.Image;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.app.AppCompatDialogFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
+
+import com.example.im.adapter.GuideViewPagerAdapter;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -14,7 +14,7 @@ import com.example.im.Setting;
 
 import java.util.jar.Attributes;
 
-public class LayoutSlide extends FrameLayout {
+public class SlideLayout extends FrameLayout {
     private Context context;
 
     // components
@@ -24,13 +24,13 @@ public class LayoutSlide extends FrameLayout {
     private PictureAndTextButton night;
     private boolean nightMode = false; // day mode default
 
-    public LayoutSlide(Context context) {
+    public SlideLayout(Context context) {
         super(context);
         this.context = context;
         initView();
     }
 
-    public LayoutSlide(Context context, AttributeSet attrs) {
+    public SlideLayout(Context context, AttributeSet attrs) {
         super(context, attrs);
         this.context = context;
         initView();

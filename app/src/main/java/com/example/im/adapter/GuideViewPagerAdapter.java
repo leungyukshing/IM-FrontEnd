@@ -1,4 +1,4 @@
-package com.example.im;
+package com.example.im.adapter;
 
 import android.content.Context;
 import android.support.annotation.NonNull;

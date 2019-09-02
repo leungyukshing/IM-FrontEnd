@@ -6,6 +6,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TableLayout;
 
+import com.example.im.adapter.MainViewPagerAdapter;
+import com.example.im.view.ChatsLayout;
+
+import java.util.ArrayList;
 import java.util.List;
 
 public class MainPage extends AppCompatActivity {
@@ -22,5 +26,13 @@ public class MainPage extends AppCompatActivity {
     }
 
     private void initView() {
+        viewPager = findViewById(R.id.mainViewPager);
+        tabLayout = findViewById(R.id.mainTabLayout);
+
+        tabList = new ArrayList<>();
+
+        // Set ViewPager Adapter
+        MainViewPagerAdapter mainViewPagerAdapter = new MainViewPagerAdapter(getSupportFragmentManager());
+        mainViewPagerAdapter.addItem(new ChatsLayout());
     }
 }

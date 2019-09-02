@@ -26,6 +26,10 @@ This is the FE of IM.
      -  TitleBar
      -  LayoutSlide
      -  PictureAndTextButton
+  -  3 Tab
+     -  Chats: RecyclerView
+     -  Contacts: RecyclerView
+     -  Moments: RecyclerView
 - LoginOrRegister: TabHost
 - GuidePage: MultiView, use select to indicate which page the user is watching.
 - DressUp: choose avatar and background
