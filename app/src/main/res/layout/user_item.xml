@@ -1,6 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp">
 
-</android.support.constraint.ConstraintLayout>
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/user_item_avatar"
+        android:layout_marginLeft="16dp"
+        android:src="@drawable/avasterwe"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="vertical"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:paddingLeft="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/user_item_username"
+            android:textAllCaps="false"
+            android:text="username"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:maxLines="1"
+            android:gravity="center_vertical"
+            android:layout_weight="3" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/user_item_sign"
+            android:textAllCaps="false"
+            android:text="sign"
+            android:textSize="12sp"
+            android:textColor="#292929"
+            android:maxLines="1"
+            android:gravity="center_vertical"
+            android:layout_weight="2"/>
+    </LinearLayout>
+</LinearLayout>

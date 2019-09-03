@@ -27,7 +27,7 @@ This is the FE of IM.
      -  LayoutSlide
      -  PictureAndTextButton
   -  3 Tab
-     -  Chats: RecyclerView
+     -  Chats: RecyclerView, ChatsLayout(UserItem)
      -  Contacts: RecyclerView
      -  Moments: RecyclerView
 - LoginOrRegister: TabHost
