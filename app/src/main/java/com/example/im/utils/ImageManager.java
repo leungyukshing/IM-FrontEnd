@@ -24,4 +24,13 @@ public class ImageManager {
             R.drawable.bgtower
     };
 
+    public static final int[] tabImageID = {
+            R.drawable.msgselected,
+            R.drawable.contactsunselected,
+            R.drawable.momentunselected,
+            R.drawable.msgunselected,
+            R.drawable.contactsselected,
+            R.drawable.momentselected,
+    };
+
 }
