@@ -7,10 +7,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.example.im.adapter.MainViewPagerAdapter;
-import com.example.im.utils.Image;
 import com.example.im.utils.ImageManager;
 import com.example.im.view.ChatsLayout;
 import com.example.im.view.ContactsLayout;
+import com.example.im.view.MomentsLayout;
 
 import java.util.ArrayList;
 import java.util.List;

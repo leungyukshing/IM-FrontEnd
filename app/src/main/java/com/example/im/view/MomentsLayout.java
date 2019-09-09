@@ -1,4 +1,4 @@
-package com.example.im;
+package com.example.im.view;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -13,6 +13,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.example.im.R;
 import com.example.im.adapter.MomentItemAdapter;
 import com.example.im.utils.MomentItem;
 
