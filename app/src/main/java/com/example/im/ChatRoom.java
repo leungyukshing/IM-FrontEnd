@@ -34,6 +34,6 @@ public class ChatRoom extends AppCompatActivity {
     }
 
     private void initView() {
-    
+
     }
 }
