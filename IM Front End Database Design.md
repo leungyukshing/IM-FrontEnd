@@ -26,7 +26,7 @@ There is one table: **chat_record**
 
 | Name    | Type    | Key         | Note                                         |
 | ------- | ------- | ----------- | -------------------------------------------- |
-| id      | int     | primary key | chat id(auto increment)                      |
+| id      | int     | primary key | chat record id(auto increment)               |
 | chat_id | int     | foreign key | to indicate this record belong to which chat |
 | user_id | int     | foreign key | to indicate who send this record             |
 | content | varchar |             | message content                              |
