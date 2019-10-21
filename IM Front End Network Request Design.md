@@ -19,4 +19,7 @@ Retrofit + okhttp
 1. [Android use pb](https://www.jianshu.com/p/acbc7df5decd?utm_source=oschina-app)
 
 2. [Retrofit + okHttp + Rxjava](https://juejin.im/entry/58a8faf38d6d81005836195d)
+
 3. [use example](https://github.com/SYSUcarey/FTEReader-Android/blob/master/code/Group13/FinalProject/app/src/main/java/fte/finalproject/service/BookService.java)
+
+4. [Retrofit + Rxjava + pb](https://blog.csdn.net/qq137722697/article/details/81630666)
