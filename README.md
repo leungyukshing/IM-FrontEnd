@@ -50,6 +50,7 @@ This is the FE of IM.
 ## Docs
  + [FrontEnd Database Design](https://github.com/leungyukshing/IM-FrontEnd/blob/master/IM%20Front%20End%20Database%20Design.md)
  + [FrontEnd Network Request Design](https://github.com/leungyukshing/IM-FrontEnd/blob/master/IM%20Front%20End%20Network%20Request%20Design.md)
+ + [FrontEnd CI Design](https://github.com/leungyukshing/IM-FrontEnd/blob/master/IM%20Front%20End%20CI%20Design.md)
 
 
 ## TimeLine
