@@ -1,0 +1,33 @@
+// [START declaration]
+syntax = "proto2";
+
+message RegisterRequest {
+    optional string username = 1;
+    optional string password = 2;
+    optional string email = 3;
+}
+
+message RegisternResponse {
+    optional string code = 1;
+    optional string message = 2;
+}
+
+message LoginRequest {
+    optional string email = 1;
+    optional string password = 2;
+}
+
+message LoginResponse {
+	optional string code = 1;
+    optional string message = 2;
+    optional string userid = 3;
+    optional string username = 4;    
+}
+
+message GetContactListRequest {
+
+}
+
+message GetContactListResponse {
+
+}
