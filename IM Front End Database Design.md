@@ -10,7 +10,7 @@ In IM's database structure, there are two main databases. One is for front-end, 
 
 ## Techs
 
-I try to use [Android SQLite](https://www.tutorialspoint.com/android/android_sqlite_database.htm) to implement. Store the database in the default path([SQLite Database Store path])(https://blog.csdn.net/brucezcg/article/details/10208979)
+I try to use [Android SQLite](https://www.tutorialspoint.com/android/android_sqlite_database.htm) to implement. Store the database in the default path([SQLite Database Store path](https://blog.csdn.net/brucezcg/article/details/10208979))
 
 ---
 
