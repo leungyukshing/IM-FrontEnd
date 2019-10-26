@@ -1,6 +1,6 @@
 # IM FrontEnd Network Request Design Doc
 
-**Date: **2019.10.13
+**Date: ** 2019.10.13
 
 ## Goal
 
