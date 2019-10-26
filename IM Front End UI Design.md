@@ -1,6 +1,6 @@
 # IM Front End UI Design Doc
 
-This doc mainly introduce the basic view design of IM
+This doc mainly introduce the User Interaction design of IM
 
 ## Basic View
 
