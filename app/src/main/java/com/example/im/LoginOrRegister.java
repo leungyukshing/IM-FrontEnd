@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TabHost;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.hdl.elog.ELog;
@@ -28,6 +29,8 @@ public class LoginOrRegister extends AppCompatActivity implements View.OnClickLi
     EditText registerPassword;
     EditText registerRepeatPassword;
     EditText registerEmail;
+
+    TextView error;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -50,6 +53,8 @@ public class LoginOrRegister extends AppCompatActivity implements View.OnClickLi
         registerRepeatPassword = findViewById(R.id.register_repeatPassword);
         registerEmail = findViewById(R.id.register_email);
 
+        error = findViewById(R.id.errormsg);
+
         tabHost.setup();
         tabHost.addTab(tabHost.newTabSpec("Login").setIndicator("Login").setContent(R.id.login_layout));
         tabHost.addTab(tabHost.newTabSpec("Register").setIndicator("Register").setContent(R.id.register_layout));
@@ -61,13 +66,15 @@ public class LoginOrRegister extends AppCompatActivity implements View.OnClickLi
             @Override
             public void onFocusChange(View view, boolean b) {
                 if (b) {
-                    // do nothing
+                    // clear error
+                    error.setText("");
                 }
                 else {
                     // validate email format
                     String email = registerEmail.getText().toString();
                     if (!validateEmail(email)) {
-                        Toast.makeText(LoginOrRegister.this, "Email Format Wrong", Toast.LENGTH_SHORT).show();
+                        // Toast.makeText(LoginOrRegister.this, "Email Format Wrong", Toast.LENGTH_SHORT).show();
+                        error.setText("Email Format Wrong!");
                     }
                 }
             }
@@ -88,7 +95,6 @@ public class LoginOrRegister extends AppCompatActivity implements View.OnClickLi
                 }
                 else {
                     // reset password
-                    // loginUsername.setText("");
                     loginPassword.setText("");
                 }
                 break;
@@ -130,12 +136,14 @@ public class LoginOrRegister extends AppCompatActivity implements View.OnClickLi
             public void onNext(ImEntities.LoginResponse loginResponse) {
                 ELog.e("Login Result: code =" + loginResponse.getCode() + "\t msg = " + loginResponse.getMessage());
                 Toast.makeText(LoginOrRegister.this, "Login Successful", Toast.LENGTH_SHORT).show();
+                // give error msg if failed
             }
 
             @Override
             public void onError(Throwable e) {
                 e.printStackTrace();
                 ELog.e("error: " + e.getMessage());
+                Toast.makeText(LoginOrRegister.this, "Network Error!", Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -159,12 +167,14 @@ public class LoginOrRegister extends AppCompatActivity implements View.OnClickLi
             public void onNext(ImEntities.RegisternResponse registerResponse) {
                 ELog.e("Register Result: code =" + registerResponse.getCode() + "\t msg = " + registerResponse.getMessage());
                 Toast.makeText(LoginOrRegister.this, "Login Successful", Toast.LENGTH_SHORT).show();
+                // give error msg if failed
             }
 
             @Override
             public void onError(Throwable e) {
                 e.printStackTrace();
                 ELog.e("error: " + e.getMessage());
+                Toast.makeText(LoginOrRegister.this, "Network Error!", Toast.LENGTH_SHORT).show();
             }
 
             @Override

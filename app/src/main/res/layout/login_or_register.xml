@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/shot1"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <TabHost
         android:layout_width="match_parent"
@@ -31,11 +33,11 @@
                 android:id="@+id/login_layout"
                 android:orientation="vertical">
                 <EditText
+                    android:id="@+id/login_username"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/login_username"
                     android:hint="Please input username"
-                    android:maxLines="1"/>
+                    android:maxLines="1" />
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -88,4 +90,12 @@
             </LinearLayout>
         </FrameLayout>
     </TabHost>
-</RelativeLayout>
+    <TextView
+        android:id="@+id/errormsg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#ff0000"
+        android:textSize="20dp"
+        android:layout_marginTop="60dp"
+        android:gravity="center_horizontal"/>
+</LinearLayout>
