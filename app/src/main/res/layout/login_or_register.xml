@@ -35,13 +35,14 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/login_username"
                     android:hint="Please input username"
-                    />
+                    android:maxLines="1"/>
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/login_password"
                     android:hint="Please input password"
-                    android:inputType="textPassword"/>
+                    android:inputType="textPassword"
+                    android:maxLines="1"/>
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -67,6 +68,17 @@
                     android:id="@+id/register_password"
                     android:hint="Please input password"
                     android:inputType="textPassword"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/register_repeatPassword"
+                    android:hint="Please repeat password"
+                    android:inputType="textPassword" />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/register_email"
+                    android:hint="Please input email" />
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

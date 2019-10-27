@@ -8,6 +8,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TabHost;
+import android.widget.Toast;
+
+import com.hdl.elog.ELog;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import io.reactivex.disposables.Disposable;
 
 public class LoginOrRegister extends AppCompatActivity implements View.OnClickListener {
     TabHost tabHost;
@@ -18,13 +26,15 @@ public class LoginOrRegister extends AppCompatActivity implements View.OnClickLi
     Button registerBtn;
     EditText registerUsername;
     EditText registerPassword;
+    EditText registerRepeatPassword;
+    EditText registerEmail;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_or_register);
-
         initView();
+        HttpSend.getInstance().initContext(this);
     }
 
     private void initView() {
@@ -37,6 +47,8 @@ public class LoginOrRegister extends AppCompatActivity implements View.OnClickLi
         registerBtn = findViewById(R.id.register_btn);
         registerUsername = findViewById(R.id.register_username);
         registerPassword = findViewById(R.id.register_password);
+        registerRepeatPassword = findViewById(R.id.register_repeatPassword);
+        registerEmail = findViewById(R.id.register_email);
 
         tabHost.setup();
         tabHost.addTab(tabHost.newTabSpec("Login").setIndicator("Login").setContent(R.id.login_layout));
@@ -44,6 +56,22 @@ public class LoginOrRegister extends AppCompatActivity implements View.OnClickLi
 
         // Register Button Listener
         loginBtn.setOnClickListener(this);
+
+        registerEmail.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View view, boolean b) {
+                if (b) {
+                    // do nothing
+                }
+                else {
+                    // validate email format
+                    String email = registerEmail.getText().toString();
+                    if (!validateEmail(email)) {
+                        Toast.makeText(LoginOrRegister.this, "Email Format Wrong", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            }
+        });
     }
 
     @Override
@@ -59,16 +87,27 @@ public class LoginOrRegister extends AppCompatActivity implements View.OnClickLi
                     finish();
                 }
                 else {
-                    // reset
-                    loginUsername.setText("");
+                    // reset password
+                    // loginUsername.setText("");
                     loginPassword.setText("");
                 }
                 break;
             }
             case R.id.register_btn: {
-                Intent intent = new Intent(this, MainPage.class);
-                startActivity(intent);
-                finish();
+                String username = registerUsername.getText().toString();
+                String password = registerPassword.getText().toString();
+                String repeatPassword = registerRepeatPassword.getText().toString();
+                String email = registerEmail.getText().toString();
+                if (register(username, password, repeatPassword, email)) {
+                    Intent intent = new Intent(this, MainPage.class);
+                    startActivity(intent);
+                    finish();
+                }
+                else {
+                    // reset password
+                    registerPassword.setText("");
+                    registerRepeatPassword.setText("");
+                }
                 break;
             }
             default:
@@ -83,6 +122,62 @@ public class LoginOrRegister extends AppCompatActivity implements View.OnClickLi
         }
 
         // call to server
+        HttpSend.getInstance().login(username, password, new ResultCallbackListener<ImEntities.LoginResponse>() {
+            @Override
+            public void onSubscribe(Disposable d) { }
+
+            @Override
+            public void onNext(ImEntities.LoginResponse loginResponse) {
+                ELog.e("Login Result: code =" + loginResponse.getCode() + "\t msg = " + loginResponse.getMessage());
+                Toast.makeText(LoginOrRegister.this, "Login Successful", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onError(Throwable e) {
+                e.printStackTrace();
+                ELog.e("error: " + e.getMessage());
+            }
+
+            @Override
+            public void onComplete() { }
+        });
         return true;
     }
+
+    private boolean register(String username, String password, String repeatPassword, String email) {
+        // validate
+        if (username == null || password == null || password.length() > 20) {
+            return false;
+        }
+
+        // call to server
+        HttpSend.getInstance().register(username, password, email,new ResultCallbackListener<ImEntities.RegisternResponse>() {
+            @Override
+            public void onSubscribe(Disposable d) { }
+
+            @Override
+            public void onNext(ImEntities.RegisternResponse registerResponse) {
+                ELog.e("Register Result: code =" + registerResponse.getCode() + "\t msg = " + registerResponse.getMessage());
+                Toast.makeText(LoginOrRegister.this, "Login Successful", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onError(Throwable e) {
+                e.printStackTrace();
+                ELog.e("error: " + e.getMessage());
+            }
+
+            @Override
+            public void onComplete() { }
+        });
+        return true;
+    }
+
+    private boolean validateEmail(String email) {
+        Pattern p = Pattern.compile("/^[a-z]([a-z0-9]*[-_]?[a-z0-9]+)*@([a-z0-9]*[-_]?[a-z0-9]+)+[\\.][a-z]{2,3}([\\.][a-z]{2})?$/i");
+        Matcher matcher = p.matcher(email);
+        matcher.find();
+        return matcher.matches();
+    }
+
 }
