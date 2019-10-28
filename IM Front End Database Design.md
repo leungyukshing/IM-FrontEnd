@@ -24,11 +24,16 @@ There is one table: **chat_record**
 
 ### chat_record
 
-| Name    | Type    | Key         | Note                                         |
-| ------- | ------- | ----------- | -------------------------------------------- |
-| id      | int     | primary key | chat record id(auto increment)               |
-| chat_id | int     | foreign key | to indicate this record belong to which chat |
-| user_id | int     | foreign key | to indicate who send this record             |
-| content | varchar |             | message content                              |
-| time    | varchar |             | record created time                          |
+| Name    | Type     | Key         | Note                                         |
+| ------- | -------- | ----------- | -------------------------------------------- |
+| id      | int      | primary key | chat record id(auto increment)               |
+| chat_id | int      | foreign key | to indicate this record belong to which chat |
+| user_id | int      | foreign key | to indicate who send this record             |
+| content | varchar  |             | message content                              |
+| time    | datetime |             | record created time                          |
 
+---
+
+## Reference
+
+1. [Android SQLite Usage](https://blog.csdn.net/midnight_time/article/details/80834198)
