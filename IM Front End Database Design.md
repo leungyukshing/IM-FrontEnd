@@ -38,3 +38,4 @@ There is one table: **chat_record**
 ## Reference
 
 1. [Android SQLite Usage](https://blog.csdn.net/midnight_time/article/details/80834198)
+2. [Encapsulate SQLiteDatabase](https://blog.csdn.net/jian11058/article/details/89239010)
