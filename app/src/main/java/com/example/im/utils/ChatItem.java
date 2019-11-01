@@ -6,18 +6,16 @@ import java.util.List;
 public class ChatItem {
     private boolean myInfo;
     private int iconID;
-    private String username;
+    private int chatID;
+    private int senderID;
+    private String senderName;
     private String content;
     private String chatObj;
     public static List<ChatItem> chatItemList = new ArrayList<>();
 
-    public boolean isMyInfo() {
-        return myInfo;
-    }
+    public boolean isMyInfo() { return myInfo; }
 
-    public void setMyInfo(boolean myInfo) {
-        this.myInfo = myInfo;
-    }
+    public void setMyInfo(boolean myInfo) { this.myInfo = myInfo; }
 
     public void setIconID(int iconID) {
         this.iconID = iconID;
@@ -27,13 +25,17 @@ public class ChatItem {
         return iconID;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
-    }
+    public void setChatID(int chatID) { this.chatID = chatID; }
 
-    public String getUsername() {
-        return username;
-    }
+    public int getChatID() { return chatID; }
+
+    public void setSenderID() { this.senderID = senderID; }
+
+    public int getSenderID() { return senderID; }
+
+    public void setSenderName(String senderName) { this.senderName = senderName; }
+
+    public String getSenderName() { return senderName; }
 
     public void setContent(String content) {
         this.content = content;
@@ -43,11 +45,7 @@ public class ChatItem {
         return content;
     }
 
-    public String getChatObj() {
-        return chatObj;
-    }
+    public String getChatObj() { return chatObj; }
 
-    public void setChatObj(String chatObj) {
-        this.chatObj = chatObj;
-    }
+    public void setChatObj(String chatObj) { this.chatObj = chatObj; }
 }

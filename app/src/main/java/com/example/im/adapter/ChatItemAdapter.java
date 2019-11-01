@@ -65,7 +65,7 @@ public class ChatItemAdapter extends ArrayAdapter<ChatItem> {
         }
 
         viewHolder.icon.setImageResource(ImageManager.imagesAvatar[chatItemList.get(position).getIconID()]);
-        viewHolder.username.setText(chatItem.isMyInfo() ? chatItemList.get(position).getUsername() : chatItemList.get(position).getChatObj());
+        viewHolder.username.setText(chatItem.isMyInfo() ? chatItemList.get(position).getSenderName() : chatItemList.get(position).getChatObj());
         viewHolder.content.setText(chatItemList.get(position).getContent());
         return view;
     }

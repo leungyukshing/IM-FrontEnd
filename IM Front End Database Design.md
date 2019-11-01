@@ -24,14 +24,15 @@ There is one table: **chat_record**
 
 ### chat_record
 
-| Name       | Type     | Key         | Note                                         |
-| ---------- | -------- | ----------- | -------------------------------------------- |
-| id         | int      | primary key | chat record id(auto increment)               |
-| chat_id    | int      | foreign key | to indicate this record belong to which chat |
-| user_id    | int      | foreign key | to indicate who send this record             |
-| content    | varchar  |             | message content                              |
-| time       | datetime |             | record created time                          |
-| encryptkey | varchar  |             | key used to encrypt info                     |
+| Name        | Type     | Key         | Note                                         |
+| ----------- | -------- | ----------- | -------------------------------------------- |
+| id          | int      | primary key | chat record id(auto increment)               |
+| chat_id     | int      | foreign key | to indicate this record belong to which chat |
+| sender_id   | int      | foreign key | to indicate who send this record             |
+| sender_name | varchar  |             | to indicate who send this record             |
+| content     | varchar  |             | message content                              |
+| time        | datetime |             | record created time                          |
+| encryptkey  | varchar  |             | key used to encrypt info                     |
 
 ---
 
@@ -39,3 +40,5 @@ There is one table: **chat_record**
 
 1. [Android SQLite Usage](https://blog.csdn.net/midnight_time/article/details/80834198)
 2. [Encapsulate SQLiteDatabase](https://blog.csdn.net/jian11058/article/details/89239010)
+3. [Android SQLite Multi-select Query](https://blog.csdn.net/luoshen87/article/details/74784161)
+
