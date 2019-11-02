@@ -24,7 +24,7 @@ message LoginRequest {
 }
 
 message LoginResponse {
-	optional string code = 1;
+    optional string code = 1;
     optional string message = 2;
     optional User user = 3;
 }
