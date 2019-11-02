@@ -12,6 +12,12 @@ message RegisternResponse {
     optional string message = 2;
 }
 
+message User {
+    optional string userid = 1;
+    optional string username = 2;
+    optional string email = 3;
+}
+
 message LoginRequest {
     optional string email = 1;
     optional string password = 2;
@@ -20,14 +26,31 @@ message LoginRequest {
 message LoginResponse {
 	optional string code = 1;
     optional string message = 2;
-    optional string userid = 3;
-    optional string username = 4;    
+    optional User user = 3;
+}
+
+message Chat {
+    optional string chatid = 1;
+    optional string userid = 2;
+    optional string chatname = 3;
+    optional string create_time = 4;
+    optional string last_update_time = 5;
+}
+
+message GetChatListRequest {
+    optional string userid = 1;
+}
+
+message GetChatListResponse {
+    optional string code = 1;
+    repeated Chat chat = 2;
 }
 
 message GetContactListRequest {
-
+    optional string userid = 1;
 }
 
 message GetContactListResponse {
-
+    optional string code = 1;
+    repeated User user = 2;
 }

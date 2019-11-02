@@ -29,7 +29,7 @@ public class ChatItem {
 
     public int getChatID() { return chatID; }
 
-    public void setSenderID() { this.senderID = senderID; }
+    public void setSenderID(int senderID) { this.senderID = senderID; }
 
     public int getSenderID() { return senderID; }
 

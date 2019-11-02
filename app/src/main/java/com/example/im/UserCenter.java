@@ -2,8 +2,7 @@ package com.example.im;
 
 public class UserCenter {
     private static UserCenter userCenter;
-    private  String userName;
-    private int userID;
+    private ImEntities.User user;
 
     private UserCenter() { }
 
@@ -18,12 +17,7 @@ public class UserCenter {
         return userCenter;
     }
 
-    public int getUserID() { return userID; }
+    public void setUser(ImEntities.User user) { this.user = user; }
 
-    public void setUserID(int userID) { this.userID = userID; }
-
-    public String getUserName() { return userName; }
-
-    public void setUserName(String userName) { this.userName = userName; }
-
+    public ImEntities.User getUser() { return user; }
 }

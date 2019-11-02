@@ -135,6 +135,7 @@ public class LoginOrRegister extends AppCompatActivity implements View.OnClickLi
             @Override
             public void onNext(ImEntities.LoginResponse loginResponse) {
                 ELog.e("Login Result: code =" + loginResponse.getCode() + "\t msg = " + loginResponse.getMessage());
+                UserCenter.getInstance().setUser(loginResponse.getUser());
                 Toast.makeText(LoginOrRegister.this, "Login Successful", Toast.LENGTH_SHORT).show();
                 // give error msg if failed
             }

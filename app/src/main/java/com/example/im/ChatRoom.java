@@ -55,7 +55,8 @@ public class ChatRoom extends AppCompatActivity {
                 if (!content.isEmpty()) {
                     ChatItem chatItem = new ChatItem();
                     chatItem.setContent(content);
-                    chatItem.setSenderName(UserCenter.getInstance().getUserName());
+                    chatItem.setSenderID(Integer.parseInt(UserCenter.getInstance().getUser().getUserid()));
+                    chatItem.setSenderName(UserCenter.getInstance().getUser().getUsername());
                     chatItem.setMyInfo(true);
                     chatItem.setChatID(chatID);
                     // 1. save to DB

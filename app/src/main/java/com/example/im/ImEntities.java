@@ -1054,6 +1054,594 @@ public final class ImEntities {
     }
   }
 
+  public interface UserOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:User)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>optional string userid = 1;</code>
+     */
+    boolean hasUserid();
+    /**
+     * <code>optional string userid = 1;</code>
+     */
+    String getUserid();
+    /**
+     * <code>optional string userid = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getUseridBytes();
+
+    /**
+     * <code>optional string username = 2;</code>
+     */
+    boolean hasUsername();
+    /**
+     * <code>optional string username = 2;</code>
+     */
+    String getUsername();
+    /**
+     * <code>optional string username = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getUsernameBytes();
+
+    /**
+     * <code>optional string email = 3;</code>
+     */
+    boolean hasEmail();
+    /**
+     * <code>optional string email = 3;</code>
+     */
+    String getEmail();
+    /**
+     * <code>optional string email = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getEmailBytes();
+  }
+  /**
+   * Protobuf type {@code User}
+   */
+  public  static final class User extends
+      com.google.protobuf.GeneratedMessageLite<
+          User, User.Builder> implements
+      // @@protoc_insertion_point(message_implements:User)
+      UserOrBuilder {
+    private User() {
+      userid_ = "";
+      username_ = "";
+      email_ = "";
+    }
+    private int bitField0_;
+    public static final int USERID_FIELD_NUMBER = 1;
+    private String userid_;
+    /**
+     * <code>optional string userid = 1;</code>
+     */
+    public boolean hasUserid() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional string userid = 1;</code>
+     */
+    public String getUserid() {
+      return userid_;
+    }
+    /**
+     * <code>optional string userid = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getUseridBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(userid_);
+    }
+    /**
+     * <code>optional string userid = 1;</code>
+     */
+    private void setUserid(
+        String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+      userid_ = value;
+    }
+    /**
+     * <code>optional string userid = 1;</code>
+     */
+    private void clearUserid() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      userid_ = getDefaultInstance().getUserid();
+    }
+    /**
+     * <code>optional string userid = 1;</code>
+     */
+    private void setUseridBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+      userid_ = value.toStringUtf8();
+    }
+
+    public static final int USERNAME_FIELD_NUMBER = 2;
+    private String username_;
+    /**
+     * <code>optional string username = 2;</code>
+     */
+    public boolean hasUsername() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional string username = 2;</code>
+     */
+    public String getUsername() {
+      return username_;
+    }
+    /**
+     * <code>optional string username = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getUsernameBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(username_);
+    }
+    /**
+     * <code>optional string username = 2;</code>
+     */
+    private void setUsername(
+        String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+      username_ = value;
+    }
+    /**
+     * <code>optional string username = 2;</code>
+     */
+    private void clearUsername() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      username_ = getDefaultInstance().getUsername();
+    }
+    /**
+     * <code>optional string username = 2;</code>
+     */
+    private void setUsernameBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+      username_ = value.toStringUtf8();
+    }
+
+    public static final int EMAIL_FIELD_NUMBER = 3;
+    private String email_;
+    /**
+     * <code>optional string email = 3;</code>
+     */
+    public boolean hasEmail() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional string email = 3;</code>
+     */
+    public String getEmail() {
+      return email_;
+    }
+    /**
+     * <code>optional string email = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getEmailBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(email_);
+    }
+    /**
+     * <code>optional string email = 3;</code>
+     */
+    private void setEmail(
+        String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+      email_ = value;
+    }
+    /**
+     * <code>optional string email = 3;</code>
+     */
+    private void clearEmail() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      email_ = getDefaultInstance().getEmail();
+    }
+    /**
+     * <code>optional string email = 3;</code>
+     */
+    private void setEmailBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+      email_ = value.toStringUtf8();
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeString(1, getUserid());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeString(2, getUsername());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeString(3, getEmail());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeStringSize(1, getUserid());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeStringSize(2, getUsername());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeStringSize(3, getEmail());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    public static ImEntities.User parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static ImEntities.User parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static ImEntities.User parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static ImEntities.User parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static ImEntities.User parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static ImEntities.User parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static ImEntities.User parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+    public static ImEntities.User parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static ImEntities.User parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static ImEntities.User parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(ImEntities.User prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+
+    /**
+     * Protobuf type {@code User}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          User, Builder> implements
+        // @@protoc_insertion_point(builder_implements:User)
+        ImEntities.UserOrBuilder {
+      // Construct using ImEntities.User.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>optional string userid = 1;</code>
+       */
+      public boolean hasUserid() {
+        return instance.hasUserid();
+      }
+      /**
+       * <code>optional string userid = 1;</code>
+       */
+      public String getUserid() {
+        return instance.getUserid();
+      }
+      /**
+       * <code>optional string userid = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getUseridBytes() {
+        return instance.getUseridBytes();
+      }
+      /**
+       * <code>optional string userid = 1;</code>
+       */
+      public Builder setUserid(
+          String value) {
+        copyOnWrite();
+        instance.setUserid(value);
+        return this;
+      }
+      /**
+       * <code>optional string userid = 1;</code>
+       */
+      public Builder clearUserid() {
+        copyOnWrite();
+        instance.clearUserid();
+        return this;
+      }
+      /**
+       * <code>optional string userid = 1;</code>
+       */
+      public Builder setUseridBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setUseridBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>optional string username = 2;</code>
+       */
+      public boolean hasUsername() {
+        return instance.hasUsername();
+      }
+      /**
+       * <code>optional string username = 2;</code>
+       */
+      public String getUsername() {
+        return instance.getUsername();
+      }
+      /**
+       * <code>optional string username = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getUsernameBytes() {
+        return instance.getUsernameBytes();
+      }
+      /**
+       * <code>optional string username = 2;</code>
+       */
+      public Builder setUsername(
+          String value) {
+        copyOnWrite();
+        instance.setUsername(value);
+        return this;
+      }
+      /**
+       * <code>optional string username = 2;</code>
+       */
+      public Builder clearUsername() {
+        copyOnWrite();
+        instance.clearUsername();
+        return this;
+      }
+      /**
+       * <code>optional string username = 2;</code>
+       */
+      public Builder setUsernameBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setUsernameBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>optional string email = 3;</code>
+       */
+      public boolean hasEmail() {
+        return instance.hasEmail();
+      }
+      /**
+       * <code>optional string email = 3;</code>
+       */
+      public String getEmail() {
+        return instance.getEmail();
+      }
+      /**
+       * <code>optional string email = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getEmailBytes() {
+        return instance.getEmailBytes();
+      }
+      /**
+       * <code>optional string email = 3;</code>
+       */
+      public Builder setEmail(
+          String value) {
+        copyOnWrite();
+        instance.setEmail(value);
+        return this;
+      }
+      /**
+       * <code>optional string email = 3;</code>
+       */
+      public Builder clearEmail() {
+        copyOnWrite();
+        instance.clearEmail();
+        return this;
+      }
+      /**
+       * <code>optional string email = 3;</code>
+       */
+      public Builder setEmailBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setEmailBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:User)
+    }
+    protected final Object dynamicMethod(
+        MethodToInvoke method,
+        Object arg0, Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new ImEntities.User();
+        }
+        case IS_INITIALIZED: {
+          return DEFAULT_INSTANCE;
+        }
+        case MAKE_IMMUTABLE: {
+          return null;
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case VISIT: {
+          Visitor visitor = (Visitor) arg0;
+          ImEntities.User other = (ImEntities.User) arg1;
+          userid_ = visitor.visitString(
+              hasUserid(), userid_,
+              other.hasUserid(), other.userid_);
+          username_ = visitor.visitString(
+              hasUsername(), username_,
+              other.hasUsername(), other.username_);
+          email_ = visitor.visitString(
+              hasEmail(), email_,
+              other.hasEmail(), other.email_);
+          if (visitor == MergeFromVisitor
+              .INSTANCE) {
+            bitField0_ |= other.bitField0_;
+          }
+          return this;
+        }
+        case MERGE_FROM_STREAM: {
+          com.google.protobuf.CodedInputStream input =
+              (com.google.protobuf.CodedInputStream) arg0;
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry =
+              (com.google.protobuf.ExtensionRegistryLite) arg1;
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                default: {
+                  if (!parseUnknownField(tag, input)) {
+                    done = true;
+                  }
+                  break;
+                }
+                case 10: {
+                  String s = input.readString();
+                  bitField0_ |= 0x00000001;
+                  userid_ = s;
+                  break;
+                }
+                case 18: {
+                  String s = input.readString();
+                  bitField0_ |= 0x00000002;
+                  username_ = s;
+                  break;
+                }
+                case 26: {
+                  String s = input.readString();
+                  bitField0_ |= 0x00000004;
+                  email_ = s;
+                  break;
+                }
+              }
+            }
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw new RuntimeException(e.setUnfinishedMessage(this));
+          } catch (java.io.IOException e) {
+            throw new RuntimeException(
+                new com.google.protobuf.InvalidProtocolBufferException(
+                    e.getMessage()).setUnfinishedMessage(this));
+          } finally {
+          }
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          if (PARSER == null) {    synchronized (ImEntities.User.class) {
+              if (PARSER == null) {
+                PARSER = new DefaultInstanceBasedParser(DEFAULT_INSTANCE);
+              }
+            }
+          }
+          return PARSER;
+        }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:User)
+    private static final ImEntities.User DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new User();
+      DEFAULT_INSTANCE.makeImmutable();
+    }
+
+    public static ImEntities.User getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<User> PARSER;
+
+    public static com.google.protobuf.Parser<User> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
   public interface LoginRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:LoginRequest)
       com.google.protobuf.MessageLiteOrBuilder {
@@ -1547,32 +2135,13 @@ public final class ImEntities {
         getMessageBytes();
 
     /**
-     * <code>optional string userid = 3;</code>
+     * <code>optional .User user = 3;</code>
      */
-    boolean hasUserid();
+    boolean hasUser();
     /**
-     * <code>optional string userid = 3;</code>
+     * <code>optional .User user = 3;</code>
      */
-    String getUserid();
-    /**
-     * <code>optional string userid = 3;</code>
-     */
-    com.google.protobuf.ByteString
-        getUseridBytes();
-
-    /**
-     * <code>optional string username = 4;</code>
-     */
-    boolean hasUsername();
-    /**
-     * <code>optional string username = 4;</code>
-     */
-    String getUsername();
-    /**
-     * <code>optional string username = 4;</code>
-     */
-    com.google.protobuf.ByteString
-        getUsernameBytes();
+    ImEntities.User getUser();
   }
   /**
    * Protobuf type {@code LoginResponse}
@@ -1585,8 +2154,6 @@ public final class ImEntities {
     private LoginResponse() {
       code_ = "";
       message_ = "";
-      userid_ = "";
-      username_ = "";
     }
     private int bitField0_;
     public static final int CODE_FIELD_NUMBER = 1;
@@ -1691,106 +2258,56 @@ public final class ImEntities {
       message_ = value.toStringUtf8();
     }
 
-    public static final int USERID_FIELD_NUMBER = 3;
-    private String userid_;
+    public static final int USER_FIELD_NUMBER = 3;
+    private ImEntities.User user_;
     /**
-     * <code>optional string userid = 3;</code>
+     * <code>optional .User user = 3;</code>
      */
-    public boolean hasUserid() {
+    public boolean hasUser() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
     /**
-     * <code>optional string userid = 3;</code>
+     * <code>optional .User user = 3;</code>
      */
-    public String getUserid() {
-      return userid_;
+    public ImEntities.User getUser() {
+      return user_ == null ? ImEntities.User.getDefaultInstance() : user_;
     }
     /**
-     * <code>optional string userid = 3;</code>
+     * <code>optional .User user = 3;</code>
      */
-    public com.google.protobuf.ByteString
-        getUseridBytes() {
-      return com.google.protobuf.ByteString.copyFromUtf8(userid_);
-    }
-    /**
-     * <code>optional string userid = 3;</code>
-     */
-    private void setUserid(
-        String value) {
+    private void setUser(ImEntities.User value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
-      userid_ = value;
+        throw new NullPointerException();
+      }
+      user_ = value;
+      bitField0_ |= 0x00000004;
+      }
+    /**
+     * <code>optional .User user = 3;</code>
+     */
+    private void setUser(
+        ImEntities.User.Builder builderForValue) {
+      user_ = builderForValue.build();
+      bitField0_ |= 0x00000004;
     }
     /**
-     * <code>optional string userid = 3;</code>
+     * <code>optional .User user = 3;</code>
      */
-    private void clearUserid() {
+    private void mergeUser(ImEntities.User value) {
+      if (user_ != null &&
+          user_ != ImEntities.User.getDefaultInstance()) {
+        user_ =
+          ImEntities.User.newBuilder(user_).mergeFrom(value).buildPartial();
+      } else {
+        user_ = value;
+      }
+      bitField0_ |= 0x00000004;
+    }
+    /**
+     * <code>optional .User user = 3;</code>
+     */
+    private void clearUser() {  user_ = null;
       bitField0_ = (bitField0_ & ~0x00000004);
-      userid_ = getDefaultInstance().getUserid();
-    }
-    /**
-     * <code>optional string userid = 3;</code>
-     */
-    private void setUseridBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
-      userid_ = value.toStringUtf8();
-    }
-
-    public static final int USERNAME_FIELD_NUMBER = 4;
-    private String username_;
-    /**
-     * <code>optional string username = 4;</code>
-     */
-    public boolean hasUsername() {
-      return ((bitField0_ & 0x00000008) == 0x00000008);
-    }
-    /**
-     * <code>optional string username = 4;</code>
-     */
-    public String getUsername() {
-      return username_;
-    }
-    /**
-     * <code>optional string username = 4;</code>
-     */
-    public com.google.protobuf.ByteString
-        getUsernameBytes() {
-      return com.google.protobuf.ByteString.copyFromUtf8(username_);
-    }
-    /**
-     * <code>optional string username = 4;</code>
-     */
-    private void setUsername(
-        String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000008;
-      username_ = value;
-    }
-    /**
-     * <code>optional string username = 4;</code>
-     */
-    private void clearUsername() {
-      bitField0_ = (bitField0_ & ~0x00000008);
-      username_ = getDefaultInstance().getUsername();
-    }
-    /**
-     * <code>optional string username = 4;</code>
-     */
-    private void setUsernameBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000008;
-      username_ = value.toStringUtf8();
     }
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
@@ -1802,10 +2319,7 @@ public final class ImEntities {
         output.writeString(2, getMessage());
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        output.writeString(3, getUserid());
-      }
-      if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        output.writeString(4, getUsername());
+        output.writeMessage(3, getUser());
       }
       unknownFields.writeTo(output);
     }
@@ -1825,11 +2339,7 @@ public final class ImEntities {
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeStringSize(3, getUserid());
-      }
-      if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeStringSize(4, getUsername());
+          .computeMessageSize(3, getUser());
       }
       size += unknownFields.getSerializedSize();
       memoizedSerializedSize = size;
@@ -2011,94 +2521,47 @@ public final class ImEntities {
       }
 
       /**
-       * <code>optional string userid = 3;</code>
+       * <code>optional .User user = 3;</code>
        */
-      public boolean hasUserid() {
-        return instance.hasUserid();
+      public boolean hasUser() {
+        return instance.hasUser();
       }
       /**
-       * <code>optional string userid = 3;</code>
+       * <code>optional .User user = 3;</code>
        */
-      public String getUserid() {
-        return instance.getUserid();
+      public ImEntities.User getUser() {
+        return instance.getUser();
       }
       /**
-       * <code>optional string userid = 3;</code>
+       * <code>optional .User user = 3;</code>
        */
-      public com.google.protobuf.ByteString
-          getUseridBytes() {
-        return instance.getUseridBytes();
-      }
-      /**
-       * <code>optional string userid = 3;</code>
-       */
-      public Builder setUserid(
-          String value) {
+      public Builder setUser(ImEntities.User value) {
         copyOnWrite();
-        instance.setUserid(value);
+        instance.setUser(value);
+        return this;
+        }
+      /**
+       * <code>optional .User user = 3;</code>
+       */
+      public Builder setUser(
+          ImEntities.User.Builder builderForValue) {
+        copyOnWrite();
+        instance.setUser(builderForValue);
         return this;
       }
       /**
-       * <code>optional string userid = 3;</code>
+       * <code>optional .User user = 3;</code>
        */
-      public Builder clearUserid() {
+      public Builder mergeUser(ImEntities.User value) {
         copyOnWrite();
-        instance.clearUserid();
+        instance.mergeUser(value);
         return this;
       }
       /**
-       * <code>optional string userid = 3;</code>
+       * <code>optional .User user = 3;</code>
        */
-      public Builder setUseridBytes(
-          com.google.protobuf.ByteString value) {
-        copyOnWrite();
-        instance.setUseridBytes(value);
-        return this;
-      }
-
-      /**
-       * <code>optional string username = 4;</code>
-       */
-      public boolean hasUsername() {
-        return instance.hasUsername();
-      }
-      /**
-       * <code>optional string username = 4;</code>
-       */
-      public String getUsername() {
-        return instance.getUsername();
-      }
-      /**
-       * <code>optional string username = 4;</code>
-       */
-      public com.google.protobuf.ByteString
-          getUsernameBytes() {
-        return instance.getUsernameBytes();
-      }
-      /**
-       * <code>optional string username = 4;</code>
-       */
-      public Builder setUsername(
-          String value) {
-        copyOnWrite();
-        instance.setUsername(value);
-        return this;
-      }
-      /**
-       * <code>optional string username = 4;</code>
-       */
-      public Builder clearUsername() {
-        copyOnWrite();
-        instance.clearUsername();
-        return this;
-      }
-      /**
-       * <code>optional string username = 4;</code>
-       */
-      public Builder setUsernameBytes(
-          com.google.protobuf.ByteString value) {
-        copyOnWrite();
-        instance.setUsernameBytes(value);
+      public Builder clearUser() {  copyOnWrite();
+        instance.clearUser();
         return this;
       }
 
@@ -2129,12 +2592,7 @@ public final class ImEntities {
           message_ = visitor.visitString(
               hasMessage(), message_,
               other.hasMessage(), other.message_);
-          userid_ = visitor.visitString(
-              hasUserid(), userid_,
-              other.hasUserid(), other.userid_);
-          username_ = visitor.visitString(
-              hasUsername(), username_,
-              other.hasUsername(), other.username_);
+          user_ = visitor.visitMessage(user_, other.user_);
           if (visitor == MergeFromVisitor
               .INSTANCE) {
             bitField0_ |= other.bitField0_;
@@ -2173,15 +2631,16 @@ public final class ImEntities {
                   break;
                 }
                 case 26: {
-                  String s = input.readString();
+                  ImEntities.User.Builder subBuilder = null;
+                  if (((bitField0_ & 0x00000004) == 0x00000004)) {
+                    subBuilder = user_.toBuilder();
+                  }
+                  user_ = input.readMessage(ImEntities.User.parser(), extensionRegistry);
+                  if (subBuilder != null) {
+                    subBuilder.mergeFrom(user_);
+                    user_ = subBuilder.buildPartial();
+                  }
                   bitField0_ |= 0x00000004;
-                  userid_ = s;
-                  break;
-                }
-                case 34: {
-                  String s = input.readString();
-                  bitField0_ |= 0x00000008;
-                  username_ = s;
                   break;
                 }
               }
@@ -2230,9 +2689,1781 @@ public final class ImEntities {
     }
   }
 
+  public interface ChatOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Chat)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>optional string chatid = 1;</code>
+     */
+    boolean hasChatid();
+    /**
+     * <code>optional string chatid = 1;</code>
+     */
+    String getChatid();
+    /**
+     * <code>optional string chatid = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getChatidBytes();
+
+    /**
+     * <code>optional string userid = 2;</code>
+     */
+    boolean hasUserid();
+    /**
+     * <code>optional string userid = 2;</code>
+     */
+    String getUserid();
+    /**
+     * <code>optional string userid = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getUseridBytes();
+
+    /**
+     * <code>optional string chatname = 3;</code>
+     */
+    boolean hasChatname();
+    /**
+     * <code>optional string chatname = 3;</code>
+     */
+    String getChatname();
+    /**
+     * <code>optional string chatname = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getChatnameBytes();
+
+    /**
+     * <code>optional string create_time = 4;</code>
+     */
+    boolean hasCreateTime();
+    /**
+     * <code>optional string create_time = 4;</code>
+     */
+    String getCreateTime();
+    /**
+     * <code>optional string create_time = 4;</code>
+     */
+    com.google.protobuf.ByteString
+        getCreateTimeBytes();
+
+    /**
+     * <code>optional string last_update_time = 5;</code>
+     */
+    boolean hasLastUpdateTime();
+    /**
+     * <code>optional string last_update_time = 5;</code>
+     */
+    String getLastUpdateTime();
+    /**
+     * <code>optional string last_update_time = 5;</code>
+     */
+    com.google.protobuf.ByteString
+        getLastUpdateTimeBytes();
+  }
+  /**
+   * Protobuf type {@code Chat}
+   */
+  public  static final class Chat extends
+      com.google.protobuf.GeneratedMessageLite<
+          Chat, Chat.Builder> implements
+      // @@protoc_insertion_point(message_implements:Chat)
+      ChatOrBuilder {
+    private Chat() {
+      chatid_ = "";
+      userid_ = "";
+      chatname_ = "";
+      createTime_ = "";
+      lastUpdateTime_ = "";
+    }
+    private int bitField0_;
+    public static final int CHATID_FIELD_NUMBER = 1;
+    private String chatid_;
+    /**
+     * <code>optional string chatid = 1;</code>
+     */
+    public boolean hasChatid() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional string chatid = 1;</code>
+     */
+    public String getChatid() {
+      return chatid_;
+    }
+    /**
+     * <code>optional string chatid = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getChatidBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(chatid_);
+    }
+    /**
+     * <code>optional string chatid = 1;</code>
+     */
+    private void setChatid(
+        String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+      chatid_ = value;
+    }
+    /**
+     * <code>optional string chatid = 1;</code>
+     */
+    private void clearChatid() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      chatid_ = getDefaultInstance().getChatid();
+    }
+    /**
+     * <code>optional string chatid = 1;</code>
+     */
+    private void setChatidBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+      chatid_ = value.toStringUtf8();
+    }
+
+    public static final int USERID_FIELD_NUMBER = 2;
+    private String userid_;
+    /**
+     * <code>optional string userid = 2;</code>
+     */
+    public boolean hasUserid() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional string userid = 2;</code>
+     */
+    public String getUserid() {
+      return userid_;
+    }
+    /**
+     * <code>optional string userid = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getUseridBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(userid_);
+    }
+    /**
+     * <code>optional string userid = 2;</code>
+     */
+    private void setUserid(
+        String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+      userid_ = value;
+    }
+    /**
+     * <code>optional string userid = 2;</code>
+     */
+    private void clearUserid() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      userid_ = getDefaultInstance().getUserid();
+    }
+    /**
+     * <code>optional string userid = 2;</code>
+     */
+    private void setUseridBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+      userid_ = value.toStringUtf8();
+    }
+
+    public static final int CHATNAME_FIELD_NUMBER = 3;
+    private String chatname_;
+    /**
+     * <code>optional string chatname = 3;</code>
+     */
+    public boolean hasChatname() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional string chatname = 3;</code>
+     */
+    public String getChatname() {
+      return chatname_;
+    }
+    /**
+     * <code>optional string chatname = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getChatnameBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(chatname_);
+    }
+    /**
+     * <code>optional string chatname = 3;</code>
+     */
+    private void setChatname(
+        String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+      chatname_ = value;
+    }
+    /**
+     * <code>optional string chatname = 3;</code>
+     */
+    private void clearChatname() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      chatname_ = getDefaultInstance().getChatname();
+    }
+    /**
+     * <code>optional string chatname = 3;</code>
+     */
+    private void setChatnameBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+      chatname_ = value.toStringUtf8();
+    }
+
+    public static final int CREATE_TIME_FIELD_NUMBER = 4;
+    private String createTime_;
+    /**
+     * <code>optional string create_time = 4;</code>
+     */
+    public boolean hasCreateTime() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>optional string create_time = 4;</code>
+     */
+    public String getCreateTime() {
+      return createTime_;
+    }
+    /**
+     * <code>optional string create_time = 4;</code>
+     */
+    public com.google.protobuf.ByteString
+        getCreateTimeBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(createTime_);
+    }
+    /**
+     * <code>optional string create_time = 4;</code>
+     */
+    private void setCreateTime(
+        String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+      createTime_ = value;
+    }
+    /**
+     * <code>optional string create_time = 4;</code>
+     */
+    private void clearCreateTime() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      createTime_ = getDefaultInstance().getCreateTime();
+    }
+    /**
+     * <code>optional string create_time = 4;</code>
+     */
+    private void setCreateTimeBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+      createTime_ = value.toStringUtf8();
+    }
+
+    public static final int LAST_UPDATE_TIME_FIELD_NUMBER = 5;
+    private String lastUpdateTime_;
+    /**
+     * <code>optional string last_update_time = 5;</code>
+     */
+    public boolean hasLastUpdateTime() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>optional string last_update_time = 5;</code>
+     */
+    public String getLastUpdateTime() {
+      return lastUpdateTime_;
+    }
+    /**
+     * <code>optional string last_update_time = 5;</code>
+     */
+    public com.google.protobuf.ByteString
+        getLastUpdateTimeBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(lastUpdateTime_);
+    }
+    /**
+     * <code>optional string last_update_time = 5;</code>
+     */
+    private void setLastUpdateTime(
+        String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000010;
+      lastUpdateTime_ = value;
+    }
+    /**
+     * <code>optional string last_update_time = 5;</code>
+     */
+    private void clearLastUpdateTime() {
+      bitField0_ = (bitField0_ & ~0x00000010);
+      lastUpdateTime_ = getDefaultInstance().getLastUpdateTime();
+    }
+    /**
+     * <code>optional string last_update_time = 5;</code>
+     */
+    private void setLastUpdateTimeBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000010;
+      lastUpdateTime_ = value.toStringUtf8();
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeString(1, getChatid());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeString(2, getUserid());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeString(3, getChatname());
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeString(4, getCreateTime());
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeString(5, getLastUpdateTime());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeStringSize(1, getChatid());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeStringSize(2, getUserid());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeStringSize(3, getChatname());
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeStringSize(4, getCreateTime());
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeStringSize(5, getLastUpdateTime());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    public static ImEntities.Chat parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static ImEntities.Chat parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static ImEntities.Chat parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static ImEntities.Chat parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static ImEntities.Chat parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static ImEntities.Chat parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static ImEntities.Chat parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+    public static ImEntities.Chat parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static ImEntities.Chat parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static ImEntities.Chat parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(ImEntities.Chat prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+
+    /**
+     * Protobuf type {@code Chat}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          Chat, Builder> implements
+        // @@protoc_insertion_point(builder_implements:Chat)
+        ImEntities.ChatOrBuilder {
+      // Construct using ImEntities.Chat.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>optional string chatid = 1;</code>
+       */
+      public boolean hasChatid() {
+        return instance.hasChatid();
+      }
+      /**
+       * <code>optional string chatid = 1;</code>
+       */
+      public String getChatid() {
+        return instance.getChatid();
+      }
+      /**
+       * <code>optional string chatid = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getChatidBytes() {
+        return instance.getChatidBytes();
+      }
+      /**
+       * <code>optional string chatid = 1;</code>
+       */
+      public Builder setChatid(
+          String value) {
+        copyOnWrite();
+        instance.setChatid(value);
+        return this;
+      }
+      /**
+       * <code>optional string chatid = 1;</code>
+       */
+      public Builder clearChatid() {
+        copyOnWrite();
+        instance.clearChatid();
+        return this;
+      }
+      /**
+       * <code>optional string chatid = 1;</code>
+       */
+      public Builder setChatidBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setChatidBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>optional string userid = 2;</code>
+       */
+      public boolean hasUserid() {
+        return instance.hasUserid();
+      }
+      /**
+       * <code>optional string userid = 2;</code>
+       */
+      public String getUserid() {
+        return instance.getUserid();
+      }
+      /**
+       * <code>optional string userid = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getUseridBytes() {
+        return instance.getUseridBytes();
+      }
+      /**
+       * <code>optional string userid = 2;</code>
+       */
+      public Builder setUserid(
+          String value) {
+        copyOnWrite();
+        instance.setUserid(value);
+        return this;
+      }
+      /**
+       * <code>optional string userid = 2;</code>
+       */
+      public Builder clearUserid() {
+        copyOnWrite();
+        instance.clearUserid();
+        return this;
+      }
+      /**
+       * <code>optional string userid = 2;</code>
+       */
+      public Builder setUseridBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setUseridBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>optional string chatname = 3;</code>
+       */
+      public boolean hasChatname() {
+        return instance.hasChatname();
+      }
+      /**
+       * <code>optional string chatname = 3;</code>
+       */
+      public String getChatname() {
+        return instance.getChatname();
+      }
+      /**
+       * <code>optional string chatname = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getChatnameBytes() {
+        return instance.getChatnameBytes();
+      }
+      /**
+       * <code>optional string chatname = 3;</code>
+       */
+      public Builder setChatname(
+          String value) {
+        copyOnWrite();
+        instance.setChatname(value);
+        return this;
+      }
+      /**
+       * <code>optional string chatname = 3;</code>
+       */
+      public Builder clearChatname() {
+        copyOnWrite();
+        instance.clearChatname();
+        return this;
+      }
+      /**
+       * <code>optional string chatname = 3;</code>
+       */
+      public Builder setChatnameBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setChatnameBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>optional string create_time = 4;</code>
+       */
+      public boolean hasCreateTime() {
+        return instance.hasCreateTime();
+      }
+      /**
+       * <code>optional string create_time = 4;</code>
+       */
+      public String getCreateTime() {
+        return instance.getCreateTime();
+      }
+      /**
+       * <code>optional string create_time = 4;</code>
+       */
+      public com.google.protobuf.ByteString
+          getCreateTimeBytes() {
+        return instance.getCreateTimeBytes();
+      }
+      /**
+       * <code>optional string create_time = 4;</code>
+       */
+      public Builder setCreateTime(
+          String value) {
+        copyOnWrite();
+        instance.setCreateTime(value);
+        return this;
+      }
+      /**
+       * <code>optional string create_time = 4;</code>
+       */
+      public Builder clearCreateTime() {
+        copyOnWrite();
+        instance.clearCreateTime();
+        return this;
+      }
+      /**
+       * <code>optional string create_time = 4;</code>
+       */
+      public Builder setCreateTimeBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setCreateTimeBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>optional string last_update_time = 5;</code>
+       */
+      public boolean hasLastUpdateTime() {
+        return instance.hasLastUpdateTime();
+      }
+      /**
+       * <code>optional string last_update_time = 5;</code>
+       */
+      public String getLastUpdateTime() {
+        return instance.getLastUpdateTime();
+      }
+      /**
+       * <code>optional string last_update_time = 5;</code>
+       */
+      public com.google.protobuf.ByteString
+          getLastUpdateTimeBytes() {
+        return instance.getLastUpdateTimeBytes();
+      }
+      /**
+       * <code>optional string last_update_time = 5;</code>
+       */
+      public Builder setLastUpdateTime(
+          String value) {
+        copyOnWrite();
+        instance.setLastUpdateTime(value);
+        return this;
+      }
+      /**
+       * <code>optional string last_update_time = 5;</code>
+       */
+      public Builder clearLastUpdateTime() {
+        copyOnWrite();
+        instance.clearLastUpdateTime();
+        return this;
+      }
+      /**
+       * <code>optional string last_update_time = 5;</code>
+       */
+      public Builder setLastUpdateTimeBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setLastUpdateTimeBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:Chat)
+    }
+    protected final Object dynamicMethod(
+        MethodToInvoke method,
+        Object arg0, Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new ImEntities.Chat();
+        }
+        case IS_INITIALIZED: {
+          return DEFAULT_INSTANCE;
+        }
+        case MAKE_IMMUTABLE: {
+          return null;
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case VISIT: {
+          Visitor visitor = (Visitor) arg0;
+          ImEntities.Chat other = (ImEntities.Chat) arg1;
+          chatid_ = visitor.visitString(
+              hasChatid(), chatid_,
+              other.hasChatid(), other.chatid_);
+          userid_ = visitor.visitString(
+              hasUserid(), userid_,
+              other.hasUserid(), other.userid_);
+          chatname_ = visitor.visitString(
+              hasChatname(), chatname_,
+              other.hasChatname(), other.chatname_);
+          createTime_ = visitor.visitString(
+              hasCreateTime(), createTime_,
+              other.hasCreateTime(), other.createTime_);
+          lastUpdateTime_ = visitor.visitString(
+              hasLastUpdateTime(), lastUpdateTime_,
+              other.hasLastUpdateTime(), other.lastUpdateTime_);
+          if (visitor == MergeFromVisitor
+              .INSTANCE) {
+            bitField0_ |= other.bitField0_;
+          }
+          return this;
+        }
+        case MERGE_FROM_STREAM: {
+          com.google.protobuf.CodedInputStream input =
+              (com.google.protobuf.CodedInputStream) arg0;
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry =
+              (com.google.protobuf.ExtensionRegistryLite) arg1;
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                default: {
+                  if (!parseUnknownField(tag, input)) {
+                    done = true;
+                  }
+                  break;
+                }
+                case 10: {
+                  String s = input.readString();
+                  bitField0_ |= 0x00000001;
+                  chatid_ = s;
+                  break;
+                }
+                case 18: {
+                  String s = input.readString();
+                  bitField0_ |= 0x00000002;
+                  userid_ = s;
+                  break;
+                }
+                case 26: {
+                  String s = input.readString();
+                  bitField0_ |= 0x00000004;
+                  chatname_ = s;
+                  break;
+                }
+                case 34: {
+                  String s = input.readString();
+                  bitField0_ |= 0x00000008;
+                  createTime_ = s;
+                  break;
+                }
+                case 42: {
+                  String s = input.readString();
+                  bitField0_ |= 0x00000010;
+                  lastUpdateTime_ = s;
+                  break;
+                }
+              }
+            }
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw new RuntimeException(e.setUnfinishedMessage(this));
+          } catch (java.io.IOException e) {
+            throw new RuntimeException(
+                new com.google.protobuf.InvalidProtocolBufferException(
+                    e.getMessage()).setUnfinishedMessage(this));
+          } finally {
+          }
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          if (PARSER == null) {    synchronized (ImEntities.Chat.class) {
+              if (PARSER == null) {
+                PARSER = new DefaultInstanceBasedParser(DEFAULT_INSTANCE);
+              }
+            }
+          }
+          return PARSER;
+        }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:Chat)
+    private static final ImEntities.Chat DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new Chat();
+      DEFAULT_INSTANCE.makeImmutable();
+    }
+
+    public static ImEntities.Chat getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<Chat> PARSER;
+
+    public static com.google.protobuf.Parser<Chat> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface GetChatListRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:GetChatListRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>optional string userid = 1;</code>
+     */
+    boolean hasUserid();
+    /**
+     * <code>optional string userid = 1;</code>
+     */
+    String getUserid();
+    /**
+     * <code>optional string userid = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getUseridBytes();
+  }
+  /**
+   * Protobuf type {@code GetChatListRequest}
+   */
+  public  static final class GetChatListRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetChatListRequest, GetChatListRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:GetChatListRequest)
+      GetChatListRequestOrBuilder {
+    private GetChatListRequest() {
+      userid_ = "";
+    }
+    private int bitField0_;
+    public static final int USERID_FIELD_NUMBER = 1;
+    private String userid_;
+    /**
+     * <code>optional string userid = 1;</code>
+     */
+    public boolean hasUserid() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional string userid = 1;</code>
+     */
+    public String getUserid() {
+      return userid_;
+    }
+    /**
+     * <code>optional string userid = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getUseridBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(userid_);
+    }
+    /**
+     * <code>optional string userid = 1;</code>
+     */
+    private void setUserid(
+        String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+      userid_ = value;
+    }
+    /**
+     * <code>optional string userid = 1;</code>
+     */
+    private void clearUserid() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      userid_ = getDefaultInstance().getUserid();
+    }
+    /**
+     * <code>optional string userid = 1;</code>
+     */
+    private void setUseridBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+      userid_ = value.toStringUtf8();
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeString(1, getUserid());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeStringSize(1, getUserid());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    public static ImEntities.GetChatListRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static ImEntities.GetChatListRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static ImEntities.GetChatListRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static ImEntities.GetChatListRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static ImEntities.GetChatListRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static ImEntities.GetChatListRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static ImEntities.GetChatListRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+    public static ImEntities.GetChatListRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static ImEntities.GetChatListRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static ImEntities.GetChatListRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(ImEntities.GetChatListRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+
+    /**
+     * Protobuf type {@code GetChatListRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          GetChatListRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:GetChatListRequest)
+        ImEntities.GetChatListRequestOrBuilder {
+      // Construct using ImEntities.GetChatListRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>optional string userid = 1;</code>
+       */
+      public boolean hasUserid() {
+        return instance.hasUserid();
+      }
+      /**
+       * <code>optional string userid = 1;</code>
+       */
+      public String getUserid() {
+        return instance.getUserid();
+      }
+      /**
+       * <code>optional string userid = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getUseridBytes() {
+        return instance.getUseridBytes();
+      }
+      /**
+       * <code>optional string userid = 1;</code>
+       */
+      public Builder setUserid(
+          String value) {
+        copyOnWrite();
+        instance.setUserid(value);
+        return this;
+      }
+      /**
+       * <code>optional string userid = 1;</code>
+       */
+      public Builder clearUserid() {
+        copyOnWrite();
+        instance.clearUserid();
+        return this;
+      }
+      /**
+       * <code>optional string userid = 1;</code>
+       */
+      public Builder setUseridBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setUseridBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:GetChatListRequest)
+    }
+    protected final Object dynamicMethod(
+        MethodToInvoke method,
+        Object arg0, Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new ImEntities.GetChatListRequest();
+        }
+        case IS_INITIALIZED: {
+          return DEFAULT_INSTANCE;
+        }
+        case MAKE_IMMUTABLE: {
+          return null;
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case VISIT: {
+          Visitor visitor = (Visitor) arg0;
+          ImEntities.GetChatListRequest other = (ImEntities.GetChatListRequest) arg1;
+          userid_ = visitor.visitString(
+              hasUserid(), userid_,
+              other.hasUserid(), other.userid_);
+          if (visitor == MergeFromVisitor
+              .INSTANCE) {
+            bitField0_ |= other.bitField0_;
+          }
+          return this;
+        }
+        case MERGE_FROM_STREAM: {
+          com.google.protobuf.CodedInputStream input =
+              (com.google.protobuf.CodedInputStream) arg0;
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry =
+              (com.google.protobuf.ExtensionRegistryLite) arg1;
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                default: {
+                  if (!parseUnknownField(tag, input)) {
+                    done = true;
+                  }
+                  break;
+                }
+                case 10: {
+                  String s = input.readString();
+                  bitField0_ |= 0x00000001;
+                  userid_ = s;
+                  break;
+                }
+              }
+            }
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw new RuntimeException(e.setUnfinishedMessage(this));
+          } catch (java.io.IOException e) {
+            throw new RuntimeException(
+                new com.google.protobuf.InvalidProtocolBufferException(
+                    e.getMessage()).setUnfinishedMessage(this));
+          } finally {
+          }
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          if (PARSER == null) {    synchronized (ImEntities.GetChatListRequest.class) {
+              if (PARSER == null) {
+                PARSER = new DefaultInstanceBasedParser(DEFAULT_INSTANCE);
+              }
+            }
+          }
+          return PARSER;
+        }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:GetChatListRequest)
+    private static final ImEntities.GetChatListRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new GetChatListRequest();
+      DEFAULT_INSTANCE.makeImmutable();
+    }
+
+    public static ImEntities.GetChatListRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<GetChatListRequest> PARSER;
+
+    public static com.google.protobuf.Parser<GetChatListRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface GetChatListResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:GetChatListResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>optional string code = 1;</code>
+     */
+    boolean hasCode();
+    /**
+     * <code>optional string code = 1;</code>
+     */
+    String getCode();
+    /**
+     * <code>optional string code = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getCodeBytes();
+
+    /**
+     * <code>repeated .Chat chat = 2;</code>
+     */
+    java.util.List<Chat>
+        getChatList();
+    /**
+     * <code>repeated .Chat chat = 2;</code>
+     */
+    ImEntities.Chat getChat(int index);
+    /**
+     * <code>repeated .Chat chat = 2;</code>
+     */
+    int getChatCount();
+  }
+  /**
+   * Protobuf type {@code GetChatListResponse}
+   */
+  public  static final class GetChatListResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetChatListResponse, GetChatListResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:GetChatListResponse)
+      GetChatListResponseOrBuilder {
+    private GetChatListResponse() {
+      code_ = "";
+      chat_ = emptyProtobufList();
+    }
+    private int bitField0_;
+    public static final int CODE_FIELD_NUMBER = 1;
+    private String code_;
+    /**
+     * <code>optional string code = 1;</code>
+     */
+    public boolean hasCode() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional string code = 1;</code>
+     */
+    public String getCode() {
+      return code_;
+    }
+    /**
+     * <code>optional string code = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getCodeBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(code_);
+    }
+    /**
+     * <code>optional string code = 1;</code>
+     */
+    private void setCode(
+        String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+      code_ = value;
+    }
+    /**
+     * <code>optional string code = 1;</code>
+     */
+    private void clearCode() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      code_ = getDefaultInstance().getCode();
+    }
+    /**
+     * <code>optional string code = 1;</code>
+     */
+    private void setCodeBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+      code_ = value.toStringUtf8();
+    }
+
+    public static final int CHAT_FIELD_NUMBER = 2;
+    private com.google.protobuf.Internal.ProtobufList<Chat> chat_;
+    /**
+     * <code>repeated .Chat chat = 2;</code>
+     */
+    public java.util.List<Chat> getChatList() {
+      return chat_;
+    }
+    /**
+     * <code>repeated .Chat chat = 2;</code>
+     */
+    public java.util.List<? extends ChatOrBuilder>
+        getChatOrBuilderList() {
+      return chat_;
+    }
+    /**
+     * <code>repeated .Chat chat = 2;</code>
+     */
+    public int getChatCount() {
+      return chat_.size();
+    }
+    /**
+     * <code>repeated .Chat chat = 2;</code>
+     */
+    public ImEntities.Chat getChat(int index) {
+      return chat_.get(index);
+    }
+    /**
+     * <code>repeated .Chat chat = 2;</code>
+     */
+    public ImEntities.ChatOrBuilder getChatOrBuilder(
+        int index) {
+      return chat_.get(index);
+    }
+    private void ensureChatIsMutable() {
+      if (!chat_.isModifiable()) {
+        chat_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(chat_);
+       }
+    }
+
+    /**
+     * <code>repeated .Chat chat = 2;</code>
+     */
+    private void setChat(
+        int index, ImEntities.Chat value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      ensureChatIsMutable();
+      chat_.set(index, value);
+    }
+    /**
+     * <code>repeated .Chat chat = 2;</code>
+     */
+    private void setChat(
+        int index, ImEntities.Chat.Builder builderForValue) {
+      ensureChatIsMutable();
+      chat_.set(index, builderForValue.build());
+    }
+    /**
+     * <code>repeated .Chat chat = 2;</code>
+     */
+    private void addChat(ImEntities.Chat value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      ensureChatIsMutable();
+      chat_.add(value);
+    }
+    /**
+     * <code>repeated .Chat chat = 2;</code>
+     */
+    private void addChat(
+        int index, ImEntities.Chat value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      ensureChatIsMutable();
+      chat_.add(index, value);
+    }
+    /**
+     * <code>repeated .Chat chat = 2;</code>
+     */
+    private void addChat(
+        ImEntities.Chat.Builder builderForValue) {
+      ensureChatIsMutable();
+      chat_.add(builderForValue.build());
+    }
+    /**
+     * <code>repeated .Chat chat = 2;</code>
+     */
+    private void addChat(
+        int index, ImEntities.Chat.Builder builderForValue) {
+      ensureChatIsMutable();
+      chat_.add(index, builderForValue.build());
+    }
+    /**
+     * <code>repeated .Chat chat = 2;</code>
+     */
+    private void addAllChat(
+        Iterable<? extends Chat> values) {
+      ensureChatIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, chat_);
+    }
+    /**
+     * <code>repeated .Chat chat = 2;</code>
+     */
+    private void clearChat() {
+      chat_ = emptyProtobufList();
+    }
+    /**
+     * <code>repeated .Chat chat = 2;</code>
+     */
+    private void removeChat(int index) {
+      ensureChatIsMutable();
+      chat_.remove(index);
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeString(1, getCode());
+      }
+      for (int i = 0; i < chat_.size(); i++) {
+        output.writeMessage(2, chat_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeStringSize(1, getCode());
+      }
+      for (int i = 0; i < chat_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, chat_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    public static ImEntities.GetChatListResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static ImEntities.GetChatListResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static ImEntities.GetChatListResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static ImEntities.GetChatListResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static ImEntities.GetChatListResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static ImEntities.GetChatListResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static ImEntities.GetChatListResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+    public static ImEntities.GetChatListResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static ImEntities.GetChatListResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static ImEntities.GetChatListResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(ImEntities.GetChatListResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+
+    /**
+     * Protobuf type {@code GetChatListResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          GetChatListResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:GetChatListResponse)
+        ImEntities.GetChatListResponseOrBuilder {
+      // Construct using ImEntities.GetChatListResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>optional string code = 1;</code>
+       */
+      public boolean hasCode() {
+        return instance.hasCode();
+      }
+      /**
+       * <code>optional string code = 1;</code>
+       */
+      public String getCode() {
+        return instance.getCode();
+      }
+      /**
+       * <code>optional string code = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getCodeBytes() {
+        return instance.getCodeBytes();
+      }
+      /**
+       * <code>optional string code = 1;</code>
+       */
+      public Builder setCode(
+          String value) {
+        copyOnWrite();
+        instance.setCode(value);
+        return this;
+      }
+      /**
+       * <code>optional string code = 1;</code>
+       */
+      public Builder clearCode() {
+        copyOnWrite();
+        instance.clearCode();
+        return this;
+      }
+      /**
+       * <code>optional string code = 1;</code>
+       */
+      public Builder setCodeBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setCodeBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>repeated .Chat chat = 2;</code>
+       */
+      public java.util.List<Chat> getChatList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getChatList());
+      }
+      /**
+       * <code>repeated .Chat chat = 2;</code>
+       */
+      public int getChatCount() {
+        return instance.getChatCount();
+      }/**
+       * <code>repeated .Chat chat = 2;</code>
+       */
+      public ImEntities.Chat getChat(int index) {
+        return instance.getChat(index);
+      }
+      /**
+       * <code>repeated .Chat chat = 2;</code>
+       */
+      public Builder setChat(
+          int index, ImEntities.Chat value) {
+        copyOnWrite();
+        instance.setChat(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .Chat chat = 2;</code>
+       */
+      public Builder setChat(
+          int index, ImEntities.Chat.Builder builderForValue) {
+        copyOnWrite();
+        instance.setChat(index, builderForValue);
+        return this;
+      }
+      /**
+       * <code>repeated .Chat chat = 2;</code>
+       */
+      public Builder addChat(ImEntities.Chat value) {
+        copyOnWrite();
+        instance.addChat(value);
+        return this;
+      }
+      /**
+       * <code>repeated .Chat chat = 2;</code>
+       */
+      public Builder addChat(
+          int index, ImEntities.Chat value) {
+        copyOnWrite();
+        instance.addChat(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .Chat chat = 2;</code>
+       */
+      public Builder addChat(
+          ImEntities.Chat.Builder builderForValue) {
+        copyOnWrite();
+        instance.addChat(builderForValue);
+        return this;
+      }
+      /**
+       * <code>repeated .Chat chat = 2;</code>
+       */
+      public Builder addChat(
+          int index, ImEntities.Chat.Builder builderForValue) {
+        copyOnWrite();
+        instance.addChat(index, builderForValue);
+        return this;
+      }
+      /**
+       * <code>repeated .Chat chat = 2;</code>
+       */
+      public Builder addAllChat(
+          Iterable<? extends Chat> values) {
+        copyOnWrite();
+        instance.addAllChat(values);
+        return this;
+      }
+      /**
+       * <code>repeated .Chat chat = 2;</code>
+       */
+      public Builder clearChat() {
+        copyOnWrite();
+        instance.clearChat();
+        return this;
+      }
+      /**
+       * <code>repeated .Chat chat = 2;</code>
+       */
+      public Builder removeChat(int index) {
+        copyOnWrite();
+        instance.removeChat(index);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:GetChatListResponse)
+    }
+    protected final Object dynamicMethod(
+        MethodToInvoke method,
+        Object arg0, Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new ImEntities.GetChatListResponse();
+        }
+        case IS_INITIALIZED: {
+          return DEFAULT_INSTANCE;
+        }
+        case MAKE_IMMUTABLE: {
+          chat_.makeImmutable();
+          return null;
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case VISIT: {
+          Visitor visitor = (Visitor) arg0;
+          ImEntities.GetChatListResponse other = (ImEntities.GetChatListResponse) arg1;
+          code_ = visitor.visitString(
+              hasCode(), code_,
+              other.hasCode(), other.code_);
+          chat_= visitor.visitList(chat_, other.chat_);
+          if (visitor == MergeFromVisitor
+              .INSTANCE) {
+            bitField0_ |= other.bitField0_;
+          }
+          return this;
+        }
+        case MERGE_FROM_STREAM: {
+          com.google.protobuf.CodedInputStream input =
+              (com.google.protobuf.CodedInputStream) arg0;
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry =
+              (com.google.protobuf.ExtensionRegistryLite) arg1;
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                default: {
+                  if (!parseUnknownField(tag, input)) {
+                    done = true;
+                  }
+                  break;
+                }
+                case 10: {
+                  String s = input.readString();
+                  bitField0_ |= 0x00000001;
+                  code_ = s;
+                  break;
+                }
+                case 18: {
+                  if (!chat_.isModifiable()) {
+                    chat_ =
+                        com.google.protobuf.GeneratedMessageLite.mutableCopy(chat_);
+                  }
+                  chat_.add(
+                      input.readMessage(ImEntities.Chat.parser(), extensionRegistry));
+                  break;
+                }
+              }
+            }
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw new RuntimeException(e.setUnfinishedMessage(this));
+          } catch (java.io.IOException e) {
+            throw new RuntimeException(
+                new com.google.protobuf.InvalidProtocolBufferException(
+                    e.getMessage()).setUnfinishedMessage(this));
+          } finally {
+          }
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          if (PARSER == null) {    synchronized (ImEntities.GetChatListResponse.class) {
+              if (PARSER == null) {
+                PARSER = new DefaultInstanceBasedParser(DEFAULT_INSTANCE);
+              }
+            }
+          }
+          return PARSER;
+        }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:GetChatListResponse)
+    private static final ImEntities.GetChatListResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new GetChatListResponse();
+      DEFAULT_INSTANCE.makeImmutable();
+    }
+
+    public static ImEntities.GetChatListResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<GetChatListResponse> PARSER;
+
+    public static com.google.protobuf.Parser<GetChatListResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
   public interface GetContactListRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:GetContactListRequest)
       com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>optional string userid = 1;</code>
+     */
+    boolean hasUserid();
+    /**
+     * <code>optional string userid = 1;</code>
+     */
+    String getUserid();
+    /**
+     * <code>optional string userid = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getUseridBytes();
   }
   /**
    * Protobuf type {@code GetContactListRequest}
@@ -2243,9 +4474,65 @@ public final class ImEntities {
       // @@protoc_insertion_point(message_implements:GetContactListRequest)
       GetContactListRequestOrBuilder {
     private GetContactListRequest() {
+      userid_ = "";
     }
+    private int bitField0_;
+    public static final int USERID_FIELD_NUMBER = 1;
+    private String userid_;
+    /**
+     * <code>optional string userid = 1;</code>
+     */
+    public boolean hasUserid() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional string userid = 1;</code>
+     */
+    public String getUserid() {
+      return userid_;
+    }
+    /**
+     * <code>optional string userid = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getUseridBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(userid_);
+    }
+    /**
+     * <code>optional string userid = 1;</code>
+     */
+    private void setUserid(
+        String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+      userid_ = value;
+    }
+    /**
+     * <code>optional string userid = 1;</code>
+     */
+    private void clearUserid() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      userid_ = getDefaultInstance().getUserid();
+    }
+    /**
+     * <code>optional string userid = 1;</code>
+     */
+    private void setUseridBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+      userid_ = value.toStringUtf8();
+    }
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeString(1, getUserid());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -2254,6 +4541,10 @@ public final class ImEntities {
       if (size != -1) return size;
 
       size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeStringSize(1, getUserid());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSerializedSize = size;
       return size;
@@ -2341,6 +4632,52 @@ public final class ImEntities {
       }
 
 
+      /**
+       * <code>optional string userid = 1;</code>
+       */
+      public boolean hasUserid() {
+        return instance.hasUserid();
+      }
+      /**
+       * <code>optional string userid = 1;</code>
+       */
+      public String getUserid() {
+        return instance.getUserid();
+      }
+      /**
+       * <code>optional string userid = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getUseridBytes() {
+        return instance.getUseridBytes();
+      }
+      /**
+       * <code>optional string userid = 1;</code>
+       */
+      public Builder setUserid(
+          String value) {
+        copyOnWrite();
+        instance.setUserid(value);
+        return this;
+      }
+      /**
+       * <code>optional string userid = 1;</code>
+       */
+      public Builder clearUserid() {
+        copyOnWrite();
+        instance.clearUserid();
+        return this;
+      }
+      /**
+       * <code>optional string userid = 1;</code>
+       */
+      public Builder setUseridBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setUseridBytes(value);
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:GetContactListRequest)
     }
     protected final Object dynamicMethod(
@@ -2362,8 +4699,12 @@ public final class ImEntities {
         case VISIT: {
           Visitor visitor = (Visitor) arg0;
           ImEntities.GetContactListRequest other = (ImEntities.GetContactListRequest) arg1;
+          userid_ = visitor.visitString(
+              hasUserid(), userid_,
+              other.hasUserid(), other.userid_);
           if (visitor == MergeFromVisitor
               .INSTANCE) {
+            bitField0_ |= other.bitField0_;
           }
           return this;
         }
@@ -2384,6 +4725,12 @@ public final class ImEntities {
                   if (!parseUnknownField(tag, input)) {
                     done = true;
                   }
+                  break;
+                }
+                case 10: {
+                  String s = input.readString();
+                  bitField0_ |= 0x00000001;
+                  userid_ = s;
                   break;
                 }
               }
@@ -2435,6 +4782,34 @@ public final class ImEntities {
   public interface GetContactListResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:GetContactListResponse)
       com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>optional string code = 1;</code>
+     */
+    boolean hasCode();
+    /**
+     * <code>optional string code = 1;</code>
+     */
+    String getCode();
+    /**
+     * <code>optional string code = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getCodeBytes();
+
+    /**
+     * <code>repeated .User user = 2;</code>
+     */
+    java.util.List<User>
+        getUserList();
+    /**
+     * <code>repeated .User user = 2;</code>
+     */
+    ImEntities.User getUser(int index);
+    /**
+     * <code>repeated .User user = 2;</code>
+     */
+    int getUserCount();
   }
   /**
    * Protobuf type {@code GetContactListResponse}
@@ -2445,9 +4820,189 @@ public final class ImEntities {
       // @@protoc_insertion_point(message_implements:GetContactListResponse)
       GetContactListResponseOrBuilder {
     private GetContactListResponse() {
+      code_ = "";
+      user_ = emptyProtobufList();
     }
+    private int bitField0_;
+    public static final int CODE_FIELD_NUMBER = 1;
+    private String code_;
+    /**
+     * <code>optional string code = 1;</code>
+     */
+    public boolean hasCode() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional string code = 1;</code>
+     */
+    public String getCode() {
+      return code_;
+    }
+    /**
+     * <code>optional string code = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getCodeBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(code_);
+    }
+    /**
+     * <code>optional string code = 1;</code>
+     */
+    private void setCode(
+        String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+      code_ = value;
+    }
+    /**
+     * <code>optional string code = 1;</code>
+     */
+    private void clearCode() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      code_ = getDefaultInstance().getCode();
+    }
+    /**
+     * <code>optional string code = 1;</code>
+     */
+    private void setCodeBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+      code_ = value.toStringUtf8();
+    }
+
+    public static final int USER_FIELD_NUMBER = 2;
+    private com.google.protobuf.Internal.ProtobufList<User> user_;
+    /**
+     * <code>repeated .User user = 2;</code>
+     */
+    public java.util.List<User> getUserList() {
+      return user_;
+    }
+    /**
+     * <code>repeated .User user = 2;</code>
+     */
+    public java.util.List<? extends UserOrBuilder>
+        getUserOrBuilderList() {
+      return user_;
+    }
+    /**
+     * <code>repeated .User user = 2;</code>
+     */
+    public int getUserCount() {
+      return user_.size();
+    }
+    /**
+     * <code>repeated .User user = 2;</code>
+     */
+    public ImEntities.User getUser(int index) {
+      return user_.get(index);
+    }
+    /**
+     * <code>repeated .User user = 2;</code>
+     */
+    public ImEntities.UserOrBuilder getUserOrBuilder(
+        int index) {
+      return user_.get(index);
+    }
+    private void ensureUserIsMutable() {
+      if (!user_.isModifiable()) {
+        user_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(user_);
+       }
+    }
+
+    /**
+     * <code>repeated .User user = 2;</code>
+     */
+    private void setUser(
+        int index, ImEntities.User value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      ensureUserIsMutable();
+      user_.set(index, value);
+    }
+    /**
+     * <code>repeated .User user = 2;</code>
+     */
+    private void setUser(
+        int index, ImEntities.User.Builder builderForValue) {
+      ensureUserIsMutable();
+      user_.set(index, builderForValue.build());
+    }
+    /**
+     * <code>repeated .User user = 2;</code>
+     */
+    private void addUser(ImEntities.User value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      ensureUserIsMutable();
+      user_.add(value);
+    }
+    /**
+     * <code>repeated .User user = 2;</code>
+     */
+    private void addUser(
+        int index, ImEntities.User value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      ensureUserIsMutable();
+      user_.add(index, value);
+    }
+    /**
+     * <code>repeated .User user = 2;</code>
+     */
+    private void addUser(
+        ImEntities.User.Builder builderForValue) {
+      ensureUserIsMutable();
+      user_.add(builderForValue.build());
+    }
+    /**
+     * <code>repeated .User user = 2;</code>
+     */
+    private void addUser(
+        int index, ImEntities.User.Builder builderForValue) {
+      ensureUserIsMutable();
+      user_.add(index, builderForValue.build());
+    }
+    /**
+     * <code>repeated .User user = 2;</code>
+     */
+    private void addAllUser(
+        Iterable<? extends User> values) {
+      ensureUserIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, user_);
+    }
+    /**
+     * <code>repeated .User user = 2;</code>
+     */
+    private void clearUser() {
+      user_ = emptyProtobufList();
+    }
+    /**
+     * <code>repeated .User user = 2;</code>
+     */
+    private void removeUser(int index) {
+      ensureUserIsMutable();
+      user_.remove(index);
+    }
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeString(1, getCode());
+      }
+      for (int i = 0; i < user_.size(); i++) {
+        output.writeMessage(2, user_.get(i));
+      }
       unknownFields.writeTo(output);
     }
 
@@ -2456,6 +5011,14 @@ public final class ImEntities {
       if (size != -1) return size;
 
       size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeStringSize(1, getCode());
+      }
+      for (int i = 0; i < user_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, user_.get(i));
+      }
       size += unknownFields.getSerializedSize();
       memoizedSerializedSize = size;
       return size;
@@ -2543,6 +5106,149 @@ public final class ImEntities {
       }
 
 
+      /**
+       * <code>optional string code = 1;</code>
+       */
+      public boolean hasCode() {
+        return instance.hasCode();
+      }
+      /**
+       * <code>optional string code = 1;</code>
+       */
+      public String getCode() {
+        return instance.getCode();
+      }
+      /**
+       * <code>optional string code = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getCodeBytes() {
+        return instance.getCodeBytes();
+      }
+      /**
+       * <code>optional string code = 1;</code>
+       */
+      public Builder setCode(
+          String value) {
+        copyOnWrite();
+        instance.setCode(value);
+        return this;
+      }
+      /**
+       * <code>optional string code = 1;</code>
+       */
+      public Builder clearCode() {
+        copyOnWrite();
+        instance.clearCode();
+        return this;
+      }
+      /**
+       * <code>optional string code = 1;</code>
+       */
+      public Builder setCodeBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setCodeBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>repeated .User user = 2;</code>
+       */
+      public java.util.List<User> getUserList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getUserList());
+      }
+      /**
+       * <code>repeated .User user = 2;</code>
+       */
+      public int getUserCount() {
+        return instance.getUserCount();
+      }/**
+       * <code>repeated .User user = 2;</code>
+       */
+      public ImEntities.User getUser(int index) {
+        return instance.getUser(index);
+      }
+      /**
+       * <code>repeated .User user = 2;</code>
+       */
+      public Builder setUser(
+          int index, ImEntities.User value) {
+        copyOnWrite();
+        instance.setUser(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .User user = 2;</code>
+       */
+      public Builder setUser(
+          int index, ImEntities.User.Builder builderForValue) {
+        copyOnWrite();
+        instance.setUser(index, builderForValue);
+        return this;
+      }
+      /**
+       * <code>repeated .User user = 2;</code>
+       */
+      public Builder addUser(ImEntities.User value) {
+        copyOnWrite();
+        instance.addUser(value);
+        return this;
+      }
+      /**
+       * <code>repeated .User user = 2;</code>
+       */
+      public Builder addUser(
+          int index, ImEntities.User value) {
+        copyOnWrite();
+        instance.addUser(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .User user = 2;</code>
+       */
+      public Builder addUser(
+          ImEntities.User.Builder builderForValue) {
+        copyOnWrite();
+        instance.addUser(builderForValue);
+        return this;
+      }
+      /**
+       * <code>repeated .User user = 2;</code>
+       */
+      public Builder addUser(
+          int index, ImEntities.User.Builder builderForValue) {
+        copyOnWrite();
+        instance.addUser(index, builderForValue);
+        return this;
+      }
+      /**
+       * <code>repeated .User user = 2;</code>
+       */
+      public Builder addAllUser(
+          Iterable<? extends User> values) {
+        copyOnWrite();
+        instance.addAllUser(values);
+        return this;
+      }
+      /**
+       * <code>repeated .User user = 2;</code>
+       */
+      public Builder clearUser() {
+        copyOnWrite();
+        instance.clearUser();
+        return this;
+      }
+      /**
+       * <code>repeated .User user = 2;</code>
+       */
+      public Builder removeUser(int index) {
+        copyOnWrite();
+        instance.removeUser(index);
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:GetContactListResponse)
     }
     protected final Object dynamicMethod(
@@ -2556,6 +5262,7 @@ public final class ImEntities {
           return DEFAULT_INSTANCE;
         }
         case MAKE_IMMUTABLE: {
+          user_.makeImmutable();
           return null;
         }
         case NEW_BUILDER: {
@@ -2564,8 +5271,13 @@ public final class ImEntities {
         case VISIT: {
           Visitor visitor = (Visitor) arg0;
           ImEntities.GetContactListResponse other = (ImEntities.GetContactListResponse) arg1;
+          code_ = visitor.visitString(
+              hasCode(), code_,
+              other.hasCode(), other.code_);
+          user_= visitor.visitList(user_, other.user_);
           if (visitor == MergeFromVisitor
               .INSTANCE) {
+            bitField0_ |= other.bitField0_;
           }
           return this;
         }
@@ -2586,6 +5298,21 @@ public final class ImEntities {
                   if (!parseUnknownField(tag, input)) {
                     done = true;
                   }
+                  break;
+                }
+                case 10: {
+                  String s = input.readString();
+                  bitField0_ |= 0x00000001;
+                  code_ = s;
+                  break;
+                }
+                case 18: {
+                  if (!user_.isModifiable()) {
+                    user_ =
+                        com.google.protobuf.GeneratedMessageLite.mutableCopy(user_);
+                  }
+                  user_.add(
+                      input.readMessage(ImEntities.User.parser(), extensionRegistry));
                   break;
                 }
               }
