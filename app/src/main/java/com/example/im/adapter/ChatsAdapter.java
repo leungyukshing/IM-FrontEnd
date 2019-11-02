@@ -1,7 +1,6 @@
 package com.example.im.adapter;
 
 import android.content.Context;
-import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -10,35 +9,32 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
-import com.example.im.ChatRoom;
 import com.example.im.R;
-import com.example.im.utils.UserItem;
-import com.example.im.view.ChatsLayout;
+import com.example.im.ImEntities;
 
 import java.util.List;
 
-public class UserItemAdapter extends RecyclerView.Adapter<UserItemAdapter.BaseViewHolder> {
+public class ChatsAdapter extends RecyclerView.Adapter<ChatsAdapter.BaseViewHolder> {
     private Context context;
-    private List<UserItem> userItemList;
+    private List<ImEntities.Chat> chatList;
 
-    public UserItemAdapter(Context context, List<UserItem> list) {
+    public ChatsAdapter(Context context, List<ImEntities.Chat> list) {
         this.context = context;
-        this.userItemList = list;
+        this.chatList = list;
     }
 
     @NonNull
     @Override
     public BaseViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        View view = LayoutInflater.from(context).inflate(R.layout.user_item, viewGroup, false);
+        View view = LayoutInflater.from(context).inflate(R.layout.chat_item, viewGroup, false);
         return new BaseViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull BaseViewHolder baseViewHolder, final int i) {
-        final UserItem userItem = userItemList.get(i);
-        baseViewHolder.userName.setText(userItem.getUsername());
-        baseViewHolder.sign.setText(userItem.getSign());
+        final ImEntities.Chat chat = chatList.get(i);
+        baseViewHolder.chatName.setText(chat.getChatname());
+        baseViewHolder.sign.setText(chat.getSign());
         baseViewHolder.linearLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -51,30 +47,30 @@ public class UserItemAdapter extends RecyclerView.Adapter<UserItemAdapter.BaseVi
         void onItemClick(int i);
     }
 
-    private UserItemAdapter.onItemClickListener mOnItemClickListener;
+    private onItemClickListener mOnItemClickListener;
 
-    public void setmOnItemClickListener(UserItemAdapter.onItemClickListener mOnItemClickListener) {
+    public void setmOnItemClickListener(onItemClickListener mOnItemClickListener) {
         this.mOnItemClickListener = mOnItemClickListener;
     }
 
     @Override
     public int getItemCount() {
-        return userItemList == null ? 0 : userItemList.size();
+        return chatList == null ? 0 : chatList.size();
     }
 
     class BaseViewHolder extends RecyclerView.ViewHolder {
         private ImageView avatar;
-        private TextView userName;
+        private TextView chatName;
         private TextView sign;
         private LinearLayout linearLayout;
 
         public BaseViewHolder(View view) {
             super(view);
 
-            avatar = view.findViewById(R.id.user_item_avatar);
-            userName = view.findViewById(R.id.user_item_username);
-            sign = view.findViewById(R.id.user_item_sign);
-            linearLayout = view.findViewById(R.id.user_item_layout);
+            avatar = view.findViewById(R.id.chat_item_avatar);
+            chatName = view.findViewById(R.id.chat_item_chatname);
+            sign = view.findViewById(R.id.chat_item_sign);
+            linearLayout = view.findViewById(R.id.chat_item_layout);
         }
     }
 }

@@ -2736,29 +2736,43 @@ public final class ImEntities {
         getChatnameBytes();
 
     /**
-     * <code>optional string create_time = 4;</code>
+     * <code>optional string sign = 4;</code>
+     */
+    boolean hasSign();
+    /**
+     * <code>optional string sign = 4;</code>
+     */
+    String getSign();
+    /**
+     * <code>optional string sign = 4;</code>
+     */
+    com.google.protobuf.ByteString
+        getSignBytes();
+
+    /**
+     * <code>optional string create_time = 5;</code>
      */
     boolean hasCreateTime();
     /**
-     * <code>optional string create_time = 4;</code>
+     * <code>optional string create_time = 5;</code>
      */
     String getCreateTime();
     /**
-     * <code>optional string create_time = 4;</code>
+     * <code>optional string create_time = 5;</code>
      */
     com.google.protobuf.ByteString
         getCreateTimeBytes();
 
     /**
-     * <code>optional string last_update_time = 5;</code>
+     * <code>optional string last_update_time = 6;</code>
      */
     boolean hasLastUpdateTime();
     /**
-     * <code>optional string last_update_time = 5;</code>
+     * <code>optional string last_update_time = 6;</code>
      */
     String getLastUpdateTime();
     /**
-     * <code>optional string last_update_time = 5;</code>
+     * <code>optional string last_update_time = 6;</code>
      */
     com.google.protobuf.ByteString
         getLastUpdateTimeBytes();
@@ -2775,6 +2789,7 @@ public final class ImEntities {
       chatid_ = "";
       userid_ = "";
       chatname_ = "";
+      sign_ = "";
       createTime_ = "";
       lastUpdateTime_ = "";
     }
@@ -2932,105 +2947,156 @@ public final class ImEntities {
       chatname_ = value.toStringUtf8();
     }
 
-    public static final int CREATE_TIME_FIELD_NUMBER = 4;
-    private String createTime_;
+    public static final int SIGN_FIELD_NUMBER = 4;
+    private String sign_;
     /**
-     * <code>optional string create_time = 4;</code>
+     * <code>optional string sign = 4;</code>
      */
-    public boolean hasCreateTime() {
+    public boolean hasSign() {
       return ((bitField0_ & 0x00000008) == 0x00000008);
     }
     /**
-     * <code>optional string create_time = 4;</code>
+     * <code>optional string sign = 4;</code>
+     */
+    public String getSign() {
+      return sign_;
+    }
+    /**
+     * <code>optional string sign = 4;</code>
+     */
+    public com.google.protobuf.ByteString
+        getSignBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(sign_);
+    }
+    /**
+     * <code>optional string sign = 4;</code>
+     */
+    private void setSign(
+        String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+      sign_ = value;
+    }
+    /**
+     * <code>optional string sign = 4;</code>
+     */
+    private void clearSign() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      sign_ = getDefaultInstance().getSign();
+    }
+    /**
+     * <code>optional string sign = 4;</code>
+     */
+    private void setSignBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+      sign_ = value.toStringUtf8();
+    }
+
+    public static final int CREATE_TIME_FIELD_NUMBER = 5;
+    private String createTime_;
+    /**
+     * <code>optional string create_time = 5;</code>
+     */
+    public boolean hasCreateTime() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>optional string create_time = 5;</code>
      */
     public String getCreateTime() {
       return createTime_;
     }
     /**
-     * <code>optional string create_time = 4;</code>
+     * <code>optional string create_time = 5;</code>
      */
     public com.google.protobuf.ByteString
         getCreateTimeBytes() {
       return com.google.protobuf.ByteString.copyFromUtf8(createTime_);
     }
     /**
-     * <code>optional string create_time = 4;</code>
+     * <code>optional string create_time = 5;</code>
      */
     private void setCreateTime(
         String value) {
       if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000008;
+  bitField0_ |= 0x00000010;
       createTime_ = value;
     }
     /**
-     * <code>optional string create_time = 4;</code>
+     * <code>optional string create_time = 5;</code>
      */
     private void clearCreateTime() {
-      bitField0_ = (bitField0_ & ~0x00000008);
+      bitField0_ = (bitField0_ & ~0x00000010);
       createTime_ = getDefaultInstance().getCreateTime();
     }
     /**
-     * <code>optional string create_time = 4;</code>
+     * <code>optional string create_time = 5;</code>
      */
     private void setCreateTimeBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000008;
+  bitField0_ |= 0x00000010;
       createTime_ = value.toStringUtf8();
     }
 
-    public static final int LAST_UPDATE_TIME_FIELD_NUMBER = 5;
+    public static final int LAST_UPDATE_TIME_FIELD_NUMBER = 6;
     private String lastUpdateTime_;
     /**
-     * <code>optional string last_update_time = 5;</code>
+     * <code>optional string last_update_time = 6;</code>
      */
     public boolean hasLastUpdateTime() {
-      return ((bitField0_ & 0x00000010) == 0x00000010);
+      return ((bitField0_ & 0x00000020) == 0x00000020);
     }
     /**
-     * <code>optional string last_update_time = 5;</code>
+     * <code>optional string last_update_time = 6;</code>
      */
     public String getLastUpdateTime() {
       return lastUpdateTime_;
     }
     /**
-     * <code>optional string last_update_time = 5;</code>
+     * <code>optional string last_update_time = 6;</code>
      */
     public com.google.protobuf.ByteString
         getLastUpdateTimeBytes() {
       return com.google.protobuf.ByteString.copyFromUtf8(lastUpdateTime_);
     }
     /**
-     * <code>optional string last_update_time = 5;</code>
+     * <code>optional string last_update_time = 6;</code>
      */
     private void setLastUpdateTime(
         String value) {
       if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000010;
+  bitField0_ |= 0x00000020;
       lastUpdateTime_ = value;
     }
     /**
-     * <code>optional string last_update_time = 5;</code>
+     * <code>optional string last_update_time = 6;</code>
      */
     private void clearLastUpdateTime() {
-      bitField0_ = (bitField0_ & ~0x00000010);
+      bitField0_ = (bitField0_ & ~0x00000020);
       lastUpdateTime_ = getDefaultInstance().getLastUpdateTime();
     }
     /**
-     * <code>optional string last_update_time = 5;</code>
+     * <code>optional string last_update_time = 6;</code>
      */
     private void setLastUpdateTimeBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000010;
+  bitField0_ |= 0x00000020;
       lastUpdateTime_ = value.toStringUtf8();
     }
 
@@ -3046,10 +3112,13 @@ public final class ImEntities {
         output.writeString(3, getChatname());
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        output.writeString(4, getCreateTime());
+        output.writeString(4, getSign());
       }
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
-        output.writeString(5, getLastUpdateTime());
+        output.writeString(5, getCreateTime());
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        output.writeString(6, getLastUpdateTime());
       }
       unknownFields.writeTo(output);
     }
@@ -3073,11 +3142,15 @@ public final class ImEntities {
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeStringSize(4, getCreateTime());
+          .computeStringSize(4, getSign());
       }
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeStringSize(5, getLastUpdateTime());
+          .computeStringSize(5, getCreateTime());
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeStringSize(6, getLastUpdateTime());
       }
       size += unknownFields.getSerializedSize();
       memoizedSerializedSize = size;
@@ -3305,26 +3378,72 @@ public final class ImEntities {
       }
 
       /**
-       * <code>optional string create_time = 4;</code>
+       * <code>optional string sign = 4;</code>
+       */
+      public boolean hasSign() {
+        return instance.hasSign();
+      }
+      /**
+       * <code>optional string sign = 4;</code>
+       */
+      public String getSign() {
+        return instance.getSign();
+      }
+      /**
+       * <code>optional string sign = 4;</code>
+       */
+      public com.google.protobuf.ByteString
+          getSignBytes() {
+        return instance.getSignBytes();
+      }
+      /**
+       * <code>optional string sign = 4;</code>
+       */
+      public Builder setSign(
+          String value) {
+        copyOnWrite();
+        instance.setSign(value);
+        return this;
+      }
+      /**
+       * <code>optional string sign = 4;</code>
+       */
+      public Builder clearSign() {
+        copyOnWrite();
+        instance.clearSign();
+        return this;
+      }
+      /**
+       * <code>optional string sign = 4;</code>
+       */
+      public Builder setSignBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setSignBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>optional string create_time = 5;</code>
        */
       public boolean hasCreateTime() {
         return instance.hasCreateTime();
       }
       /**
-       * <code>optional string create_time = 4;</code>
+       * <code>optional string create_time = 5;</code>
        */
       public String getCreateTime() {
         return instance.getCreateTime();
       }
       /**
-       * <code>optional string create_time = 4;</code>
+       * <code>optional string create_time = 5;</code>
        */
       public com.google.protobuf.ByteString
           getCreateTimeBytes() {
         return instance.getCreateTimeBytes();
       }
       /**
-       * <code>optional string create_time = 4;</code>
+       * <code>optional string create_time = 5;</code>
        */
       public Builder setCreateTime(
           String value) {
@@ -3333,7 +3452,7 @@ public final class ImEntities {
         return this;
       }
       /**
-       * <code>optional string create_time = 4;</code>
+       * <code>optional string create_time = 5;</code>
        */
       public Builder clearCreateTime() {
         copyOnWrite();
@@ -3341,7 +3460,7 @@ public final class ImEntities {
         return this;
       }
       /**
-       * <code>optional string create_time = 4;</code>
+       * <code>optional string create_time = 5;</code>
        */
       public Builder setCreateTimeBytes(
           com.google.protobuf.ByteString value) {
@@ -3351,26 +3470,26 @@ public final class ImEntities {
       }
 
       /**
-       * <code>optional string last_update_time = 5;</code>
+       * <code>optional string last_update_time = 6;</code>
        */
       public boolean hasLastUpdateTime() {
         return instance.hasLastUpdateTime();
       }
       /**
-       * <code>optional string last_update_time = 5;</code>
+       * <code>optional string last_update_time = 6;</code>
        */
       public String getLastUpdateTime() {
         return instance.getLastUpdateTime();
       }
       /**
-       * <code>optional string last_update_time = 5;</code>
+       * <code>optional string last_update_time = 6;</code>
        */
       public com.google.protobuf.ByteString
           getLastUpdateTimeBytes() {
         return instance.getLastUpdateTimeBytes();
       }
       /**
-       * <code>optional string last_update_time = 5;</code>
+       * <code>optional string last_update_time = 6;</code>
        */
       public Builder setLastUpdateTime(
           String value) {
@@ -3379,7 +3498,7 @@ public final class ImEntities {
         return this;
       }
       /**
-       * <code>optional string last_update_time = 5;</code>
+       * <code>optional string last_update_time = 6;</code>
        */
       public Builder clearLastUpdateTime() {
         copyOnWrite();
@@ -3387,7 +3506,7 @@ public final class ImEntities {
         return this;
       }
       /**
-       * <code>optional string last_update_time = 5;</code>
+       * <code>optional string last_update_time = 6;</code>
        */
       public Builder setLastUpdateTimeBytes(
           com.google.protobuf.ByteString value) {
@@ -3426,6 +3545,9 @@ public final class ImEntities {
           chatname_ = visitor.visitString(
               hasChatname(), chatname_,
               other.hasChatname(), other.chatname_);
+          sign_ = visitor.visitString(
+              hasSign(), sign_,
+              other.hasSign(), other.sign_);
           createTime_ = visitor.visitString(
               hasCreateTime(), createTime_,
               other.hasCreateTime(), other.createTime_);
@@ -3478,12 +3600,18 @@ public final class ImEntities {
                 case 34: {
                   String s = input.readString();
                   bitField0_ |= 0x00000008;
-                  createTime_ = s;
+                  sign_ = s;
                   break;
                 }
                 case 42: {
                   String s = input.readString();
                   bitField0_ |= 0x00000010;
+                  createTime_ = s;
+                  break;
+                }
+                case 50: {
+                  String s = input.readString();
+                  bitField0_ |= 0x00000020;
                   lastUpdateTime_ = s;
                   break;
                 }

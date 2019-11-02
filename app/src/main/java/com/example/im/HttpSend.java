@@ -43,4 +43,20 @@ public class HttpSend {
         Observable<ImEntities.RegisternResponse> registernResponseObservable = networkService.register(params);
         HttpConfiger.getInstance().toSubscribe(registernResponseObservable).subscribe(subscriber);
     }
+
+    public void getChatListByUserID(String userID, ResultCallbackListener<ImEntities.GetChatListResponse> subscriber) {
+        // construct request for getChatListByUserID
+        ImEntities.GetChatListRequest getChatListRequest = ImEntities.GetChatListRequest.newBuilder().setUserid(userID).build();
+        RequestBody params = RequestBody.create(MediaType.parse("application/octet-stream"), getChatListRequest.toByteArray());
+        Observable<ImEntities.GetChatListResponse> getChatListResponseObservable = networkService.getChatListByUserID(params);
+        HttpConfiger.getInstance().toSubscribe(getChatListResponseObservable).subscribe(subscriber);
+    }
+
+    public void getContactListByUserID(String userID, ResultCallbackListener<ImEntities.GetContactListResponse> subscriber) {
+        // construct request for getContactListByUserID
+        ImEntities.GetContactListRequest getContactListRequest = ImEntities.GetContactListRequest.newBuilder().setUserid(userID).build();
+        RequestBody params = RequestBody.create(MediaType.parse("application/octet-stream"), getContactListRequest.toByteArray());
+        Observable<ImEntities.GetContactListResponse> getContactListResponseObservable = networkService.getContactListByUserID(params);
+        HttpConfiger.getInstance().toSubscribe(getContactListResponseObservable).subscribe(subscriber);
+    }
 }

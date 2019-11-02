@@ -79,6 +79,22 @@ public class LoginOrRegister extends AppCompatActivity implements View.OnClickLi
                 }
             }
         });
+        registerPassword.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View view, boolean b) {
+                if (b) {
+                    // clear error
+                    error.setText("");
+                }
+                else {
+                    // validate password format
+                    String password = registerPassword.getText().toString();
+                    if (!validatePassword(password)) {
+                        error.setText("Password Format Wrong!");
+                    }
+                }
+            }
+        });
     }
 
     @Override
@@ -158,7 +174,6 @@ public class LoginOrRegister extends AppCompatActivity implements View.OnClickLi
         if (username == null || password == null || password.length() > 20) {
             return false;
         }
-
         // call to server
         HttpSend.getInstance().register(username, password, email,new ResultCallbackListener<ImEntities.RegisternResponse>() {
             @Override
@@ -191,4 +206,10 @@ public class LoginOrRegister extends AppCompatActivity implements View.OnClickLi
         return matcher.matches();
     }
 
+    private boolean validatePassword(String password) {
+        Pattern p = Pattern.compile("^(?![0-9])(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,16}$");
+        Matcher matcher = p.matcher(password);
+        matcher.find();
+        return matcher.matches();
+    }
 }

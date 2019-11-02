@@ -33,8 +33,9 @@ message Chat {
     optional string chatid = 1;
     optional string userid = 2;
     optional string chatname = 3;
-    optional string create_time = 4;
-    optional string last_update_time = 5;
+    optional string sign = 4;
+    optional string create_time = 5;
+    optional string last_update_time = 6;
 }
 
 message GetChatListRequest {

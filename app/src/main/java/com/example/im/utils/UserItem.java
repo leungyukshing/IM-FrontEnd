@@ -6,9 +6,9 @@ import java.util.List;
 public class UserItem {
     private int iconID;
     private String username;
+    private String userid;
     private String sign;
-    private String state;
-    public static List<UserItem> userItemList = new ArrayList<>();
+    private String email;
 
     public int getIconID() {
         return iconID;
@@ -30,15 +30,13 @@ public class UserItem {
         return sign;
     }
 
-    public void setSign(String sign) {
-        this.sign = sign;
-    }
+    public void setSign(String sign) { this.sign = sign; }
 
-    public String getState() {
-        return state;
-    }
+    public String getUserid() { return userid; }
 
-    public void setState(String state) {
-        this.state = state;
-    }
+    public void setUserid(String userid) { this.userid = userid; }
+
+    public String getEmail() { return email; }
+
+    public void setEmail(String email) { this.email = email; }
 }
