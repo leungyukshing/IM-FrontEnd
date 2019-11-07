@@ -16,6 +16,7 @@ import android.widget.Toast;
 import com.example.im.ChatRoom;
 import com.example.im.HttpSend;
 import com.example.im.ImEntities;
+import com.example.im.PersonInfo;
 import com.example.im.R;
 import com.example.im.ResultCallbackListener;
 import com.example.im.UserCenter;
@@ -86,6 +87,10 @@ public class ContactsLayout extends Fragment {
             @Override
             public void onItemClick(int i) {
                 // jump to personal info
+                Intent intent = new Intent(context, PersonInfo.class);
+                intent.putExtra("username", contactList.get(i).getUsername());
+                intent.putExtra("useremail", contactList.get(i).getEmail());
+                context.startActivity(intent);
             }
         });
         contact_patb.SetOnClickListener(new PictureAndTextButton.PictureAndTextButtonOnClickListener() {

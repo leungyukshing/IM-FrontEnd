@@ -59,4 +59,5 @@ public class HttpSend {
         Observable<ImEntities.GetContactListResponse> getContactListResponseObservable = networkService.getContactListByUserID(params);
         HttpConfiger.getInstance().toSubscribe(getContactListResponseObservable).subscribe(subscriber);
     }
+
 }

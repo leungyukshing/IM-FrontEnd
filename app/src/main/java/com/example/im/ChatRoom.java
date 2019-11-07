@@ -59,15 +59,15 @@ public class ChatRoom extends AppCompatActivity {
                     chatItem.setSenderName(UserCenter.getInstance().getUser().getUsername());
                     chatItem.setMyInfo(true);
                     chatItem.setChatID(chatID);
-                    // 1. save to DB
+                    if (send(chatItem)) {
+                        // reset
+                        msg.setText("");
+                    }
+                    else {
+                        Toast.makeText(ChatRoom.this, "Send Failed", Toast.LENGTH_SHORT).show();
+                    }
                     // 2. send to Server
-                        if (send(chatItem)) {
-                            // reset
-                            msg.setText("");
-                        }
-                        else {
-                            Toast.makeText(ChatRoom.this, "Send Failed", Toast.LENGTH_SHORT).show();
-                        }
+
                 }
                 else {
                     Toast.makeText(ChatRoom.this, "Cannot Send Empty Message", Toast.LENGTH_SHORT).show();
@@ -87,7 +87,17 @@ public class ChatRoom extends AppCompatActivity {
     }
 
     private boolean send(ChatItem chatItem) {
+        return saveToDB(chatItem) && sendToServer(chatItem);
+    }
+
+    private boolean saveToDB(ChatItem chatItem) {
+        // chat record save to local DB
         return DataBaseHelper.getInstance(getApplicationContext()).sendMessage(chatItem);
+    }
+
+    private boolean sendToServer(ChatItem chatItem) {
+        // send to server to notify other users
+        return true;
     }
 
     private void loadChatMsg() {
