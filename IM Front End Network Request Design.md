@@ -19,6 +19,11 @@ Retrofit + okhttp
 + when a user send a new message, we need to post it to the server.
 + and we should receive any push messages from the server.
 
+Generally, we use two connection manager: retrofit and websocket:
+
++ Retrofit is responsible for most request from front-end to back-end
++ Websocket acts as a listener to receive pushed messsages from back-end. Also link to notification services.
+
 ## Reference
 
 1. [Android use pb](https://www.jianshu.com/p/acbc7df5decd?utm_source=oschina-app)
@@ -28,4 +33,5 @@ Retrofit + okhttp
 5. [Okhttp Interceptor](https://blog.csdn.net/RockyHua/article/details/80079621)
 6. [Android websocket example1](https://www.jianshu.com/p/9302f8552a7d)
 7. [Android websocket example2](https://www.jianshu.com/p/7b919910c892)
+8. [Android Protobuf conversion](https://blog.csdn.net/duanbokan/article/details/51029240)
 

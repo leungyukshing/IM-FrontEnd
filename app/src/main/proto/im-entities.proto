@@ -55,3 +55,13 @@ message GetContactListResponse {
     optional string code = 1;
     repeated User user = 2;
 }
+
+message SendMessageRequest {
+    optional string senderid = 1;
+    optional string chatid = 2;
+    optional string message =3;
+}
+
+message SendMessageResponse {
+    optional string code = 1;
+}

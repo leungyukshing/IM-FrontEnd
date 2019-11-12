@@ -1,5 +1,6 @@
 package com.example.im;
 
+import android.content.Intent;
 import android.support.design.widget.TabLayout;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
@@ -12,6 +13,8 @@ import com.example.im.view.ChatsLayout;
 import com.example.im.view.ContactsLayout;
 import com.example.im.view.MomentsLayout;
 
+import java.net.URI;
+import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
 
