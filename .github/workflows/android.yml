@@ -1,0 +1,38 @@
+name: Android CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    # checkout branch
+    - uses: actions/checkout@v2
+    
+    # set jdk version
+    - name: set up JDK 1.8
+      uses: actions/setup-java@v1
+      with:
+        java-version: 1.8
+  
+    # pack apk
+    - name: Build with Gradle
+      run: chmod +x gradlew && ./gradlew build
+      
+    # upload apk to action
+    - name: Upload APK
+      uses: actions/upload-artifact@v1
+      with:
+        name: app
+        path: app/build/outputs/apk/debug/xw-debug.apk
+        
+    # upload apk to Pgyer
+    - name: Upload to Pgyer
+      uses: JantHsueh/upload-file-action@master
+      with:
+        url: https://www.pgyer.com/apiv2/app/upload
+        method: POST
+        forms: '{"_api_key_":"${{ secrets.pgyer_key }}", "buildInstallType":3}'
+        fileForms: '{"file":"app/build/outputs/apk/debug/xw-debug.apk"}'
