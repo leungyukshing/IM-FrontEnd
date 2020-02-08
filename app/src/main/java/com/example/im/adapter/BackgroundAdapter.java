@@ -40,17 +40,18 @@ public class BackgroundAdapter extends RecyclerView.Adapter<BackgroundAdapter.Ba
     }
 
     @Override
-    public void onBindViewHolder(@NonNull BaseViewHolder baseViewHolder, final int i) {
+    public void onBindViewHolder(@NonNull final BaseViewHolder baseViewHolder, int i) {
         baseViewHolder.imageView.setImageResource(imageViews.get(i).getImageID());
         imageContainer.get(selectedBackground).setBackground(backgroundImageDrawable);
 
         baseViewHolder.imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (i != selectedBackground) {
-                    imageContainer.get(i).setBackground(backgroundImageDrawable);
+                int pos = baseViewHolder.getAdapterPosition();
+                if (pos != selectedBackground) {
+                    imageContainer.get(pos).setBackground(backgroundImageDrawable);
                     imageContainer.get(selectedBackground).setBackgroundColor(0);
-                    selectedBackground = i;
+                    selectedBackground = pos;
                 }
             }
         });

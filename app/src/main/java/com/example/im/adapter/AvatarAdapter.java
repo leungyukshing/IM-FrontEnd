@@ -41,7 +41,7 @@ public class AvatarAdapter extends RecyclerView.Adapter<AvatarAdapter.BaseViewHo
     }
 
     @Override
-    public void onBindViewHolder(@NonNull BaseViewHolder baseViewHolder, final int i) {
+    public void onBindViewHolder(@NonNull final BaseViewHolder baseViewHolder, int i) {
         baseViewHolder.imageView.setImageResource(imageViews.get(i).getImageID());
         imageContainer.get(selectedImageAvatar).setBackground(backgroundImageDrawable);
 
@@ -49,10 +49,11 @@ public class AvatarAdapter extends RecyclerView.Adapter<AvatarAdapter.BaseViewHo
             @Override
             public void onClick(View view) {
                 // change background
-                if (i != selectedImageAvatar) {
-                    imageContainer.get(i).setBackground(backgroundImageDrawable);
+                int pos = baseViewHolder.getAdapterPosition();
+                if (pos != selectedImageAvatar) {
+                    imageContainer.get(pos).setBackground(backgroundImageDrawable);
                     imageContainer.get(selectedImageAvatar).setBackgroundColor(0);
-                    selectedImageAvatar = i;
+                    selectedImageAvatar = pos;
                 }
             }
         });

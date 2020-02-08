@@ -35,14 +35,14 @@ public class UserItemAdapter extends RecyclerView.Adapter<UserItemAdapter.BaseVi
     }
 
     @Override
-    public void onBindViewHolder(@NonNull BaseViewHolder baseViewHolder, final int i) {
+    public void onBindViewHolder(@NonNull final BaseViewHolder baseViewHolder, int i) {
         final UserItem userItem = userItemList.get(i);
         baseViewHolder.userName.setText(userItem.getUsername());
         baseViewHolder.sign.setText(userItem.getSign());
         baseViewHolder.linearLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mOnItemClickListener.onItemClick(i);
+                mOnItemClickListener.onItemClick(baseViewHolder.getAdapterPosition());
             }
         });
     }
