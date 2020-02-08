@@ -24,4 +24,4 @@ before_script:
 
 script:
   # 生成release apk包
-  - ./gradlew assembleRelease
+  - ./gradlew assembleDebug
