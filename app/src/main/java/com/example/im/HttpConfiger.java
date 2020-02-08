@@ -89,7 +89,7 @@ public class HttpConfiger {
         // RxJava2CallAdapter: https://www.ctolib.com/retrofit2-rxjava2-adapter.html
         retrofitBuilder = new Retrofit.Builder()
                 .client(httpBuilder.build())
-                .baseUrl(testUrl)
+                .baseUrl(localUrl)
                 .addConverterFactory(ProtoConverterFactory.createWithRegistry(registry))
                 .addConverterFactory(GsonConverterFactory.create())
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create());

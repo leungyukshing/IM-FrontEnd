@@ -103,16 +103,7 @@ public class LoginOrRegister extends AppCompatActivity implements View.OnClickLi
             case R.id.login_btn: {
                 String username = loginUsername.getText().toString();
                 String password = loginPassword.getText().toString();
-                if (login(username, password)) {
-                    // Jump to MainPage
-                    Intent intent = new Intent(this, MainPage.class);
-                    startActivity(intent);
-                    finish();
-                }
-                else {
-                    // reset password
-                    loginPassword.setText("");
-                }
+                login(username, password);
                 break;
             }
             case R.id.register_btn: {
@@ -120,16 +111,8 @@ public class LoginOrRegister extends AppCompatActivity implements View.OnClickLi
                 String password = registerPassword.getText().toString();
                 String repeatPassword = registerRepeatPassword.getText().toString();
                 String email = registerEmail.getText().toString();
-                if (register(username, password, repeatPassword, email)) {
-                    Intent intent = new Intent(this, MainPage.class);
-                    startActivity(intent);
-                    finish();
-                }
-                else {
-                    // reset password
-                    registerPassword.setText("");
-                    registerRepeatPassword.setText("");
-                }
+
+                register(username, password, repeatPassword, email);
                 break;
             }
             default:
@@ -151,9 +134,21 @@ public class LoginOrRegister extends AppCompatActivity implements View.OnClickLi
             @Override
             public void onNext(ImEntities.LoginResponse loginResponse) {
                 ELog.e("Login Result: code =" + loginResponse.getCode() + "\t msg = " + loginResponse.getMessage());
-                UserCenter.getInstance().setUser(loginResponse.getUser());
-                Toast.makeText(LoginOrRegister.this, "Login Successful", Toast.LENGTH_SHORT).show();
-                // give error msg if failed
+                // succeed
+                if (loginResponse.getCode() == "200") {
+                    // save user info
+                    UserCenter.getInstance().setUser(loginResponse.getUser());
+                    // Jump to MainPage
+                    Intent intent = new Intent(getApplicationContext(), MainPage.class);
+                    startActivity(intent);
+                    finish();
+                }
+                // fail
+                else {
+                    Toast.makeText(LoginOrRegister.this, "Login Failed", Toast.LENGTH_SHORT).show();
+                    // reset password
+                    loginPassword.setText("");
+                }
             }
 
             @Override
@@ -182,8 +177,19 @@ public class LoginOrRegister extends AppCompatActivity implements View.OnClickLi
             @Override
             public void onNext(ImEntities.RegisternResponse registerResponse) {
                 ELog.e("Register Result: code =" + registerResponse.getCode() + "\t msg = " + registerResponse.getMessage());
-                Toast.makeText(LoginOrRegister.this, "Login Successful", Toast.LENGTH_SHORT).show();
-                // give error msg if failed
+                // success
+                if (registerResponse.getCode() == "200") {
+                    Intent intent = new Intent(getApplicationContext(), MainPage.class);
+                    startActivity(intent);
+                    finish();
+                }
+                // fail
+                else {
+                    // reset password
+                    registerPassword.setText("");
+                    registerRepeatPassword.setText("");
+                    Toast.makeText(LoginOrRegister.this, "Login Failed", Toast.LENGTH_SHORT).show();
+                }
             }
 
             @Override
