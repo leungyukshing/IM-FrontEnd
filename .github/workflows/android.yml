@@ -29,5 +29,5 @@ jobs:
       with:
         url: https://www.pyger.com/apiv2/app/upload
         method: POST
-        forms: '{"_api_key":"${{ secrets.pgyer_api_key }}","uKey":"${{ secrets.pgyer_user_key}}","buildInstallType":3}'
+        forms: '{"_api_key":"${{ secrets.pgyer_api_key }}","buildInstallType":3}'
         fileForms: '{"file":"app/build/outputs/apk/debug/app-debug.apk"}'
