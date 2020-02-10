@@ -30,7 +30,16 @@ android:
 before_script:
   - chmod +x gradlew
 
+before_install:
+  - cd $TRAVIS_BUILD_DIR
+  - wget -c https://raw.githubusercontent.com/Pgyer/TravisFile/master/pgyer_upload.sh
+    -O pgyer_upload.sh
+  - chmod +x pgyer_upload.sh
 
 script:
   # 生成release apk包
   - ./gradlew assembleDebug
+
+after_script:
+  - set -e
+  - $TRAVIS_BUILD_DIR/pgyer_upload.sh "${TRAVIS_BUILD_DIR}/app/build/outputs/apk/release/app-debug.apk" 6179acaa97de20c82b4dfe29b8e6e264
