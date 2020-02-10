@@ -24,5 +24,5 @@ jobs:
         name: app
         path: app/build/outputs/apk/debug/app-debug.apk
 
-    - name: Upload To Pgyer
-      run: curl -S "http://www.pgyer.com/apiv2/app/upload" -F "file=@app/build/outputs/apk/debug/app-debug.apk" -F "_api_key=${{ secrets.pgyer_api_key }}"
+    # - name: Upload To Pgyer
+    #  run: curl -S "http://www.pgyer.com/apiv2/app/upload" -F "file=@app/build/outputs/apk/debug/app-debug.apk" -F "_api_key=${{ secrets.pgyer_api_key }}"
