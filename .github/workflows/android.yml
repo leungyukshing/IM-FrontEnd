@@ -25,9 +25,4 @@ jobs:
         path: app/build/outputs/apk/debug/app-debug.apk
 
     - name: Upload To Pgyer
-      uses: JantHsueh/upload-file-action@master
-      with:
-        url: https://www.pyger.com/apiv2/app/upload
-        method: POST
-        forms: '{"_api_key":"${{ secrets.pgyer_api_key }}","buildInstallType":3}'
-        fileForms: '{"file":"app/build/outputs/apk/debug/app-debug.apk"}'
+        run: curl -S "http://www.pgyer.com/apiv2/app/upload" -F "file=@app/build/outputs/apk/debug/app-debug.apk" -F "_api_key=${{ secrets.pgyer_api_key }}"
