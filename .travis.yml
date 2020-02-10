@@ -4,6 +4,15 @@ jdk: oraclejdk8
 # 开启基于容器的Travis CI任务，让编译效率更高
 sudo: false
 
+before_cache:
+  - rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
+  - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
+cache:                   #指定缓存目录
+  directories:
+  - $HOME/.gradle/caches/
+  - $HOME/.gradle/wrapper/
+  - $HOME/.android/build-cache
+
 
 android:
   components:
