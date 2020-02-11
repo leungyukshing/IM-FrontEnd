@@ -7,15 +7,15 @@ import retrofit2.http.POST;
 import io.reactivex.Observable;
 
 public interface NetworkService {
-    @POST("login.action")
+    @POST("login")
     Observable<ImEntities.LoginResponse> login(@Body RequestBody body);
 
-    @POST("register.action")
+    @POST("register")
     Observable<ImEntities.RegisternResponse> register(@Body RequestBody body);
 
-    @GET("getChatList.action")
+    @POST("getChatList")
     Observable<ImEntities.GetChatListResponse> getChatListByUserID(@Body RequestBody body);
 
-    @GET("getContactsLayout.action")
+    @POST("getContactsLayout")
     Observable<ImEntities.GetContactListResponse> getContactListByUserID(@Body RequestBody body);
 }

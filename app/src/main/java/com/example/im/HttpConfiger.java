@@ -38,10 +38,10 @@ public class HttpConfiger {
     private static final String serverUrl = "http://";
 
     /* local url */
-    private static final String localUrl = "http://localhost:8080";
+    private static final String localUrl = "http://10.0.0.4:8080";
 
     /* test url */
-    private static final String testUrl = "http://192.168.31.241:8080";
+    private static final String testUrl = "http://192.168.144.81:8080";
 
     private Context context;
 

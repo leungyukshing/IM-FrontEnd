@@ -59,8 +59,25 @@ public class LoginOrRegister extends AppCompatActivity implements View.OnClickLi
         tabHost.addTab(tabHost.newTabSpec("Login").setIndicator("Login").setContent(R.id.login_layout));
         tabHost.addTab(tabHost.newTabSpec("Register").setIndicator("Register").setContent(R.id.register_layout));
 
+        tabHost.setOnTabChangedListener(new TabHost.OnTabChangeListener() {
+            @Override
+            public void onTabChanged(String s) {
+                error.setText("");
+                if (s == "Login") {
+                    // clear password on Register
+                    registerPassword.setText("");
+                    registerRepeatPassword.setText("");
+                }
+                else {
+                    // clear password on Login
+                    loginPassword.setText("");
+                }
+            }
+        });
+
         // Register Button Listener
         loginBtn.setOnClickListener(this);
+        registerBtn.setOnClickListener(this);
 
         registerEmail.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
@@ -99,6 +116,7 @@ public class LoginOrRegister extends AppCompatActivity implements View.OnClickLi
 
     @Override
     public void onClick(View view) {
+        ELog.e("onClick");
         switch (view.getId()) {
             case R.id.login_btn: {
                 String username = loginUsername.getText().toString();
@@ -111,7 +129,6 @@ public class LoginOrRegister extends AppCompatActivity implements View.OnClickLi
                 String password = registerPassword.getText().toString();
                 String repeatPassword = registerRepeatPassword.getText().toString();
                 String email = registerEmail.getText().toString();
-
                 register(username, password, repeatPassword, email);
                 break;
             }
@@ -135,7 +152,7 @@ public class LoginOrRegister extends AppCompatActivity implements View.OnClickLi
             public void onNext(ImEntities.LoginResponse loginResponse) {
                 ELog.e("Login Result: code =" + loginResponse.getCode() + "\t msg = " + loginResponse.getMessage());
                 // succeed
-                if (loginResponse.getCode() == "200") {
+                if (loginResponse.getCode().equals("200") && loginResponse.getMessage().equals("Login Success")) {
                     // save user info
                     UserCenter.getInstance().setUser(loginResponse.getUser());
                     // Jump to MainPage
@@ -178,8 +195,8 @@ public class LoginOrRegister extends AppCompatActivity implements View.OnClickLi
             public void onNext(ImEntities.RegisternResponse registerResponse) {
                 ELog.e("Register Result: code =" + registerResponse.getCode() + "\t msg = " + registerResponse.getMessage());
                 // success
-                if (registerResponse.getCode() == "200") {
-                    Intent intent = new Intent(getApplicationContext(), MainPage.class);
+                if (registerResponse.getCode().equals("200") && registerResponse.getMessage().equals("Register Success")) {
+                    Intent intent = new Intent(getApplicationContext(), LoginOrRegister.class);
                     startActivity(intent);
                     finish();
                 }
@@ -188,7 +205,7 @@ public class LoginOrRegister extends AppCompatActivity implements View.OnClickLi
                     // reset password
                     registerPassword.setText("");
                     registerRepeatPassword.setText("");
-                    Toast.makeText(LoginOrRegister.this, "Login Failed", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginOrRegister.this, "Register Failed", Toast.LENGTH_SHORT).show();
                 }
             }
 
@@ -205,15 +222,15 @@ public class LoginOrRegister extends AppCompatActivity implements View.OnClickLi
         return true;
     }
 
-    private boolean validateEmail(String email) {
-        Pattern p = Pattern.compile("/^[a-z]([a-z0-9]*[-_]?[a-z0-9]+)*@([a-z0-9]*[-_]?[a-z0-9]+)+[\\.][a-z]{2,3}([\\.][a-z]{2})?$/i");
+    protected boolean validateEmail(String email) {
+        Pattern p = Pattern.compile("\\w+([-+.]\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*");
         Matcher matcher = p.matcher(email);
         matcher.find();
         return matcher.matches();
     }
 
-    private boolean validatePassword(String password) {
-        Pattern p = Pattern.compile("^(?![0-9])(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,16}$");
+    protected boolean validatePassword(String password) {
+        Pattern p = Pattern.compile("\\w+([-+.]\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*");
         Matcher matcher = p.matcher(password);
         matcher.find();
         return matcher.matches();

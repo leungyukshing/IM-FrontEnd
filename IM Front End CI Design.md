@@ -25,4 +25,6 @@ As a result, developer only need to focus on writing codes.
 2. [Android CI Travis example2](https://xucanhui.com/2018/12/15/android-travis-ci/)
 3. [Github Action auto-build Android1](http://blog.yoqi.me/lyq/16666.html)
 4. [Github Action auto-build Android2](https://blog.csdn.net/xx326664162/article/details/103921480)
-5. [Android Unit Test](https://www.jianshu.com/p/472c4c35efdb)
+5. [Android Unit Test1](https://www.jianshu.com/p/472c4c35efdb)
+6. [Android Unit Test2](https://www.jianshu.com/p/aa51a3e007e2)
+7. [Android Build Acceleration](https://www.jianshu.com/p/e456a5ac8613)
