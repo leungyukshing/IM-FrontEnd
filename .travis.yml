@@ -42,4 +42,4 @@ script:
 
 after_script:
   - set -e
-  - $TRAVIS_BUILD_DIR/pgyer_upload.sh "${TRAVIS_BUILD_DIR}/app/build/outputs/apk/debug/app-debug.apk" 6179acaa97de20c82b4dfe29b8e6e264
+  - $TRAVIS_BUILD_DIR/pgyer_upload.sh "${TRAVIS_BUILD_DIR}/app/build/outputs/apk/release/app-release-unsigned.apk" 6179acaa97de20c82b4dfe29b8e6e264
