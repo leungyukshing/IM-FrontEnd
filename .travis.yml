@@ -38,7 +38,7 @@ before_install:
 
 script:
   # 生成release apk包
-  - ./gradlew assembleDebug
+  - ./gradlew assembleRelease
 
 after_script:
   - set -e
