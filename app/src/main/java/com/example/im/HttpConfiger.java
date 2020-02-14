@@ -43,6 +43,8 @@ public class HttpConfiger {
     /* test url */
     private static final String testUrl = "http://192.168.144.81:8080";
 
+    private static final String url = BuildConfig.HOST;
+
     private Context context;
 
     private Retrofit retrofit;
@@ -89,7 +91,7 @@ public class HttpConfiger {
         // RxJava2CallAdapter: https://www.ctolib.com/retrofit2-rxjava2-adapter.html
         retrofitBuilder = new Retrofit.Builder()
                 .client(httpBuilder.build())
-                .baseUrl(localUrl)
+                .baseUrl(url)
                 .addConverterFactory(ProtoConverterFactory.createWithRegistry(registry))
                 .addConverterFactory(GsonConverterFactory.create())
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create());

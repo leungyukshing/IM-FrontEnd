@@ -2,7 +2,6 @@ package com.example.im;
 
 import okhttp3.RequestBody;
 import retrofit2.http.Body;
-import retrofit2.http.GET;
 import retrofit2.http.POST;
 import io.reactivex.Observable;
 

@@ -17,6 +17,10 @@ android {
             minifyEnabled true
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField 'String','HOST',getHOST('release')
+        }
+        debug {
+            buildConfigField 'String','HOST',getHOST('debug')
         }
     }
     sourceSets {
@@ -74,4 +78,17 @@ protobuf {
             }
         }
     }
+}
+
+def getHOST(String env){
+    def HOST
+    def Properties props = new Properties()
+    def propFile=file('src/main/filters/'+env+'/config.properties')
+    if (propFile.canRead()){
+        props.load(new FileInputStream(propFile))
+        if (props != null) {
+            HOST=props['HOST']
+        }
+    }
+    HOST
 }
