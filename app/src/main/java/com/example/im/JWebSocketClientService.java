@@ -15,11 +15,8 @@ import android.os.IBinder;
 import android.os.PowerManager;
 import android.support.annotation.Nullable;
 import android.support.v4.app.NotificationCompat;
-
 import com.hdl.elog.ELog;
-
 import org.java_websocket.handshake.ServerHandshake;
-
 import java.net.URI;
 import java.nio.ByteBuffer;
 

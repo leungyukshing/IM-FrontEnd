@@ -34,7 +34,7 @@ public class ChatsAdapter extends RecyclerView.Adapter<ChatsAdapter.BaseViewHold
     public void onBindViewHolder(@NonNull final BaseViewHolder baseViewHolder, int i) {
         final ImEntities.Chat chat = chatList.get(i);
         baseViewHolder.chatName.setText(chat.getChatname());
-        baseViewHolder.sign.setText(chat.getSign());
+        // baseViewHolder.sign.setText(chat.getSign());
         baseViewHolder.linearLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

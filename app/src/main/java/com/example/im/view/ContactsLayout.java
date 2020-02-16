@@ -1,5 +1,4 @@
 package com.example.im.view;
-
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,8 +11,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
-
-import com.example.im.ChatRoom;
 import com.example.im.HttpSend;
 import com.example.im.ImEntities;
 import com.example.im.PersonInfo;
@@ -23,10 +20,8 @@ import com.example.im.UserCenter;
 import com.example.im.adapter.UserItemAdapter;
 import com.example.im.utils.UserItem;
 import com.hdl.elog.ELog;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import io.reactivex.disposables.Disposable;
 
 public class ContactsLayout extends Fragment {
@@ -116,13 +111,17 @@ public class ContactsLayout extends Fragment {
 
             @Override
             public void onNext(ImEntities.GetContactListResponse getContactListResponse) {
-                List<ImEntities.User> userList = getContactListResponse.getUserList();
-                for (int i = 0; i < userList.size(); i++) {
-                    UserItem userItem = new UserItem();
-                    userItem.setUsername(userList.get(i).getUsername());
-                    userItem.setUserid(userList.get(i).getUserid());
-                    userItem.setEmail(userList.get(i).getEmail());
-                    contactList.add(userItem);
+                ELog.e("GetContactList Result: code =" + getContactListResponse.getCode() + "\t msg = " + getContactListResponse.getMessage());
+                if (getContactListResponse.getCode().equals("200") && getContactListResponse.getMessage().equals("GetContactList Success")) {
+                    List<ImEntities.User> userList = getContactListResponse.getUserList();
+                    for (int i = 0; i < userList.size(); i++) {
+                        UserItem userItem = new UserItem();
+                        userItem.setUsername(userList.get(i).getUsername());
+                        userItem.setUserid(userList.get(i).getUserid());
+                        userItem.setEmail(userList.get(i).getEmail());
+                        contactList.add(userItem);
+                    }
+                    contact_recyclerview.notify();
                 }
             }
 

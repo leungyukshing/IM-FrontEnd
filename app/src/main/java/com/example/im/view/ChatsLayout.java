@@ -1,5 +1,4 @@
 package com.example.im.view;
-
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,19 +13,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
-
 import com.example.im.ChatRoom;
 import com.example.im.HttpSend;
 import com.example.im.R;
 import com.example.im.ResultCallbackListener;
 import com.example.im.UserCenter;
 import com.example.im.adapter.ChatsAdapter;
-import com.example.im.adapter.UserItemAdapter;
-import com.example.im.utils.UserItem;
 import com.example.im.ImEntities;
 import com.hdl.elog.ELog;
-
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -110,7 +104,12 @@ public class ChatsLayout extends Fragment {
 
             @Override
             public void onNext(ImEntities.GetChatListResponse getChatListResponse) {
-                chatList = getChatListResponse.getChatList();
+                ELog.e("GetChatList Result: code =" + getChatListResponse.getCode() + "\t msg = " + getChatListResponse.getMessage());
+                if (getChatListResponse.getCode().equals("200") && getChatListResponse.getMessage().equals("GetChatList Success")) {
+                    chatList = getChatListResponse.getChatList();
+                    chatsAdapter.notify();
+                }
+
             }
 
             @Override

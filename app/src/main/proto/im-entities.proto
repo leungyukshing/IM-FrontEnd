@@ -33,9 +33,7 @@ message Chat {
     optional string chatid = 1;
     optional string userid = 2;
     optional string chatname = 3;
-    optional string sign = 4;
-    optional string create_time = 5;
-    optional string last_update_time = 6;
+    optional string last_update_time = 4;
 }
 
 message GetChatListRequest {
@@ -44,7 +42,8 @@ message GetChatListRequest {
 
 message GetChatListResponse {
     optional string code = 1;
-    repeated Chat chat = 2;
+    optional string message = 2;
+    repeated Chat chat = 3;
 }
 
 message GetContactListRequest {
@@ -53,7 +52,8 @@ message GetContactListRequest {
 
 message GetContactListResponse {
     optional string code = 1;
-    repeated User user = 2;
+    optional string message = 2;
+    repeated User user = 3;
 }
 
 message SendMessageRequest {
