@@ -33,10 +33,10 @@
                 android:id="@+id/login_layout"
                 android:orientation="vertical">
                 <EditText
-                    android:id="@+id/login_username"
+                    android:id="@+id/login_email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Please input username"
+                    android:hint="Please input email"
                     android:singleLine="true"/>
                 <EditText
                     android:layout_width="match_parent"

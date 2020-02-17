@@ -21,7 +21,7 @@ import io.reactivex.disposables.Disposable;
 public class LoginOrRegister extends AppCompatActivity implements View.OnClickListener {
     TabHost tabHost;
     Button loginBtn;
-    EditText loginUsername;
+    EditText loginEmail;
     EditText loginPassword;
 
     Button registerBtn;
@@ -44,7 +44,7 @@ public class LoginOrRegister extends AppCompatActivity implements View.OnClickLi
         tabHost = findViewById(R.id.tabHost);
 
         loginBtn = findViewById(R.id.login_btn);
-        loginUsername = findViewById(R.id.login_username);
+        loginEmail = findViewById(R.id.login_email);
         loginPassword = findViewById(R.id.login_password);
 
         registerBtn = findViewById(R.id.register_btn);
@@ -119,9 +119,9 @@ public class LoginOrRegister extends AppCompatActivity implements View.OnClickLi
         ELog.e("onClick");
         switch (view.getId()) {
             case R.id.login_btn: {
-                String username = loginUsername.getText().toString();
+                String email = loginEmail.getText().toString();
                 String password = loginPassword.getText().toString();
-                login(username, password);
+                login(email, password);
                 break;
             }
             case R.id.register_btn: {
@@ -137,14 +137,14 @@ public class LoginOrRegister extends AppCompatActivity implements View.OnClickLi
         }
     }
 
-    private boolean login(String username, String password) {
+    private boolean login(String email, String password) {
         // validate
-        if (username == null || password == null || password.length() > 20) {
+        if (email == null || password == null || password.length() > 20) {
             return false;
         }
 
         // call to server
-        HttpSend.getInstance().login(username, password, new ResultCallbackListener<ImEntities.LoginResponse>() {
+        HttpSend.getInstance().login(email, password, new ResultCallbackListener<ImEntities.LoginResponse>() {
             @Override
             public void onSubscribe(Disposable d) { }
 
@@ -164,6 +164,7 @@ public class LoginOrRegister extends AppCompatActivity implements View.OnClickLi
                 else {
                     Toast.makeText(LoginOrRegister.this, "Login Failed", Toast.LENGTH_SHORT).show();
                     // reset password
+                    error.setText(loginResponse.getMessage());
                     loginPassword.setText("");
                 }
             }
