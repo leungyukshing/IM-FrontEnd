@@ -12,6 +12,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.im.ChatRoom;
+import com.example.im.ImEntities;
 import com.example.im.R;
 import com.example.im.utils.UserItem;
 import com.example.im.view.ChatsLayout;
@@ -60,6 +61,15 @@ public class UserItemAdapter extends RecyclerView.Adapter<UserItemAdapter.BaseVi
     @Override
     public int getItemCount() {
         return userItemList == null ? 0 : userItemList.size();
+    }
+
+    public void setmDatas(List<UserItem> datas) {
+        if (userItemList != null) {
+            userItemList.clear();
+            this.notifyDataSetChanged();
+        }
+        userItemList.addAll(datas);
+        this.notifyDataSetChanged();
     }
 
     class BaseViewHolder extends RecyclerView.ViewHolder {

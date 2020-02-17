@@ -25,10 +25,10 @@ public class ImageManager {
     };
 
     public static final int[] tabImageID = {
-            R.drawable.msgselected,
+            R.drawable.msgunselected,
             R.drawable.contactsunselected,
             R.drawable.momentunselected,
-            R.drawable.msgunselected,
+            R.drawable.msgselected,
             R.drawable.contactsselected,
             R.drawable.momentselected,
     };

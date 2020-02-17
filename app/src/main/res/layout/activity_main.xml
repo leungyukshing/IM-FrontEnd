@@ -3,11 +3,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!-- Main Layout -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="@drawable/shot8">
+        android:background="@drawable/shot8"
+        android:gravity="center">
 
         <com.example.im.view.TitleBar
             android:layout_width="match_parent"
@@ -31,8 +33,10 @@
         </android.support.v4.view.ViewPager>
 
         <android.support.design.widget.TabLayout
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="35dp"
             android:id="@+id/mainTabLayout"
             app:tabMode="fixed"
             app:tabIndicatorHeight="0dp"
@@ -42,10 +46,13 @@
         </android.support.design.widget.TabLayout>
     </LinearLayout>
 
+    <!-- Slide Menu -->
     <com.example.im.view.SlideLayout
+        android:layout_gravity="left"
         android:layout_width="270dp"
         android:layout_height="match_parent"
-        android:clickable="true">
+        android:clickable="true"
+        android:visibility="invisible">
     </com.example.im.view.SlideLayout>
 
 </android.support.v4.widget.DrawerLayout>

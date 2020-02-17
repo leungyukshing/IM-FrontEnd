@@ -111,11 +111,11 @@ public class TitleBar extends RelativeLayout {
         addView(textView, titleLayoutParams);
 
         LayoutParams leftBtnLayoutParams = new LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-        leftBtnLayoutParams.addRule(RelativeLayout.ALIGN_LEFT, TRUE);
+        leftBtnLayoutParams.addRule(RelativeLayout.ALIGN_PARENT_LEFT, TRUE);
         addView(left_btn, leftBtnLayoutParams);
 
         LayoutParams rightBtnLayoutParams = new LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-        rightBtnLayoutParams.addRule(RelativeLayout.ALIGN_RIGHT, TRUE);
+        rightBtnLayoutParams.addRule(RelativeLayout.ALIGN_PARENT_RIGHT, TRUE);
         addView(right_btn, rightBtnLayoutParams);
     }
 

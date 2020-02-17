@@ -15,6 +15,6 @@ public interface NetworkService {
     @POST("getChatList")
     Observable<ImEntities.GetChatListResponse> getChatListByUserID(@Body RequestBody body);
 
-    @POST("getContactsLayout")
+    @POST("getContactList")
     Observable<ImEntities.GetContactListResponse> getContactListByUserID(@Body RequestBody body);
 }

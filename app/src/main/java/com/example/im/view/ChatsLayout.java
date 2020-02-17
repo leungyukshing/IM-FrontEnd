@@ -21,6 +21,8 @@ import com.example.im.UserCenter;
 import com.example.im.adapter.ChatsAdapter;
 import com.example.im.ImEntities;
 import com.hdl.elog.ELog;
+
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -48,6 +50,7 @@ public class ChatsLayout extends Fragment {
         loadChatList();
 
         // set adapter
+        chatList = new ArrayList<>();
         chatsAdapter = new ChatsAdapter(context, chatList);
         recyclerView.setLayoutManager(new LinearLayoutManager(context));
         recyclerView.setItemAnimator(new DefaultItemAnimator());
@@ -106,8 +109,8 @@ public class ChatsLayout extends Fragment {
             public void onNext(ImEntities.GetChatListResponse getChatListResponse) {
                 ELog.e("GetChatList Result: code =" + getChatListResponse.getCode() + "\t msg = " + getChatListResponse.getMessage());
                 if (getChatListResponse.getCode().equals("200") && getChatListResponse.getMessage().equals("GetChatList Success")) {
-                    chatList = getChatListResponse.getChatList();
-                    chatsAdapter.notify();
+                    List<ImEntities.Chat> newChatList = getChatListResponse.getChatList();
+                    chatsAdapter.setmDatas(newChatList);
                 }
 
             }

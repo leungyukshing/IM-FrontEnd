@@ -37,6 +37,13 @@ public class SlideLayout extends FrameLayout {
         setClickListener();
     }
 
+    public SlideLayout(Context context, AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
+        this.context = context;
+        initView();
+        setClickListener();
+    }
+
     private void initView() {
         this.addView(LayoutInflater.from(context).inflate(R.layout.layout_slide, null));
 

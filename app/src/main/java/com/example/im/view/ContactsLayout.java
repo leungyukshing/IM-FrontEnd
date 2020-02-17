@@ -33,7 +33,7 @@ public class ContactsLayout extends Fragment {
     private PictureAndTextButton contact_patb;
     private RecyclerView group_recyclerview;
     private RecyclerView contact_recyclerview;
-
+    UserItemAdapter contactAdapter;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -75,7 +75,7 @@ public class ContactsLayout extends Fragment {
 
 
         // Set Contact Adapter and Listener
-        UserItemAdapter contactAdapter = new UserItemAdapter(context, contactList);
+        contactAdapter = new UserItemAdapter(context, contactList);
         contact_recyclerview.setLayoutManager(new LinearLayoutManager(context));
         contact_recyclerview.setAdapter(contactAdapter);
         contactAdapter.setmOnItemClickListener(new UserItemAdapter.onItemClickListener() {
@@ -121,7 +121,7 @@ public class ContactsLayout extends Fragment {
                         userItem.setEmail(userList.get(i).getEmail());
                         contactList.add(userItem);
                     }
-                    contact_recyclerview.notify();
+                    contactAdapter.setmDatas(contactList);
                 }
             }
 

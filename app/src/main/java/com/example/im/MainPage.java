@@ -18,6 +18,7 @@ import android.provider.Settings;
 import android.support.design.widget.TabLayout;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -40,6 +41,7 @@ public class MainPage extends AppCompatActivity {
     private Context context;
     private ViewPager viewPager;
     private TabLayout tabLayout;
+    private DrawerLayout drawerLayout;
     private List<TabLayout.Tab> tabList;
 
     private JWebSocketClient client;
@@ -145,6 +147,8 @@ public class MainPage extends AppCompatActivity {
     }
 
     private void initView() {
+        getSupportActionBar().hide();
+
         viewPager = findViewById(R.id.mainViewPager);
         tabLayout = findViewById(R.id.mainTabLayout);
 

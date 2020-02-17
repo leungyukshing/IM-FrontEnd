@@ -58,6 +58,16 @@ public class ChatsAdapter extends RecyclerView.Adapter<ChatsAdapter.BaseViewHold
         return chatList == null ? 0 : chatList.size();
     }
 
+
+    public void setmDatas(List<ImEntities.Chat> datas) {
+        if (chatList != null) {
+            chatList.clear();
+            this.notifyDataSetChanged();
+        }
+        chatList.addAll(datas);
+        this.notifyDataSetChanged();
+    }
+
     class BaseViewHolder extends RecyclerView.ViewHolder {
         private ImageView avatar;
         private TextView chatName;
