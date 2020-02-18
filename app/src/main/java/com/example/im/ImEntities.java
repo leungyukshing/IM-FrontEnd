@@ -594,8 +594,8 @@ public final class ImEntities {
     }
   }
 
-  public interface RegisternResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:RegisternResponse)
+  public interface RegisterResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:RegisterResponse)
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
@@ -627,14 +627,14 @@ public final class ImEntities {
         getMessageBytes();
   }
   /**
-   * Protobuf type {@code RegisternResponse}
+   * Protobuf type {@code RegisterResponse}
    */
-  public  static final class RegisternResponse extends
+  public  static final class RegisterResponse extends
       com.google.protobuf.GeneratedMessageLite<
-          RegisternResponse, RegisternResponse.Builder> implements
-      // @@protoc_insertion_point(message_implements:RegisternResponse)
-      RegisternResponseOrBuilder {
-    private RegisternResponse() {
+          RegisterResponse, RegisterResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:RegisterResponse)
+      RegisterResponseOrBuilder {
+    private RegisterResponse() {
       code_ = "";
       message_ = "";
     }
@@ -770,60 +770,60 @@ public final class ImEntities {
       return size;
     }
 
-    public static ImEntities.RegisternResponse parseFrom(
+    public static ImEntities.RegisterResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data);
     }
-    public static ImEntities.RegisternResponse parseFrom(
+    public static ImEntities.RegisterResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data, extensionRegistry);
     }
-    public static ImEntities.RegisternResponse parseFrom(byte[] data)
+    public static ImEntities.RegisterResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data);
     }
-    public static ImEntities.RegisternResponse parseFrom(
+    public static ImEntities.RegisterResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data, extensionRegistry);
     }
-    public static ImEntities.RegisternResponse parseFrom(java.io.InputStream input)
+    public static ImEntities.RegisterResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, input);
     }
-    public static ImEntities.RegisternResponse parseFrom(
+    public static ImEntities.RegisterResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, input, extensionRegistry);
     }
-    public static ImEntities.RegisternResponse parseDelimitedFrom(java.io.InputStream input)
+    public static ImEntities.RegisterResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
-    public static ImEntities.RegisternResponse parseDelimitedFrom(
+    public static ImEntities.RegisterResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
-    public static ImEntities.RegisternResponse parseFrom(
+    public static ImEntities.RegisterResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, input);
     }
-    public static ImEntities.RegisternResponse parseFrom(
+    public static ImEntities.RegisterResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -834,19 +834,19 @@ public final class ImEntities {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(ImEntities.RegisternResponse prototype) {
+    public static Builder newBuilder(ImEntities.RegisterResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
 
     /**
-     * Protobuf type {@code RegisternResponse}
+     * Protobuf type {@code RegisterResponse}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageLite.Builder<
-          RegisternResponse, Builder> implements
-        // @@protoc_insertion_point(builder_implements:RegisternResponse)
-        ImEntities.RegisternResponseOrBuilder {
-      // Construct using ImEntities.RegisternResponse.newBuilder()
+          RegisterResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:RegisterResponse)
+        ImEntities.RegisterResponseOrBuilder {
+      // Construct using ImEntities.RegisterResponse.newBuilder()
       private Builder() {
         super(DEFAULT_INSTANCE);
       }
@@ -944,14 +944,14 @@ public final class ImEntities {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:RegisternResponse)
+      // @@protoc_insertion_point(builder_scope:RegisterResponse)
     }
     protected final Object dynamicMethod(
         MethodToInvoke method,
         Object arg0, Object arg1) {
       switch (method) {
         case NEW_MUTABLE_INSTANCE: {
-          return new ImEntities.RegisternResponse();
+          return new ImEntities.RegisterResponse();
         }
         case IS_INITIALIZED: {
           return DEFAULT_INSTANCE;
@@ -964,7 +964,7 @@ public final class ImEntities {
         }
         case VISIT: {
           Visitor visitor = (Visitor) arg0;
-          ImEntities.RegisternResponse other = (ImEntities.RegisternResponse) arg1;
+          ImEntities.RegisterResponse other = (ImEntities.RegisterResponse) arg1;
           code_ = visitor.visitString(
               hasCode(), code_,
               other.hasCode(), other.code_);
@@ -1023,7 +1023,7 @@ public final class ImEntities {
           return DEFAULT_INSTANCE;
         }
         case GET_PARSER: {
-          if (PARSER == null) {    synchronized (ImEntities.RegisternResponse.class) {
+          if (PARSER == null) {    synchronized (ImEntities.RegisterResponse.class) {
               if (PARSER == null) {
                 PARSER = new DefaultInstanceBasedParser(DEFAULT_INSTANCE);
               }
@@ -1036,20 +1036,20 @@ public final class ImEntities {
     }
 
 
-    // @@protoc_insertion_point(class_scope:RegisternResponse)
-    private static final ImEntities.RegisternResponse DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:RegisterResponse)
+    private static final ImEntities.RegisterResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new RegisternResponse();
+      DEFAULT_INSTANCE = new RegisterResponse();
       DEFAULT_INSTANCE.makeImmutable();
     }
 
-    public static ImEntities.RegisternResponse getDefaultInstance() {
+    public static ImEntities.RegisterResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static volatile com.google.protobuf.Parser<RegisternResponse> PARSER;
+    private static volatile com.google.protobuf.Parser<RegisterResponse> PARSER;
 
-    public static com.google.protobuf.Parser<RegisternResponse> parser() {
+    public static com.google.protobuf.Parser<RegisterResponse> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }
@@ -6405,6 +6405,1973 @@ public final class ImEntities {
     private static volatile com.google.protobuf.Parser<SendMessageResponse> PARSER;
 
     public static com.google.protobuf.Parser<SendMessageResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface CreateChatRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CreateChatRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>optional string userid = 1;</code>
+     */
+    boolean hasUserid();
+    /**
+     * <code>optional string userid = 1;</code>
+     */
+    String getUserid();
+    /**
+     * <code>optional string userid = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getUseridBytes();
+
+    /**
+     * <code>optional string receiverid = 2;</code>
+     */
+    boolean hasReceiverid();
+    /**
+     * <code>optional string receiverid = 2;</code>
+     */
+    String getReceiverid();
+    /**
+     * <code>optional string receiverid = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getReceiveridBytes();
+  }
+  /**
+   * Protobuf type {@code CreateChatRequest}
+   */
+  public  static final class CreateChatRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          CreateChatRequest, CreateChatRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:CreateChatRequest)
+      CreateChatRequestOrBuilder {
+    private CreateChatRequest() {
+      userid_ = "";
+      receiverid_ = "";
+    }
+    private int bitField0_;
+    public static final int USERID_FIELD_NUMBER = 1;
+    private String userid_;
+    /**
+     * <code>optional string userid = 1;</code>
+     */
+    public boolean hasUserid() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional string userid = 1;</code>
+     */
+    public String getUserid() {
+      return userid_;
+    }
+    /**
+     * <code>optional string userid = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getUseridBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(userid_);
+    }
+    /**
+     * <code>optional string userid = 1;</code>
+     */
+    private void setUserid(
+        String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+      userid_ = value;
+    }
+    /**
+     * <code>optional string userid = 1;</code>
+     */
+    private void clearUserid() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      userid_ = getDefaultInstance().getUserid();
+    }
+    /**
+     * <code>optional string userid = 1;</code>
+     */
+    private void setUseridBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+      userid_ = value.toStringUtf8();
+    }
+
+    public static final int RECEIVERID_FIELD_NUMBER = 2;
+    private String receiverid_;
+    /**
+     * <code>optional string receiverid = 2;</code>
+     */
+    public boolean hasReceiverid() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional string receiverid = 2;</code>
+     */
+    public String getReceiverid() {
+      return receiverid_;
+    }
+    /**
+     * <code>optional string receiverid = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getReceiveridBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(receiverid_);
+    }
+    /**
+     * <code>optional string receiverid = 2;</code>
+     */
+    private void setReceiverid(
+        String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+      receiverid_ = value;
+    }
+    /**
+     * <code>optional string receiverid = 2;</code>
+     */
+    private void clearReceiverid() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      receiverid_ = getDefaultInstance().getReceiverid();
+    }
+    /**
+     * <code>optional string receiverid = 2;</code>
+     */
+    private void setReceiveridBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+      receiverid_ = value.toStringUtf8();
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeString(1, getUserid());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeString(2, getReceiverid());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeStringSize(1, getUserid());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeStringSize(2, getReceiverid());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    public static ImEntities.CreateChatRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static ImEntities.CreateChatRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static ImEntities.CreateChatRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static ImEntities.CreateChatRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static ImEntities.CreateChatRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static ImEntities.CreateChatRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static ImEntities.CreateChatRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+    public static ImEntities.CreateChatRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static ImEntities.CreateChatRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static ImEntities.CreateChatRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(ImEntities.CreateChatRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+
+    /**
+     * Protobuf type {@code CreateChatRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          CreateChatRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:CreateChatRequest)
+        ImEntities.CreateChatRequestOrBuilder {
+      // Construct using ImEntities.CreateChatRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>optional string userid = 1;</code>
+       */
+      public boolean hasUserid() {
+        return instance.hasUserid();
+      }
+      /**
+       * <code>optional string userid = 1;</code>
+       */
+      public String getUserid() {
+        return instance.getUserid();
+      }
+      /**
+       * <code>optional string userid = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getUseridBytes() {
+        return instance.getUseridBytes();
+      }
+      /**
+       * <code>optional string userid = 1;</code>
+       */
+      public Builder setUserid(
+          String value) {
+        copyOnWrite();
+        instance.setUserid(value);
+        return this;
+      }
+      /**
+       * <code>optional string userid = 1;</code>
+       */
+      public Builder clearUserid() {
+        copyOnWrite();
+        instance.clearUserid();
+        return this;
+      }
+      /**
+       * <code>optional string userid = 1;</code>
+       */
+      public Builder setUseridBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setUseridBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>optional string receiverid = 2;</code>
+       */
+      public boolean hasReceiverid() {
+        return instance.hasReceiverid();
+      }
+      /**
+       * <code>optional string receiverid = 2;</code>
+       */
+      public String getReceiverid() {
+        return instance.getReceiverid();
+      }
+      /**
+       * <code>optional string receiverid = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getReceiveridBytes() {
+        return instance.getReceiveridBytes();
+      }
+      /**
+       * <code>optional string receiverid = 2;</code>
+       */
+      public Builder setReceiverid(
+          String value) {
+        copyOnWrite();
+        instance.setReceiverid(value);
+        return this;
+      }
+      /**
+       * <code>optional string receiverid = 2;</code>
+       */
+      public Builder clearReceiverid() {
+        copyOnWrite();
+        instance.clearReceiverid();
+        return this;
+      }
+      /**
+       * <code>optional string receiverid = 2;</code>
+       */
+      public Builder setReceiveridBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setReceiveridBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:CreateChatRequest)
+    }
+    protected final Object dynamicMethod(
+        MethodToInvoke method,
+        Object arg0, Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new ImEntities.CreateChatRequest();
+        }
+        case IS_INITIALIZED: {
+          return DEFAULT_INSTANCE;
+        }
+        case MAKE_IMMUTABLE: {
+          return null;
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case VISIT: {
+          Visitor visitor = (Visitor) arg0;
+          ImEntities.CreateChatRequest other = (ImEntities.CreateChatRequest) arg1;
+          userid_ = visitor.visitString(
+              hasUserid(), userid_,
+              other.hasUserid(), other.userid_);
+          receiverid_ = visitor.visitString(
+              hasReceiverid(), receiverid_,
+              other.hasReceiverid(), other.receiverid_);
+          if (visitor == MergeFromVisitor
+              .INSTANCE) {
+            bitField0_ |= other.bitField0_;
+          }
+          return this;
+        }
+        case MERGE_FROM_STREAM: {
+          com.google.protobuf.CodedInputStream input =
+              (com.google.protobuf.CodedInputStream) arg0;
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry =
+              (com.google.protobuf.ExtensionRegistryLite) arg1;
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                default: {
+                  if (!parseUnknownField(tag, input)) {
+                    done = true;
+                  }
+                  break;
+                }
+                case 10: {
+                  String s = input.readString();
+                  bitField0_ |= 0x00000001;
+                  userid_ = s;
+                  break;
+                }
+                case 18: {
+                  String s = input.readString();
+                  bitField0_ |= 0x00000002;
+                  receiverid_ = s;
+                  break;
+                }
+              }
+            }
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw new RuntimeException(e.setUnfinishedMessage(this));
+          } catch (java.io.IOException e) {
+            throw new RuntimeException(
+                new com.google.protobuf.InvalidProtocolBufferException(
+                    e.getMessage()).setUnfinishedMessage(this));
+          } finally {
+          }
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          if (PARSER == null) {    synchronized (ImEntities.CreateChatRequest.class) {
+              if (PARSER == null) {
+                PARSER = new DefaultInstanceBasedParser(DEFAULT_INSTANCE);
+              }
+            }
+          }
+          return PARSER;
+        }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:CreateChatRequest)
+    private static final ImEntities.CreateChatRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new CreateChatRequest();
+      DEFAULT_INSTANCE.makeImmutable();
+    }
+
+    public static ImEntities.CreateChatRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<CreateChatRequest> PARSER;
+
+    public static com.google.protobuf.Parser<CreateChatRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface CreateChatResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CreateChatResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>optional string code = 1;</code>
+     */
+    boolean hasCode();
+    /**
+     * <code>optional string code = 1;</code>
+     */
+    String getCode();
+    /**
+     * <code>optional string code = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getCodeBytes();
+
+    /**
+     * <code>optional string message = 2;</code>
+     */
+    boolean hasMessage();
+    /**
+     * <code>optional string message = 2;</code>
+     */
+    String getMessage();
+    /**
+     * <code>optional string message = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getMessageBytes();
+
+    /**
+     * <code>optional .Chat chat = 3;</code>
+     */
+    boolean hasChat();
+    /**
+     * <code>optional .Chat chat = 3;</code>
+     */
+    ImEntities.Chat getChat();
+  }
+  /**
+   * Protobuf type {@code CreateChatResponse}
+   */
+  public  static final class CreateChatResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          CreateChatResponse, CreateChatResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:CreateChatResponse)
+      CreateChatResponseOrBuilder {
+    private CreateChatResponse() {
+      code_ = "";
+      message_ = "";
+    }
+    private int bitField0_;
+    public static final int CODE_FIELD_NUMBER = 1;
+    private String code_;
+    /**
+     * <code>optional string code = 1;</code>
+     */
+    public boolean hasCode() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional string code = 1;</code>
+     */
+    public String getCode() {
+      return code_;
+    }
+    /**
+     * <code>optional string code = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getCodeBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(code_);
+    }
+    /**
+     * <code>optional string code = 1;</code>
+     */
+    private void setCode(
+        String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+      code_ = value;
+    }
+    /**
+     * <code>optional string code = 1;</code>
+     */
+    private void clearCode() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      code_ = getDefaultInstance().getCode();
+    }
+    /**
+     * <code>optional string code = 1;</code>
+     */
+    private void setCodeBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+      code_ = value.toStringUtf8();
+    }
+
+    public static final int MESSAGE_FIELD_NUMBER = 2;
+    private String message_;
+    /**
+     * <code>optional string message = 2;</code>
+     */
+    public boolean hasMessage() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional string message = 2;</code>
+     */
+    public String getMessage() {
+      return message_;
+    }
+    /**
+     * <code>optional string message = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getMessageBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(message_);
+    }
+    /**
+     * <code>optional string message = 2;</code>
+     */
+    private void setMessage(
+        String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+      message_ = value;
+    }
+    /**
+     * <code>optional string message = 2;</code>
+     */
+    private void clearMessage() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      message_ = getDefaultInstance().getMessage();
+    }
+    /**
+     * <code>optional string message = 2;</code>
+     */
+    private void setMessageBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+      message_ = value.toStringUtf8();
+    }
+
+    public static final int CHAT_FIELD_NUMBER = 3;
+    private ImEntities.Chat chat_;
+    /**
+     * <code>optional .Chat chat = 3;</code>
+     */
+    public boolean hasChat() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional .Chat chat = 3;</code>
+     */
+    public ImEntities.Chat getChat() {
+      return chat_ == null ? ImEntities.Chat.getDefaultInstance() : chat_;
+    }
+    /**
+     * <code>optional .Chat chat = 3;</code>
+     */
+    private void setChat(ImEntities.Chat value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      chat_ = value;
+      bitField0_ |= 0x00000004;
+      }
+    /**
+     * <code>optional .Chat chat = 3;</code>
+     */
+    private void setChat(
+        ImEntities.Chat.Builder builderForValue) {
+      chat_ = builderForValue.build();
+      bitField0_ |= 0x00000004;
+    }
+    /**
+     * <code>optional .Chat chat = 3;</code>
+     */
+    private void mergeChat(ImEntities.Chat value) {
+      if (chat_ != null &&
+          chat_ != ImEntities.Chat.getDefaultInstance()) {
+        chat_ =
+          ImEntities.Chat.newBuilder(chat_).mergeFrom(value).buildPartial();
+      } else {
+        chat_ = value;
+      }
+      bitField0_ |= 0x00000004;
+    }
+    /**
+     * <code>optional .Chat chat = 3;</code>
+     */
+    private void clearChat() {  chat_ = null;
+      bitField0_ = (bitField0_ & ~0x00000004);
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeString(1, getCode());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeString(2, getMessage());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeMessage(3, getChat());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeStringSize(1, getCode());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeStringSize(2, getMessage());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getChat());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    public static ImEntities.CreateChatResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static ImEntities.CreateChatResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static ImEntities.CreateChatResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static ImEntities.CreateChatResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static ImEntities.CreateChatResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static ImEntities.CreateChatResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static ImEntities.CreateChatResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+    public static ImEntities.CreateChatResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static ImEntities.CreateChatResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static ImEntities.CreateChatResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(ImEntities.CreateChatResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+
+    /**
+     * Protobuf type {@code CreateChatResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          CreateChatResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:CreateChatResponse)
+        ImEntities.CreateChatResponseOrBuilder {
+      // Construct using ImEntities.CreateChatResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>optional string code = 1;</code>
+       */
+      public boolean hasCode() {
+        return instance.hasCode();
+      }
+      /**
+       * <code>optional string code = 1;</code>
+       */
+      public String getCode() {
+        return instance.getCode();
+      }
+      /**
+       * <code>optional string code = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getCodeBytes() {
+        return instance.getCodeBytes();
+      }
+      /**
+       * <code>optional string code = 1;</code>
+       */
+      public Builder setCode(
+          String value) {
+        copyOnWrite();
+        instance.setCode(value);
+        return this;
+      }
+      /**
+       * <code>optional string code = 1;</code>
+       */
+      public Builder clearCode() {
+        copyOnWrite();
+        instance.clearCode();
+        return this;
+      }
+      /**
+       * <code>optional string code = 1;</code>
+       */
+      public Builder setCodeBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setCodeBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>optional string message = 2;</code>
+       */
+      public boolean hasMessage() {
+        return instance.hasMessage();
+      }
+      /**
+       * <code>optional string message = 2;</code>
+       */
+      public String getMessage() {
+        return instance.getMessage();
+      }
+      /**
+       * <code>optional string message = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getMessageBytes() {
+        return instance.getMessageBytes();
+      }
+      /**
+       * <code>optional string message = 2;</code>
+       */
+      public Builder setMessage(
+          String value) {
+        copyOnWrite();
+        instance.setMessage(value);
+        return this;
+      }
+      /**
+       * <code>optional string message = 2;</code>
+       */
+      public Builder clearMessage() {
+        copyOnWrite();
+        instance.clearMessage();
+        return this;
+      }
+      /**
+       * <code>optional string message = 2;</code>
+       */
+      public Builder setMessageBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setMessageBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>optional .Chat chat = 3;</code>
+       */
+      public boolean hasChat() {
+        return instance.hasChat();
+      }
+      /**
+       * <code>optional .Chat chat = 3;</code>
+       */
+      public ImEntities.Chat getChat() {
+        return instance.getChat();
+      }
+      /**
+       * <code>optional .Chat chat = 3;</code>
+       */
+      public Builder setChat(ImEntities.Chat value) {
+        copyOnWrite();
+        instance.setChat(value);
+        return this;
+        }
+      /**
+       * <code>optional .Chat chat = 3;</code>
+       */
+      public Builder setChat(
+          ImEntities.Chat.Builder builderForValue) {
+        copyOnWrite();
+        instance.setChat(builderForValue);
+        return this;
+      }
+      /**
+       * <code>optional .Chat chat = 3;</code>
+       */
+      public Builder mergeChat(ImEntities.Chat value) {
+        copyOnWrite();
+        instance.mergeChat(value);
+        return this;
+      }
+      /**
+       * <code>optional .Chat chat = 3;</code>
+       */
+      public Builder clearChat() {  copyOnWrite();
+        instance.clearChat();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:CreateChatResponse)
+    }
+    protected final Object dynamicMethod(
+        MethodToInvoke method,
+        Object arg0, Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new ImEntities.CreateChatResponse();
+        }
+        case IS_INITIALIZED: {
+          return DEFAULT_INSTANCE;
+        }
+        case MAKE_IMMUTABLE: {
+          return null;
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case VISIT: {
+          Visitor visitor = (Visitor) arg0;
+          ImEntities.CreateChatResponse other = (ImEntities.CreateChatResponse) arg1;
+          code_ = visitor.visitString(
+              hasCode(), code_,
+              other.hasCode(), other.code_);
+          message_ = visitor.visitString(
+              hasMessage(), message_,
+              other.hasMessage(), other.message_);
+          chat_ = visitor.visitMessage(chat_, other.chat_);
+          if (visitor == MergeFromVisitor
+              .INSTANCE) {
+            bitField0_ |= other.bitField0_;
+          }
+          return this;
+        }
+        case MERGE_FROM_STREAM: {
+          com.google.protobuf.CodedInputStream input =
+              (com.google.protobuf.CodedInputStream) arg0;
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry =
+              (com.google.protobuf.ExtensionRegistryLite) arg1;
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                default: {
+                  if (!parseUnknownField(tag, input)) {
+                    done = true;
+                  }
+                  break;
+                }
+                case 10: {
+                  String s = input.readString();
+                  bitField0_ |= 0x00000001;
+                  code_ = s;
+                  break;
+                }
+                case 18: {
+                  String s = input.readString();
+                  bitField0_ |= 0x00000002;
+                  message_ = s;
+                  break;
+                }
+                case 26: {
+                  ImEntities.Chat.Builder subBuilder = null;
+                  if (((bitField0_ & 0x00000004) == 0x00000004)) {
+                    subBuilder = chat_.toBuilder();
+                  }
+                  chat_ = input.readMessage(ImEntities.Chat.parser(), extensionRegistry);
+                  if (subBuilder != null) {
+                    subBuilder.mergeFrom(chat_);
+                    chat_ = subBuilder.buildPartial();
+                  }
+                  bitField0_ |= 0x00000004;
+                  break;
+                }
+              }
+            }
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw new RuntimeException(e.setUnfinishedMessage(this));
+          } catch (java.io.IOException e) {
+            throw new RuntimeException(
+                new com.google.protobuf.InvalidProtocolBufferException(
+                    e.getMessage()).setUnfinishedMessage(this));
+          } finally {
+          }
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          if (PARSER == null) {    synchronized (ImEntities.CreateChatResponse.class) {
+              if (PARSER == null) {
+                PARSER = new DefaultInstanceBasedParser(DEFAULT_INSTANCE);
+              }
+            }
+          }
+          return PARSER;
+        }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:CreateChatResponse)
+    private static final ImEntities.CreateChatResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new CreateChatResponse();
+      DEFAULT_INSTANCE.makeImmutable();
+    }
+
+    public static ImEntities.CreateChatResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<CreateChatResponse> PARSER;
+
+    public static com.google.protobuf.Parser<CreateChatResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface AddContactRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:AddContactRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>optional string userid = 1;</code>
+     */
+    boolean hasUserid();
+    /**
+     * <code>optional string userid = 1;</code>
+     */
+    String getUserid();
+    /**
+     * <code>optional string userid = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getUseridBytes();
+
+    /**
+     * <code>optional string receiverid = 2;</code>
+     */
+    boolean hasReceiverid();
+    /**
+     * <code>optional string receiverid = 2;</code>
+     */
+    String getReceiverid();
+    /**
+     * <code>optional string receiverid = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getReceiveridBytes();
+  }
+  /**
+   * Protobuf type {@code AddContactRequest}
+   */
+  public  static final class AddContactRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          AddContactRequest, AddContactRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:AddContactRequest)
+      AddContactRequestOrBuilder {
+    private AddContactRequest() {
+      userid_ = "";
+      receiverid_ = "";
+    }
+    private int bitField0_;
+    public static final int USERID_FIELD_NUMBER = 1;
+    private String userid_;
+    /**
+     * <code>optional string userid = 1;</code>
+     */
+    public boolean hasUserid() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional string userid = 1;</code>
+     */
+    public String getUserid() {
+      return userid_;
+    }
+    /**
+     * <code>optional string userid = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getUseridBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(userid_);
+    }
+    /**
+     * <code>optional string userid = 1;</code>
+     */
+    private void setUserid(
+        String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+      userid_ = value;
+    }
+    /**
+     * <code>optional string userid = 1;</code>
+     */
+    private void clearUserid() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      userid_ = getDefaultInstance().getUserid();
+    }
+    /**
+     * <code>optional string userid = 1;</code>
+     */
+    private void setUseridBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+      userid_ = value.toStringUtf8();
+    }
+
+    public static final int RECEIVERID_FIELD_NUMBER = 2;
+    private String receiverid_;
+    /**
+     * <code>optional string receiverid = 2;</code>
+     */
+    public boolean hasReceiverid() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional string receiverid = 2;</code>
+     */
+    public String getReceiverid() {
+      return receiverid_;
+    }
+    /**
+     * <code>optional string receiverid = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getReceiveridBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(receiverid_);
+    }
+    /**
+     * <code>optional string receiverid = 2;</code>
+     */
+    private void setReceiverid(
+        String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+      receiverid_ = value;
+    }
+    /**
+     * <code>optional string receiverid = 2;</code>
+     */
+    private void clearReceiverid() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      receiverid_ = getDefaultInstance().getReceiverid();
+    }
+    /**
+     * <code>optional string receiverid = 2;</code>
+     */
+    private void setReceiveridBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+      receiverid_ = value.toStringUtf8();
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeString(1, getUserid());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeString(2, getReceiverid());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeStringSize(1, getUserid());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeStringSize(2, getReceiverid());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    public static ImEntities.AddContactRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static ImEntities.AddContactRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static ImEntities.AddContactRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static ImEntities.AddContactRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static ImEntities.AddContactRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static ImEntities.AddContactRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static ImEntities.AddContactRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+    public static ImEntities.AddContactRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static ImEntities.AddContactRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static ImEntities.AddContactRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(ImEntities.AddContactRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+
+    /**
+     * Protobuf type {@code AddContactRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          AddContactRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:AddContactRequest)
+        ImEntities.AddContactRequestOrBuilder {
+      // Construct using ImEntities.AddContactRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>optional string userid = 1;</code>
+       */
+      public boolean hasUserid() {
+        return instance.hasUserid();
+      }
+      /**
+       * <code>optional string userid = 1;</code>
+       */
+      public String getUserid() {
+        return instance.getUserid();
+      }
+      /**
+       * <code>optional string userid = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getUseridBytes() {
+        return instance.getUseridBytes();
+      }
+      /**
+       * <code>optional string userid = 1;</code>
+       */
+      public Builder setUserid(
+          String value) {
+        copyOnWrite();
+        instance.setUserid(value);
+        return this;
+      }
+      /**
+       * <code>optional string userid = 1;</code>
+       */
+      public Builder clearUserid() {
+        copyOnWrite();
+        instance.clearUserid();
+        return this;
+      }
+      /**
+       * <code>optional string userid = 1;</code>
+       */
+      public Builder setUseridBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setUseridBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>optional string receiverid = 2;</code>
+       */
+      public boolean hasReceiverid() {
+        return instance.hasReceiverid();
+      }
+      /**
+       * <code>optional string receiverid = 2;</code>
+       */
+      public String getReceiverid() {
+        return instance.getReceiverid();
+      }
+      /**
+       * <code>optional string receiverid = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getReceiveridBytes() {
+        return instance.getReceiveridBytes();
+      }
+      /**
+       * <code>optional string receiverid = 2;</code>
+       */
+      public Builder setReceiverid(
+          String value) {
+        copyOnWrite();
+        instance.setReceiverid(value);
+        return this;
+      }
+      /**
+       * <code>optional string receiverid = 2;</code>
+       */
+      public Builder clearReceiverid() {
+        copyOnWrite();
+        instance.clearReceiverid();
+        return this;
+      }
+      /**
+       * <code>optional string receiverid = 2;</code>
+       */
+      public Builder setReceiveridBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setReceiveridBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:AddContactRequest)
+    }
+    protected final Object dynamicMethod(
+        MethodToInvoke method,
+        Object arg0, Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new ImEntities.AddContactRequest();
+        }
+        case IS_INITIALIZED: {
+          return DEFAULT_INSTANCE;
+        }
+        case MAKE_IMMUTABLE: {
+          return null;
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case VISIT: {
+          Visitor visitor = (Visitor) arg0;
+          ImEntities.AddContactRequest other = (ImEntities.AddContactRequest) arg1;
+          userid_ = visitor.visitString(
+              hasUserid(), userid_,
+              other.hasUserid(), other.userid_);
+          receiverid_ = visitor.visitString(
+              hasReceiverid(), receiverid_,
+              other.hasReceiverid(), other.receiverid_);
+          if (visitor == MergeFromVisitor
+              .INSTANCE) {
+            bitField0_ |= other.bitField0_;
+          }
+          return this;
+        }
+        case MERGE_FROM_STREAM: {
+          com.google.protobuf.CodedInputStream input =
+              (com.google.protobuf.CodedInputStream) arg0;
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry =
+              (com.google.protobuf.ExtensionRegistryLite) arg1;
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                default: {
+                  if (!parseUnknownField(tag, input)) {
+                    done = true;
+                  }
+                  break;
+                }
+                case 10: {
+                  String s = input.readString();
+                  bitField0_ |= 0x00000001;
+                  userid_ = s;
+                  break;
+                }
+                case 18: {
+                  String s = input.readString();
+                  bitField0_ |= 0x00000002;
+                  receiverid_ = s;
+                  break;
+                }
+              }
+            }
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw new RuntimeException(e.setUnfinishedMessage(this));
+          } catch (java.io.IOException e) {
+            throw new RuntimeException(
+                new com.google.protobuf.InvalidProtocolBufferException(
+                    e.getMessage()).setUnfinishedMessage(this));
+          } finally {
+          }
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          if (PARSER == null) {    synchronized (ImEntities.AddContactRequest.class) {
+              if (PARSER == null) {
+                PARSER = new DefaultInstanceBasedParser(DEFAULT_INSTANCE);
+              }
+            }
+          }
+          return PARSER;
+        }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:AddContactRequest)
+    private static final ImEntities.AddContactRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new AddContactRequest();
+      DEFAULT_INSTANCE.makeImmutable();
+    }
+
+    public static ImEntities.AddContactRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<AddContactRequest> PARSER;
+
+    public static com.google.protobuf.Parser<AddContactRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface AddContactResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:AddContactResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>optional string code = 1;</code>
+     */
+    boolean hasCode();
+    /**
+     * <code>optional string code = 1;</code>
+     */
+    String getCode();
+    /**
+     * <code>optional string code = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getCodeBytes();
+
+    /**
+     * <code>optional string message = 2;</code>
+     */
+    boolean hasMessage();
+    /**
+     * <code>optional string message = 2;</code>
+     */
+    String getMessage();
+    /**
+     * <code>optional string message = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getMessageBytes();
+  }
+  /**
+   * Protobuf type {@code AddContactResponse}
+   */
+  public  static final class AddContactResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          AddContactResponse, AddContactResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:AddContactResponse)
+      AddContactResponseOrBuilder {
+    private AddContactResponse() {
+      code_ = "";
+      message_ = "";
+    }
+    private int bitField0_;
+    public static final int CODE_FIELD_NUMBER = 1;
+    private String code_;
+    /**
+     * <code>optional string code = 1;</code>
+     */
+    public boolean hasCode() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional string code = 1;</code>
+     */
+    public String getCode() {
+      return code_;
+    }
+    /**
+     * <code>optional string code = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getCodeBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(code_);
+    }
+    /**
+     * <code>optional string code = 1;</code>
+     */
+    private void setCode(
+        String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+      code_ = value;
+    }
+    /**
+     * <code>optional string code = 1;</code>
+     */
+    private void clearCode() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      code_ = getDefaultInstance().getCode();
+    }
+    /**
+     * <code>optional string code = 1;</code>
+     */
+    private void setCodeBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+      code_ = value.toStringUtf8();
+    }
+
+    public static final int MESSAGE_FIELD_NUMBER = 2;
+    private String message_;
+    /**
+     * <code>optional string message = 2;</code>
+     */
+    public boolean hasMessage() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional string message = 2;</code>
+     */
+    public String getMessage() {
+      return message_;
+    }
+    /**
+     * <code>optional string message = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getMessageBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(message_);
+    }
+    /**
+     * <code>optional string message = 2;</code>
+     */
+    private void setMessage(
+        String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+      message_ = value;
+    }
+    /**
+     * <code>optional string message = 2;</code>
+     */
+    private void clearMessage() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      message_ = getDefaultInstance().getMessage();
+    }
+    /**
+     * <code>optional string message = 2;</code>
+     */
+    private void setMessageBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+      message_ = value.toStringUtf8();
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeString(1, getCode());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeString(2, getMessage());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeStringSize(1, getCode());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeStringSize(2, getMessage());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    public static ImEntities.AddContactResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static ImEntities.AddContactResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static ImEntities.AddContactResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static ImEntities.AddContactResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static ImEntities.AddContactResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static ImEntities.AddContactResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static ImEntities.AddContactResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+    public static ImEntities.AddContactResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static ImEntities.AddContactResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static ImEntities.AddContactResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(ImEntities.AddContactResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+
+    /**
+     * Protobuf type {@code AddContactResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          AddContactResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:AddContactResponse)
+        ImEntities.AddContactResponseOrBuilder {
+      // Construct using ImEntities.AddContactResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>optional string code = 1;</code>
+       */
+      public boolean hasCode() {
+        return instance.hasCode();
+      }
+      /**
+       * <code>optional string code = 1;</code>
+       */
+      public String getCode() {
+        return instance.getCode();
+      }
+      /**
+       * <code>optional string code = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getCodeBytes() {
+        return instance.getCodeBytes();
+      }
+      /**
+       * <code>optional string code = 1;</code>
+       */
+      public Builder setCode(
+          String value) {
+        copyOnWrite();
+        instance.setCode(value);
+        return this;
+      }
+      /**
+       * <code>optional string code = 1;</code>
+       */
+      public Builder clearCode() {
+        copyOnWrite();
+        instance.clearCode();
+        return this;
+      }
+      /**
+       * <code>optional string code = 1;</code>
+       */
+      public Builder setCodeBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setCodeBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>optional string message = 2;</code>
+       */
+      public boolean hasMessage() {
+        return instance.hasMessage();
+      }
+      /**
+       * <code>optional string message = 2;</code>
+       */
+      public String getMessage() {
+        return instance.getMessage();
+      }
+      /**
+       * <code>optional string message = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getMessageBytes() {
+        return instance.getMessageBytes();
+      }
+      /**
+       * <code>optional string message = 2;</code>
+       */
+      public Builder setMessage(
+          String value) {
+        copyOnWrite();
+        instance.setMessage(value);
+        return this;
+      }
+      /**
+       * <code>optional string message = 2;</code>
+       */
+      public Builder clearMessage() {
+        copyOnWrite();
+        instance.clearMessage();
+        return this;
+      }
+      /**
+       * <code>optional string message = 2;</code>
+       */
+      public Builder setMessageBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setMessageBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:AddContactResponse)
+    }
+    protected final Object dynamicMethod(
+        MethodToInvoke method,
+        Object arg0, Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new ImEntities.AddContactResponse();
+        }
+        case IS_INITIALIZED: {
+          return DEFAULT_INSTANCE;
+        }
+        case MAKE_IMMUTABLE: {
+          return null;
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case VISIT: {
+          Visitor visitor = (Visitor) arg0;
+          ImEntities.AddContactResponse other = (ImEntities.AddContactResponse) arg1;
+          code_ = visitor.visitString(
+              hasCode(), code_,
+              other.hasCode(), other.code_);
+          message_ = visitor.visitString(
+              hasMessage(), message_,
+              other.hasMessage(), other.message_);
+          if (visitor == MergeFromVisitor
+              .INSTANCE) {
+            bitField0_ |= other.bitField0_;
+          }
+          return this;
+        }
+        case MERGE_FROM_STREAM: {
+          com.google.protobuf.CodedInputStream input =
+              (com.google.protobuf.CodedInputStream) arg0;
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry =
+              (com.google.protobuf.ExtensionRegistryLite) arg1;
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                default: {
+                  if (!parseUnknownField(tag, input)) {
+                    done = true;
+                  }
+                  break;
+                }
+                case 10: {
+                  String s = input.readString();
+                  bitField0_ |= 0x00000001;
+                  code_ = s;
+                  break;
+                }
+                case 18: {
+                  String s = input.readString();
+                  bitField0_ |= 0x00000002;
+                  message_ = s;
+                  break;
+                }
+              }
+            }
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw new RuntimeException(e.setUnfinishedMessage(this));
+          } catch (java.io.IOException e) {
+            throw new RuntimeException(
+                new com.google.protobuf.InvalidProtocolBufferException(
+                    e.getMessage()).setUnfinishedMessage(this));
+          } finally {
+          }
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          if (PARSER == null) {    synchronized (ImEntities.AddContactResponse.class) {
+              if (PARSER == null) {
+                PARSER = new DefaultInstanceBasedParser(DEFAULT_INSTANCE);
+              }
+            }
+          }
+          return PARSER;
+        }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:AddContactResponse)
+    private static final ImEntities.AddContactResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new AddContactResponse();
+      DEFAULT_INSTANCE.makeImmutable();
+    }
+
+    public static ImEntities.AddContactResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<AddContactResponse> PARSER;
+
+    public static com.google.protobuf.Parser<AddContactResponse> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }

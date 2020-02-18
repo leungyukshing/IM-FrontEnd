@@ -10,7 +10,7 @@ public interface NetworkService {
     Observable<ImEntities.LoginResponse> login(@Body RequestBody body);
 
     @POST("register")
-    Observable<ImEntities.RegisternResponse> register(@Body RequestBody body);
+    Observable<ImEntities.RegisterResponse> register(@Body RequestBody body);
 
     @POST("getChatList")
     Observable<ImEntities.GetChatListResponse> getChatListByUserID(@Body RequestBody body);

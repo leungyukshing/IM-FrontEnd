@@ -188,12 +188,12 @@ public class LoginOrRegister extends AppCompatActivity implements View.OnClickLi
             return false;
         }
         // call to server
-        HttpSend.getInstance().register(username, password, email,new ResultCallbackListener<ImEntities.RegisternResponse>() {
+        HttpSend.getInstance().register(username, password, email,new ResultCallbackListener<ImEntities.RegisterResponse>() {
             @Override
             public void onSubscribe(Disposable d) { }
 
             @Override
-            public void onNext(ImEntities.RegisternResponse registerResponse) {
+            public void onNext(ImEntities.RegisterResponse registerResponse) {
                 ELog.e("Register Result: code =" + registerResponse.getCode() + "\t msg = " + registerResponse.getMessage());
                 // success
                 if (registerResponse.getCode().equals("200") && registerResponse.getMessage().equals("Register Success")) {

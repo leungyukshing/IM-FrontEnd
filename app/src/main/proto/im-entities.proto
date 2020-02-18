@@ -1,4 +1,5 @@
 // [START declaration]
+// PB Script: protoc --go_out=../improto im-entities.proto
 syntax = "proto2";
 
 message RegisterRequest {
@@ -7,7 +8,7 @@ message RegisterRequest {
     optional string email = 3;
 }
 
-message RegisternResponse {
+message RegisterResponse {
     optional string code = 1;
     optional string message = 2;
 }
@@ -64,4 +65,25 @@ message SendMessageRequest {
 
 message SendMessageResponse {
     optional string code = 1;
+}
+
+message CreateChatRequest {
+    optional string userid = 1;
+    optional string receiverid = 2;
+}
+
+message CreateChatResponse {
+    optional string code = 1;
+    optional string message = 2;
+    optional Chat chat = 3;
+}
+
+message AddContactRequest {
+    optional string userid = 1;
+    optional string receiverid = 2;
+}
+
+message AddContactResponse {
+    optional string code = 1;
+    optional string message = 2;
 }

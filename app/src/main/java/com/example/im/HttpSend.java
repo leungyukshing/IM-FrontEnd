@@ -36,11 +36,11 @@ public class HttpSend {
         HttpConfiger.getInstance().toSubscribe(loginResponseObservable).subscribe(subscriber);
     }
 
-    public void register(String username, String password, String email, ResultCallbackListener<ImEntities.RegisternResponse> subscriber) {
+    public void register(String username, String password, String email, ResultCallbackListener<ImEntities.RegisterResponse> subscriber) {
         // construct request for register
         ImEntities.RegisterRequest registerRequest = ImEntities.RegisterRequest.newBuilder().setUsername(username).setPassword(password).setEmail(email).build();
         RequestBody params = RequestBody.create(MediaType.parse("application/octet-stream"), registerRequest.toByteArray());
-        Observable<ImEntities.RegisternResponse> registernResponseObservable = networkService.register(params);
+        Observable<ImEntities.RegisterResponse> registernResponseObservable = networkService.register(params);
         HttpConfiger.getInstance().toSubscribe(registernResponseObservable).subscribe(subscriber);
     }
 
